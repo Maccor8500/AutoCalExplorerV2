@@ -1,0 +1,2 @@
+avr_dude RCDATA "..\\..\\..\\..\\Delphi\\MacCommonCode\\Julius\\avrdude-v8.1-windows-x64.zip"
+header_image RCDATA "HeaderImage.png"

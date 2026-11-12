@@ -1,0 +1,36 @@
+16:51:04  Log file: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_165104\flash.log
+16:51:04  Hex: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\direct_20261106_165104.hex
+16:51:04  Fuses not written: E 0xFD H 0xD8 L 0xFF
+16:51:04  Lock bits not written
+16:51:04  ISP clock 125kHz
+16:51:04  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 125kHz -U signature:r:-:h -U efuse:r:-:h -U hfuse:r:-:h -U lfuse:r:-:h -U lock:r:-:h
+16:51:05  Processing -U signature:r:-:h
+16:51:05  Reading signature memory ...
+16:51:05  Writing 3 bytes to output file <stdout>
+16:51:05  0x1e,0x98,0x1
+16:51:05  Processing -U efuse:r:-:h
+16:51:05  Reading efuse memory ...
+16:51:05  Writing 1 byte to output file <stdout>
+16:51:05  0xfd
+16:51:05  Processing -U hfuse:r:-:h
+16:51:05  Reading hfuse memory ...
+16:51:05  Writing 1 byte to output file <stdout>
+16:51:05  0xd8
+16:51:05  Processing -U lfuse:r:-:h
+16:51:05  Reading lfuse memory ...
+16:51:05  Writing 1 byte to output file <stdout>
+16:51:05  0xff
+16:51:05  Processing -U lock:r:-:h
+16:51:05  Reading lock memory ...
+16:51:05  Writing 1 byte to output file <stdout>
+16:51:05  0xff
+16:51:05  Avrdude done.  Thank you.
+16:51:05  Connected at 125kHz: signature 0x1e,0x98,0x1, fuses E 0xFD H 0xD8 L 0xFF, lock 0xFF
+16:51:05  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 3.4MHz -U signature:r:-:h
+16:51:05  Reading signature memory ...
+16:51:05  Writing 3 bytes to output file <stdout>
+16:51:05  0x1e,0x98,0x1
+16:51:05  Avrdude done.  Thank you.
+16:51:05  Backing up to C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_165104\
+16:51:05  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 3.4MHz -U "flash:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_165104\flash.hex:i" -U "eeprom:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_165104\eeprom.eep:i"
+16:51:05  Cancelled: nothing was changed

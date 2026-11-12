@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/11/06 11:48:35.000.533,=C:\Users\jolaoye\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/11/06 11:49:13.000.320,C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\MainU.pas=C:\Users\jolaoye\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/11/06 11:49:13.000.320,C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\MainU.dfm=C:\Users\jolaoye\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2026/11/06 11:49:42.000.405,C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\AutoCalv2.dproj=C:\Users\jolaoye\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2026/11/06 13:36:32.000.081,=C:\Data\Maccor_Software\Development\Delphi\MacCommonCode\Julius\avrdude-main.zip</Transaction>
+    <Transaction>2026/11/06 13:53:50.000.863,=C:\Data\Maccor_Software\Development\Delphi\MacCommonCode\Julius\avrdude-v8.1-windows-x64.zip</Transaction>
+    <Transaction>2026/11/11 12:44:33.821,=C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\ShuntCfgFormU.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\..\..\..\Development"/>
+    <File Path="..\..\..\..\Delphi"/>
+    <File Path="..\..\..\..\Delphi\MacCommonCode"/>
+    <File Path="..\..\..\..\Delphi\MacCommonCode\Julius"/>
+    <File Path="..\..\..\..\Delphi\MacCommonCode\Julius\CommonsU.pas"/>
+    <File Path="..\..\..\..\Delphi\MacCommonCode\Julius\avrdude-v8.1-windows-x64.zip"/>
+    <File Path="..\..\..\..\Delphi\MacCommonCode\Julius\AutoCalProtocolU.pas"/>
+    <File Path="AutoCalBoardU.pas"/>
+    <File Path="SystemInfoImportU.pas"/>
+    <File Path="AvrFlasherU.pas"/>
+    <File Path="ControlsFrameU.pas"/>
+    <File Path="ControlsFrameU.dfm"/>
+    <File Path="FirmwareFrameU.pas"/>
+    <File Path="FirmwareFrameU.dfm"/>
+    <File Path="RecordFrameU.pas"/>
+    <File Path="RecordFrameU.dfm"/>
+    <File Path="MainU.pas"/>
+    <File Path="MainU.dfm"/>
+    <File Path="ConfettiU.pas"/>
+    <File Path="CalibrationFrameU.pas"/>
+    <File Path="CalibrationFrameU.dfm"/>
+    <File Path="MaccorTesterU.pas"/>
+    <File Path="MeterBenchU.pas"/>
+    <File Path="WorkbookDataU.pas"/>
+    <File Path="ShuntCfgFormU.pas"/>
+    <File Path="ShuntCfgFormU.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

@@ -1,0 +1,53 @@
+14:40:58  Log file: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\flash.log
+14:40:58  Hex: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\ariadne_bootloader\AUTOCAL_528LB_BTLDR_RevE.hex
+14:40:58  Fuses not written: E 0xFD H 0xD8 L 0xFF
+14:40:58  Lock bits not written
+14:40:58  ISP clock 125kHz
+14:40:58  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 125kHz -U signature:r:-:h -U efuse:r:-:h -U hfuse:r:-:h -U lfuse:r:-:h -U lock:r:-:h
+14:40:58  Processing -U signature:r:-:h
+14:40:58  Reading signature memory ...
+14:40:58  Writing 3 bytes to output file <stdout>
+14:40:58  0x1e,0x98,0x1
+14:40:58  Processing -U efuse:r:-:h
+14:40:58  Reading efuse memory ...
+14:40:58  Writing 1 byte to output file <stdout>
+14:40:58  0xfd
+14:40:58  Processing -U hfuse:r:-:h
+14:40:58  Reading hfuse memory ...
+14:40:58  Writing 1 byte to output file <stdout>
+14:40:58  0xd8
+14:40:58  Processing -U lfuse:r:-:h
+14:40:58  Reading lfuse memory ...
+14:40:58  Writing 1 byte to output file <stdout>
+14:40:58  0xff
+14:40:58  Processing -U lock:r:-:h
+14:40:58  Reading lock memory ...
+14:40:58  Writing 1 byte to output file <stdout>
+14:40:58  0xff
+14:40:58  Avrdude done.  Thank you.
+14:40:58  Connected at 125kHz: signature 0x1e,0x98,0x1, fuses E 0xFD H 0xD8 L 0xFF, lock 0xFF
+14:40:58  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 3.4MHz -U signature:r:-:h
+14:40:58  Reading signature memory ...
+14:40:58  Writing 3 bytes to output file <stdout>
+14:40:58  0x1e,0x98,0x1
+14:40:58  Avrdude done.  Thank you.
+14:40:59  Backing up to C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\
+14:40:59  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 3.4MHz -U "flash:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\flash.hex:i" -U "eeprom:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\eeprom.eep:i"
+14:40:59  Processing -U flash:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\flash.hex:i
+14:40:59  Reading flash memory ...
+14:41:04  Reading | ################################################## | 100% 5.38s
+14:41:04  Writing 257112 bytes to output file flash.hex
+14:41:04  Processing -U eeprom:r:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Debug\backup\20261106_144058\eeprom.eep:i
+14:41:04  Reading eeprom memory ...
+14:41:05  Reading | ################################################## | 100% 1.03s
+14:41:05  Writing 4096 bytes to output file eeprom.eep
+14:41:05  Avrdude done.  Thank you.
+14:41:06  Erasing and flashing at 3.4MHz
+14:41:06  > "C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe" -c atmelice_isp -p m2560 -B 3.4MHz -e -U "flash:w:C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\ariadne_bootloader\AUTOCAL_528LB_BTLDR_RevE.hex:i"
+14:41:06  Reading 3160 bytes for flash from input file AUTOCAL_528LB_BTLDR_RevE.hex
+14:41:06  Writing 3160 bytes to flash
+14:41:06  Writing | ################################################## | 100% 0.09s
+14:41:06  Verifying | ################################################## | 100% 0.07s
+14:41:06  3160 bytes of flash verified
+14:41:06  Avrdude done.  Thank you.
+14:41:06  Bootloader flashed and verified. The application was erased: push the firmware with Update.

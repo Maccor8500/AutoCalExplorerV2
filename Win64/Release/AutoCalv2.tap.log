@@ -1,0 +1,2307 @@
+
+==== AutoCalv2.exe started 2026-11-11 12:39:39 ====
+12:39:39.411  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:39:39.418  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:39:39.429  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:39:41.064  Calibration: starting the tester engine...
+12:39:41.263  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:39:41.278  loading dll <MacTest32Cal.dll>, Compiled:
+12:39:41.280  Nov 04, 2026
+12:39:41.285  loading function::SetEventHandler ...
+12:39:41.290  ok!
+12:39:41.294  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:39:41.299  loading function::GetSystemName ...
+12:39:41.304  ok!
+12:39:41.312  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:39:41.317  loading function::GetSystemNameEx ...
+12:39:41.321  ok!
+12:39:41.329  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:39:41.336  loading function::InitializeSystem ...
+12:39:41.340  ok!
+12:39:41.346  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:39:41.351  loading function::CloseSystem ...
+12:39:41.356  ok!
+12:39:41.362  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:39:41.368  loading function::SetActiveChan ...
+12:39:41.373  ok!
+12:39:41.380  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:39:41.387  loading function::GetActiveChan ...
+12:39:41.391  ok!
+12:39:41.399  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:39:41.405  loading function::GetChanSpec ...
+12:39:41.409  ok!
+12:39:41.417  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:39:41.422  loading function::SetOutput ...
+12:39:41.429  ok!
+12:39:41.435  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:39:41.441  loading function::PollChannels ...
+12:39:41.448  ok!
+12:39:41.454  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:39:41.463  loading function::CheckChannel ...
+12:39:41.469  ok!
+12:39:41.477  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:39:41.485  loading function::StopChannel ...
+12:39:41.492  ok!
+12:39:41.500  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:39:41.507  loading function::StopChannels ...
+12:39:41.514  ok!
+12:39:41.522  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:39:41.529  loading function::DownloadBoard ...
+12:39:41.535  ok!
+12:39:41.544  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:39:41.550  loading function::DownloadChannel ...
+12:39:41.557  ok!
+12:39:41.566  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:39:41.574  loading function::StartChannel ...
+12:39:41.581  ok!
+12:39:41.591  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:39:41.598  loading function::GetChannelCurrent ...
+12:39:41.605  ok!
+12:39:41.613  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:39:41.619  loading function::CheckDataUpdate ...
+12:39:41.627  ok!
+12:39:41.634  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:39:41.641  loading function::ResetCalibration ...
+12:39:41.648  ok!
+12:39:41.655  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:39:41.664  loading function::UpdateCalibrationData ...
+12:39:41.672  ok!
+12:39:41.683  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:39:41.693  loading function::DownloadChannelCalibration ...
+12:39:41.700  ok!
+12:39:41.710  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:39:41.718  loading function::SystemStatus ...
+12:39:41.725  ok!
+12:39:41.735  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:39:41.743  loading function::GetCtlrDownloadStatus ...
+12:39:41.750  ok!
+12:39:41.758  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:39:41.766  loading function::SetCtlrMode ...
+12:39:41.773  ok!
+12:39:41.782  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:39:41.790  loading function::SetAuxiliaryBoard ...
+12:39:41.800  ok!
+12:39:41.808  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:39:41.819  loading function::SetAuxiliaryPanel ...
+12:39:41.826  ok!
+12:39:41.836  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:39:41.843  loading function::DownloadAuxiliaryBoard ...
+12:39:41.850  ok!
+12:39:41.858  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:39:41.868  loading function::GetAuxBoardData ...
+12:39:41.874  ok!
+12:39:41.883  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:39:41.892  loading function::GetAuxPanelData ...
+12:39:41.898  ok!
+12:39:41.906  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:39:41.913  loading function::EnableAuxEmulation ...
+12:39:41.919  ok!
+12:39:41.927  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:39:41.935  loading function::EmulateSetpoint ...
+12:39:41.941  ok!
+12:39:41.949  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:39:41.957  loading function::GetNetStats ...
+12:39:41.964  ok!
+12:39:41.971  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:39:41.978  loading function::GetEngineTiming ...
+12:39:41.986  ok!
+12:39:41.993  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:39:42.001  loading function::SetEngineTiming ...
+12:39:42.007  ok!
+12:39:42.015  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:39:42.022  loading function::SilenceToggle ...
+12:39:42.029  ok!
+12:39:42.037  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:39:42.043  Tester: MacTest32Cal.dll loaded
+12:39:42.050   | initializing network...
+12:39:42.058  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:39:42.065  RS.Create(...)| Path: RawSocket.dll, Handle: 140705405140992, Compiled:
+12:39:42.071  Oct 13, 2026
+12:39:42.080  RawSocket::GetApiVersion :: 1.1 <ok>
+12:39:42.086  RawSocket::ShutdownService :: ok
+12:39:42.093  RawSocket::CreateSocket :: ok
+12:39:42.101  RawSocket::DestroySocket :: ok
+12:39:42.108  RawSocket::SendPacket :: ok
+12:39:42.114  RawSocket::SendPacketLen :: ok
+12:39:42.121  RawSocket::SetEthernetHeader :: ok
+12:39:42.129  RawSocket::SetPacketFilter :: ok
+12:39:42.135  socket [event:0] checkpoint! all callbacks assigned!
+12:39:42.142  socket [event:0] checkpoint! socket transmit handler initialized!
+12:39:42.149  socket [event:0] receive handler object initialization successful!
+12:39:42.156  socket [event:0] global socket receive handler initialization successful!
+12:39:42.163  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:39:42.171  socket [event:0] filter compilation: successful
+12:39:42.178  socket [event:0] filter registration successful! auto filter resumed!
+12:39:42.185  socket [event:0] socket registration successful!
+12:39:42.192  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:39:42.199  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:39:42.205  socket initialized!
+12:39:42.213  socket handle address: 0000024EDF688F80
+12:39:42.219  Starting system...
+12:39:42.226  ok!
+12:39:42.233  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:39:42.240  checking controller boards...
+12:39:42.248  board: 2 ok!
+12:39:42.255  board: 1 ok!
+12:39:42.262  Setting Channel: 1 specifications...
+12:39:42.268  ok!
+12:39:42.275  Setting Channel: 1 configurations...
+12:39:42.280  ok!
+12:39:42.287  Setting raw-socket header for ctlr board...
+12:39:42.293  ok!
+12:39:42.301  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:39:42.308  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:39:42.315  socket [event:0] filter compilation: successful
+12:39:42.323  socket [event:0] filter registration successful! auto filter resumed!
+12:39:42.329  active channel = 1
+12:39:49.782  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:39:49.783  initializing meter [FL8508A]!
+12:39:49.793  Meter: Initialization complete!
+12:39:49.798  connecting to meter at gpib address 1...
+12:39:49.804  meter identity: 8508A 431874115
+12:39:49.811  meter ping process started ok!
+12:39:49.817  meter connected!
+12:39:49.823  meter setting mode to Voltage::DC...
+12:39:49.828  ok!
+12:39:49.835  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:39:49.842  initializing meter [FL8508A]!
+12:39:49.847  Meter: Initialization complete!
+12:39:49.855  connecting to meter at gpib address 2...
+12:39:49.860  meter identity: 8508A 431874139
+12:39:49.866  meter ping process started ok!
+12:39:49.872  meter connected!
+12:39:49.879  meter setting mode to Voltage::DC...
+12:39:49.885  ok!
+12:39:49.891  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:39:59.375  RUN shunt=0 amps=0 mode=0 live=0 auto=0 samples=50 settle=auto interval=10ms fast=0 res6=0 range=0V pair=1 m1(use=1 addr=1 std=1) m2(use=1 addr=2 std=0)
+12:39:59.376  Meters: sampling on autorange, waiting for stable readings, then 50 samples with 10 ms between them
+12:40:02.576  Starting socket for 192.168.126.214
+12:40:02.643  192.168.126.214 reached via 192.168.126.51
+12:40:02.644  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 15036 | }
+12:40:02.654  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 15036 | }
+12:40:02.663  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+12:40:02.664  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 15037 | }
+12:40:02.677  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 15037 | }
+12:40:02.941  Calibration record read: Prototype / PrototypeDEC2022JB
+12:40:08.218  SETTLE 1 t=8.8s m1=0.03506659 m2=0.03507055 ratio spread=0.00ppm of 10 stable=0
+12:40:14.697  SETTLE 2 t=15.3s m1=0.03602117 m2=0.03601928 ratio spread=0.00ppm of 10 stable=0
+12:40:21.170  SETTLE 3 t=21.8s m1=0.03753317 m2=0.03757547 ratio spread=0.00ppm of 10 stable=0
+12:40:27.646  SETTLE 4 t=28.3s m1=0.03516072 m2=0.03515333 ratio spread=0.00ppm of 10 stable=0
+12:40:27.646  Meters: NOT stable after 4 readings (28.3 s; 5 readings within 10 ppm wanted): sampling anyway
+12:40:27.659  Meters: 0 of 50 samples taken (stopped)
+12:40:29.785  RUN shunt=0 amps=0 mode=0 live=0 auto=0 samples=50 settle=1000ms interval=10ms fast=0 res6=0 range=0V pair=1 m1(use=1 addr=1 std=1) m2(use=1 addr=2 std=0)
+12:40:29.785  Meters: sampling on autorange, settling 1000 ms, then 50 samples with 10 ms between them
+12:40:37.265  SAMPLE 1/50 t=0.000s took=6477ms m1=0.03704558 m2=0.03704967 chan=-
+12:40:43.753  SAMPLE 2/50 t=6.492s took=6472ms m1=0.03575764 m2=0.03578503 chan=-
+12:40:50.247  SAMPLE 3/50 t=12.979s took=6479ms m1=0.03613624 m2=0.03612735 chan=-
+12:40:50.254  Meters: 3 of 50 samples taken (stopped)
+12:41:25.275  socket [event:0] unregistering socket...
+12:41:25.277  socket [event:1] ok!
+12:41:25.285  Tester: engine closed
+12:41:25.293  meter terminating ping process...
+12:41:25.552  meter ping process termination complete!
+12:41:25.555  meter terminating ping process...
+12:41:25.815  meter ping process termination complete!
+12:41:25.839  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-11 12:46:22 ====
+12:46:22.865  [Unhandled] :: Error reading ShuntCfgBtn.OnClick: Invalid property value <thread: main> | AutoCalv2.exe + $643FC2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $5081B | AutoCalv2.exe + $11B70 | AutoCalv2.exe + $11BD4 | AutoCalv2.exe + $12E7D3 | AutoCalv2.exe + $12EAE7 | AutoCalv2.exe + $12E1D3 | AutoCalv2.exe + $12E185 | AutoCalv2.exe + $13F8A2 | AutoCalv2.exe + $21D3E5 | AutoCalv2.exe + $12DE97 | AutoCalv2.exe + $12E25C | AutoCalv2.exe + $12E185 | AutoCalv2.exe + $13F8A2 | AutoCalv2.exe + $21D3E5 | AutoCalv2.exe + $224CDB | AutoCalv2.exe + $12DE97 | AutoCalv2.exe + $12E25C | AutoCalv2.exe + $12E185 | AutoCalv2.exe + $13F8A2 | AutoCalv2.exe + $21D3E5 | AutoCalv2.exe + $224CDB | AutoCalv2.exe + $12DE97 | AutoCalv2.exe + $12E25C | AutoCalv2.exe + $12E185 | AutoCalv2.exe + $13F8A2 | AutoCalv2.exe + $21D3E5 | AutoCalv2.exe + $224CDB | AutoCalv2.exe + $12DE97 | AutoCalv2.exe + $12E25C | AutoCalv2.exe + $12E163 |  |  | Error Code: 0 | Message: The operation completed successfully.
+12:46:27.048  [Unhandled] :: Access violation at address 000000000163BD64 in module 'AutoCalv2.exe' (offset 6BBD64). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $643FC2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6BBD64 | AutoCalv2.exe + $6C73DC | AutoCalv2.exe + $377D05 | AutoCalv2.exe + $377B84 | AutoCalv2.exe + $375509 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $2214AD | AutoCalv2.exe + $2291F0 | AutoCalv2.exe + $36F7A0 | AutoCalv2.exe + $2282BC | AutoCalv2.exe + $142D56 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+12:46:29.482  [Unhandled] :: Access violation at address 000000000163BD64 in module 'AutoCalv2.exe' (offset 6BBD64). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $643FC2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6BBD64 | AutoCalv2.exe + $6C73DC | AutoCalv2.exe + $377D05 | AutoCalv2.exe + $377B84 | AutoCalv2.exe + $375509 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $2214AD | AutoCalv2.exe + $2291F0 | AutoCalv2.exe + $36F7A0 | AutoCalv2.exe + $2282BC | AutoCalv2.exe + $142D56 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+12:46:43.058  [Unhandled] :: Access violation at address 000000000163BD64 in module 'AutoCalv2.exe' (offset 6BBD64). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $643FC2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6BBD64 | AutoCalv2.exe + $6C73DC | AutoCalv2.exe + $377D05 | AutoCalv2.exe + $377B84 | AutoCalv2.exe + $375509 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $2214AD | AutoCalv2.exe + $2291F0 | AutoCalv2.exe + $36F7A0 | AutoCalv2.exe + $2282BC | AutoCalv2.exe + $142D56 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+
+==== AutoCalv2.exe started 2026-11-11 12:51:44 ====
+12:51:44.097  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:51:44.105  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:51:44.124  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:51:46.328  Calibration: starting the tester engine...
+12:51:46.479  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:51:46.499  loading dll <MacTest32Cal.dll>, Compiled:
+12:51:46.500  Nov 04, 2026
+12:51:46.507  loading function::SetEventHandler ...
+12:51:46.514  ok!
+12:51:46.521  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:51:46.527  loading function::GetSystemName ...
+12:51:46.533  ok!
+12:51:46.544  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:51:46.547  loading function::GetSystemNameEx ...
+12:51:46.552  ok!
+12:51:46.560  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:51:46.567  loading function::InitializeSystem ...
+12:51:46.573  ok!
+12:51:46.582  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:51:46.588  loading function::CloseSystem ...
+12:51:46.595  ok!
+12:51:46.601  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:51:46.608  loading function::SetActiveChan ...
+12:51:46.615  ok!
+12:51:46.622  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:51:46.628  loading function::GetActiveChan ...
+12:51:46.634  ok!
+12:51:46.642  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:51:46.650  loading function::GetChanSpec ...
+12:51:46.656  ok!
+12:51:46.662  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:51:46.670  loading function::SetOutput ...
+12:51:46.675  ok!
+12:51:46.683  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:51:46.690  loading function::PollChannels ...
+12:51:46.697  ok!
+12:51:46.704  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:51:46.711  loading function::CheckChannel ...
+12:51:46.718  ok!
+12:51:46.727  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:51:46.734  loading function::StopChannel ...
+12:51:46.740  ok!
+12:51:46.747  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:51:46.754  loading function::StopChannels ...
+12:51:46.760  ok!
+12:51:46.768  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:51:46.774  loading function::DownloadBoard ...
+12:51:46.780  ok!
+12:51:46.786  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:51:46.793  loading function::DownloadChannel ...
+12:51:46.799  ok!
+12:51:46.807  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:51:46.814  loading function::StartChannel ...
+12:51:46.819  ok!
+12:51:46.826  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:51:46.832  loading function::GetChannelCurrent ...
+12:51:46.838  ok!
+12:51:46.846  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:51:46.853  loading function::CheckDataUpdate ...
+12:51:46.859  ok!
+12:51:46.868  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:51:46.874  loading function::ResetCalibration ...
+12:51:46.879  ok!
+12:51:46.887  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:51:46.893  loading function::UpdateCalibrationData ...
+12:51:46.900  ok!
+12:51:46.909  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:51:46.915  loading function::DownloadChannelCalibration ...
+12:51:46.921  ok!
+12:51:46.929  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:51:46.937  loading function::SystemStatus ...
+12:51:46.943  ok!
+12:51:46.953  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:51:46.961  loading function::GetCtlrDownloadStatus ...
+12:51:46.967  ok!
+12:51:46.974  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:51:46.981  loading function::SetCtlrMode ...
+12:51:46.987  ok!
+12:51:46.994  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:51:47.001  loading function::SetAuxiliaryBoard ...
+12:51:47.007  ok!
+12:51:47.015  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:51:47.021  loading function::SetAuxiliaryPanel ...
+12:51:47.027  ok!
+12:51:47.035  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:51:47.041  loading function::DownloadAuxiliaryBoard ...
+12:51:47.047  ok!
+12:51:47.054  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:51:47.062  loading function::GetAuxBoardData ...
+12:51:47.068  ok!
+12:51:47.076  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:51:47.083  loading function::GetAuxPanelData ...
+12:51:47.090  ok!
+12:51:47.098  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:51:47.105  loading function::EnableAuxEmulation ...
+12:51:47.112  ok!
+12:51:47.120  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:51:47.127  loading function::EmulateSetpoint ...
+12:51:47.133  ok!
+12:51:47.140  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:51:47.147  loading function::GetNetStats ...
+12:51:47.154  ok!
+12:51:47.162  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:51:47.168  loading function::GetEngineTiming ...
+12:51:47.175  ok!
+12:51:47.184  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:51:47.190  loading function::SetEngineTiming ...
+12:51:47.196  ok!
+12:51:47.204  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:51:47.211  loading function::SilenceToggle ...
+12:51:47.218  ok!
+12:51:47.227  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:51:47.236  Tester: MacTest32Cal.dll loaded
+12:51:47.243   | initializing network...
+12:51:47.250  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:51:47.257  RS.Create(...)| Path: RawSocket.dll, Handle: 140705226358784, Compiled:
+12:51:47.263  Oct 13, 2026
+12:51:47.271  RawSocket::GetApiVersion :: 1.1 <ok>
+12:51:47.279  RawSocket::ShutdownService :: ok
+12:51:47.286  RawSocket::CreateSocket :: ok
+12:51:47.295  RawSocket::DestroySocket :: ok
+12:51:47.303  RawSocket::SendPacket :: ok
+12:51:47.310  RawSocket::SendPacketLen :: ok
+12:51:47.318  RawSocket::SetEthernetHeader :: ok
+12:51:47.326  RawSocket::SetPacketFilter :: ok
+12:51:47.332  socket [event:0] checkpoint! all callbacks assigned!
+12:51:47.338  socket [event:0] checkpoint! socket transmit handler initialized!
+12:51:47.347  socket [event:0] receive handler object initialization successful!
+12:51:47.352  socket [event:0] global socket receive handler initialization successful!
+12:51:47.360  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:51:47.366  socket [event:0] filter compilation: successful
+12:51:47.374  socket [event:0] filter registration successful! auto filter resumed!
+12:51:47.381  socket [event:0] socket registration successful!
+12:51:47.390  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:51:47.397  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:51:47.404  socket initialized!
+12:51:47.411  socket handle address: 000001C7251572E0
+12:51:47.418  Starting system...
+12:51:47.426  ok!
+12:51:47.433  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:51:47.442  checking controller boards...
+12:51:47.448  board: 2 ok!
+12:51:47.455  board: 1 ok!
+12:51:47.462  Setting Channel: 1 specifications...
+12:51:47.469  ok!
+12:51:47.476  Setting Channel: 1 configurations...
+12:51:47.482  ok!
+12:51:47.489  Setting raw-socket header for ctlr board...
+12:51:47.496  ok!
+12:51:47.502  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:51:47.510  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:51:47.515  socket [event:0] filter compilation: successful
+12:51:47.521  socket [event:0] filter registration successful! auto filter resumed!
+12:51:47.527  active channel = 1
+12:51:50.018  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:51:50.021  initializing meter [FL8508A]!
+12:51:50.027  Meter: Initialization complete!
+12:51:50.033  connecting to meter at gpib address 1...
+12:51:50.039  meter identity: 8508A 431874115
+12:51:50.047  meter ping process started ok!
+12:51:50.053  meter connected!
+12:51:50.060  meter setting mode to Voltage::DC...
+12:51:50.065  ok!
+12:51:50.073  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:51:50.079  initializing meter [FL8508A]!
+12:51:50.086  Meter: Initialization complete!
+12:51:50.093  connecting to meter at gpib address 2...
+12:51:50.100  meter identity: 8508A 431874139
+12:51:50.106  meter ping process started ok!
+12:51:50.112  meter connected!
+12:51:50.118  meter setting mode to Voltage::DC...
+12:51:50.123  ok!
+12:51:50.131  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:52:13.701  socket [event:0] unregistering socket...
+12:52:13.703  socket [event:1] ok!
+12:52:13.710  Tester: engine closed
+12:52:13.718  meter terminating ping process...
+12:52:13.982  meter ping process termination complete!
+12:52:13.988  meter terminating ping process...
+12:52:14.261  meter ping process termination complete!
+
+==== AutoCalv2.exe started 2026-11-11 12:52:40 ====
+12:52:40.285  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:52:40.292  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:52:40.307  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:52:42.239  Calibration: starting the tester engine...
+12:52:42.402  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:52:42.423  loading dll <MacTest32Cal.dll>, Compiled:
+12:52:42.423  Nov 04, 2026
+12:52:42.431  loading function::SetEventHandler ...
+12:52:42.437  ok!
+12:52:42.442  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:52:42.449  loading function::GetSystemName ...
+12:52:42.455  ok!
+12:52:42.463  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:52:42.468  loading function::GetSystemNameEx ...
+12:52:42.473  ok!
+12:52:42.480  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:52:42.487  loading function::InitializeSystem ...
+12:52:42.492  ok!
+12:52:42.500  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:52:42.506  loading function::CloseSystem ...
+12:52:42.512  ok!
+12:52:42.520  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:52:42.526  loading function::SetActiveChan ...
+12:52:42.532  ok!
+12:52:42.538  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:52:42.545  loading function::GetActiveChan ...
+12:52:42.551  ok!
+12:52:42.558  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:52:42.565  loading function::GetChanSpec ...
+12:52:42.571  ok!
+12:52:42.578  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:52:42.584  loading function::SetOutput ...
+12:52:42.590  ok!
+12:52:42.596  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:52:42.604  loading function::PollChannels ...
+12:52:42.610  ok!
+12:52:42.617  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:52:42.623  loading function::CheckChannel ...
+12:52:42.630  ok!
+12:52:42.638  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:52:42.644  loading function::StopChannel ...
+12:52:42.650  ok!
+12:52:42.658  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:52:42.665  loading function::StopChannels ...
+12:52:42.671  ok!
+12:52:42.684  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:52:42.691  loading function::DownloadBoard ...
+12:52:42.698  ok!
+12:52:42.705  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:52:42.712  loading function::DownloadChannel ...
+12:52:42.717  ok!
+12:52:42.725  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:52:42.732  loading function::StartChannel ...
+12:52:42.738  ok!
+12:52:42.746  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:52:42.753  loading function::GetChannelCurrent ...
+12:52:42.759  ok!
+12:52:42.767  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:52:42.774  loading function::CheckDataUpdate ...
+12:52:42.780  ok!
+12:52:42.790  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:52:42.795  loading function::ResetCalibration ...
+12:52:42.802  ok!
+12:52:42.810  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:52:42.818  loading function::UpdateCalibrationData ...
+12:52:42.825  ok!
+12:52:42.833  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:52:42.841  loading function::DownloadChannelCalibration ...
+12:52:42.848  ok!
+12:52:42.856  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:52:42.863  loading function::SystemStatus ...
+12:52:42.870  ok!
+12:52:42.878  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:52:42.884  loading function::GetCtlrDownloadStatus ...
+12:52:42.891  ok!
+12:52:42.899  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:52:42.907  loading function::SetCtlrMode ...
+12:52:42.913  ok!
+12:52:42.921  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:52:42.930  loading function::SetAuxiliaryBoard ...
+12:52:42.936  ok!
+12:52:42.945  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:52:42.953  loading function::SetAuxiliaryPanel ...
+12:52:42.960  ok!
+12:52:42.969  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:52:42.977  loading function::DownloadAuxiliaryBoard ...
+12:52:42.983  ok!
+12:52:42.992  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:52:43.000  loading function::GetAuxBoardData ...
+12:52:43.006  ok!
+12:52:43.017  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:52:43.025  loading function::GetAuxPanelData ...
+12:52:43.032  ok!
+12:52:43.041  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:52:43.049  loading function::EnableAuxEmulation ...
+12:52:43.056  ok!
+12:52:43.066  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:52:43.073  loading function::EmulateSetpoint ...
+12:52:43.081  ok!
+12:52:43.090  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:52:43.098  loading function::GetNetStats ...
+12:52:43.106  ok!
+12:52:43.115  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:52:43.123  loading function::GetEngineTiming ...
+12:52:43.130  ok!
+12:52:43.140  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:52:43.148  loading function::SetEngineTiming ...
+12:52:43.156  ok!
+12:52:43.164  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:52:43.173  loading function::SilenceToggle ...
+12:52:43.180  ok!
+12:52:43.189  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:52:43.197  Tester: MacTest32Cal.dll loaded
+12:52:43.204   | initializing network...
+12:52:43.213  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:52:43.221  RS.Create(...)| Path: RawSocket.dll, Handle: 140705233108992, Compiled:
+12:52:43.228  Oct 13, 2026
+12:52:43.239  RawSocket::GetApiVersion :: 1.1 <ok>
+12:52:43.247  RawSocket::ShutdownService :: ok
+12:52:43.256  RawSocket::CreateSocket :: ok
+12:52:43.264  RawSocket::DestroySocket :: ok
+12:52:43.272  RawSocket::SendPacket :: ok
+12:52:43.280  RawSocket::SendPacketLen :: ok
+12:52:43.290  RawSocket::SetEthernetHeader :: ok
+12:52:43.298  RawSocket::SetPacketFilter :: ok
+12:52:43.306  socket [event:0] checkpoint! all callbacks assigned!
+12:52:43.314  socket [event:0] checkpoint! socket transmit handler initialized!
+12:52:43.320  socket [event:0] receive handler object initialization successful!
+12:52:43.329  socket [event:0] global socket receive handler initialization successful!
+12:52:43.337  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:52:43.344  socket [event:0] filter compilation: successful
+12:52:43.351  socket [event:0] filter registration successful! auto filter resumed!
+12:52:43.358  socket [event:0] socket registration successful!
+12:52:43.365  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:52:43.372  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:52:43.380  socket initialized!
+12:52:43.386  socket handle address: 0000015611EF91E0
+12:52:43.392  Starting system...
+12:52:43.399  ok!
+12:52:43.406  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:52:43.414  checking controller boards...
+12:52:43.421  board: 2 ok!
+12:52:43.429  board: 1 ok!
+12:52:43.436  Setting Channel: 1 specifications...
+12:52:43.444  ok!
+12:52:43.451  Setting Channel: 1 configurations...
+12:52:43.458  ok!
+12:52:43.466  Setting raw-socket header for ctlr board...
+12:52:43.472  ok!
+12:52:43.481  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:52:43.487  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:52:43.494  socket [event:0] filter compilation: successful
+12:52:43.502  socket [event:0] filter registration successful! auto filter resumed!
+12:52:43.509  active channel = 1
+12:52:46.003  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:52:46.004  initializing meter [FL8508A]!
+12:52:46.011  Meter: Initialization complete!
+12:52:46.018  connecting to meter at gpib address 1...
+12:52:46.025  meter identity: 8508A 431874115
+12:52:46.032  meter ping process started ok!
+12:52:46.038  meter connected!
+12:52:46.043  meter setting mode to Voltage::DC...
+12:52:46.050  ok!
+12:52:46.057  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:52:46.063  initializing meter [FL8508A]!
+12:52:46.069  Meter: Initialization complete!
+12:52:46.077  connecting to meter at gpib address 2...
+12:52:46.081  meter identity: 8508A 431874139
+12:52:46.089  meter ping process started ok!
+12:52:46.095  meter connected!
+12:52:46.101  meter setting mode to Voltage::DC...
+12:52:46.106  ok!
+12:52:46.113  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:52:54.281  socket [event:0] unregistering socket...
+12:52:54.282  socket [event:1] ok!
+12:52:54.290  Tester: engine closed
+12:52:54.297  meter terminating ping process...
+12:52:54.563  meter ping process termination complete!
+12:52:54.564  meter terminating ping process...
+12:52:54.828  meter ping process termination complete!
+
+==== AutoCalv2.exe started 2026-11-11 12:53:46 ====
+12:53:46.574  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:53:46.583  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:53:46.599  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:53:48.290  Calibration: starting the tester engine...
+12:53:48.450  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:53:48.469  loading dll <MacTest32Cal.dll>, Compiled:
+12:53:48.470  Nov 04, 2026
+12:53:48.476  loading function::SetEventHandler ...
+12:53:48.483  ok!
+12:53:48.489  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:53:48.494  loading function::GetSystemName ...
+12:53:48.500  ok!
+12:53:48.508  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:53:48.512  loading function::GetSystemNameEx ...
+12:53:48.518  ok!
+12:53:48.526  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:53:48.531  loading function::InitializeSystem ...
+12:53:48.539  ok!
+12:53:48.547  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:53:48.556  loading function::CloseSystem ...
+12:53:48.563  ok!
+12:53:48.573  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:53:48.581  loading function::SetActiveChan ...
+12:53:48.588  ok!
+12:53:48.597  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:53:48.605  loading function::GetActiveChan ...
+12:53:48.612  ok!
+12:53:48.620  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:53:48.627  loading function::GetChanSpec ...
+12:53:48.633  ok!
+12:53:48.642  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:53:48.648  loading function::SetOutput ...
+12:53:48.654  ok!
+12:53:48.663  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:53:48.669  loading function::PollChannels ...
+12:53:48.675  ok!
+12:53:48.685  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:53:48.692  loading function::CheckChannel ...
+12:53:48.698  ok!
+12:53:48.704  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:53:48.710  loading function::StopChannel ...
+12:53:48.716  ok!
+12:53:48.723  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:53:48.731  loading function::StopChannels ...
+12:53:48.738  ok!
+12:53:48.746  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:53:48.751  loading function::DownloadBoard ...
+12:53:48.758  ok!
+12:53:48.765  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:53:48.772  loading function::DownloadChannel ...
+12:53:48.779  ok!
+12:53:48.787  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:53:48.794  loading function::StartChannel ...
+12:53:48.801  ok!
+12:53:48.809  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:53:48.815  loading function::GetChannelCurrent ...
+12:53:48.821  ok!
+12:53:48.828  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:53:48.836  loading function::CheckDataUpdate ...
+12:53:48.842  ok!
+12:53:48.849  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:53:48.855  loading function::ResetCalibration ...
+12:53:48.861  ok!
+12:53:48.868  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:53:48.874  loading function::UpdateCalibrationData ...
+12:53:48.880  ok!
+12:53:48.887  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:53:48.893  loading function::DownloadChannelCalibration ...
+12:53:48.899  ok!
+12:53:48.906  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:53:48.914  loading function::SystemStatus ...
+12:53:48.920  ok!
+12:53:48.927  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:53:48.933  loading function::GetCtlrDownloadStatus ...
+12:53:48.939  ok!
+12:53:48.947  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:53:48.954  loading function::SetCtlrMode ...
+12:53:48.961  ok!
+12:53:48.969  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:53:48.978  loading function::SetAuxiliaryBoard ...
+12:53:48.984  ok!
+12:53:48.991  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:53:48.998  loading function::SetAuxiliaryPanel ...
+12:53:49.004  ok!
+12:53:49.012  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:53:49.018  loading function::DownloadAuxiliaryBoard ...
+12:53:49.023  ok!
+12:53:49.032  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:53:49.039  loading function::GetAuxBoardData ...
+12:53:49.045  ok!
+12:53:49.053  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:53:49.059  loading function::GetAuxPanelData ...
+12:53:49.066  ok!
+12:53:49.073  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:53:49.079  loading function::EnableAuxEmulation ...
+12:53:49.087  ok!
+12:53:49.095  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:53:49.103  loading function::EmulateSetpoint ...
+12:53:49.108  ok!
+12:53:49.116  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:53:49.123  loading function::GetNetStats ...
+12:53:49.129  ok!
+12:53:49.136  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:53:49.143  loading function::GetEngineTiming ...
+12:53:49.149  ok!
+12:53:49.156  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:53:49.163  loading function::SetEngineTiming ...
+12:53:49.169  ok!
+12:53:49.177  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:53:49.183  loading function::SilenceToggle ...
+12:53:49.189  ok!
+12:53:49.196  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:53:49.204  Tester: MacTest32Cal.dll loaded
+12:53:49.213   | initializing network...
+12:53:49.217  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:53:49.225  RS.Create(...)| Path: RawSocket.dll, Handle: 140705405140992, Compiled:
+12:53:49.231  Oct 13, 2026
+12:53:49.242  RawSocket::GetApiVersion :: 1.1 <ok>
+12:53:49.248  RawSocket::ShutdownService :: ok
+12:53:49.254  RawSocket::CreateSocket :: ok
+12:53:49.260  RawSocket::DestroySocket :: ok
+12:53:49.266  RawSocket::SendPacket :: ok
+12:53:49.274  RawSocket::SendPacketLen :: ok
+12:53:49.280  RawSocket::SetEthernetHeader :: ok
+12:53:49.289  RawSocket::SetPacketFilter :: ok
+12:53:49.295  socket [event:0] checkpoint! all callbacks assigned!
+12:53:49.301  socket [event:0] checkpoint! socket transmit handler initialized!
+12:53:49.308  socket [event:0] receive handler object initialization successful!
+12:53:49.314  socket [event:0] global socket receive handler initialization successful!
+12:53:49.324  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:53:49.331  socket [event:0] filter compilation: successful
+12:53:49.339  socket [event:0] filter registration successful! auto filter resumed!
+12:53:49.345  socket [event:0] socket registration successful!
+12:53:49.353  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:53:49.359  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:53:49.365  socket initialized!
+12:53:49.371  socket handle address: 000002750BF91920
+12:53:49.377  Starting system...
+12:53:49.384  ok!
+12:53:49.392  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:53:49.399  checking controller boards...
+12:53:49.406  board: 2 ok!
+12:53:49.416  board: 1 ok!
+12:53:49.423  Setting Channel: 1 specifications...
+12:53:49.428  ok!
+12:53:49.436  Setting Channel: 1 configurations...
+12:53:49.441  ok!
+12:53:49.448  Setting raw-socket header for ctlr board...
+12:53:49.454  ok!
+12:53:49.460  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:53:49.466  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:53:49.474  socket [event:0] filter compilation: successful
+12:53:49.480  socket [event:0] filter registration successful! auto filter resumed!
+12:53:49.485  active channel = 1
+12:53:51.975  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:53:51.977  initializing meter [FL8508A]!
+12:53:51.985  Meter: Initialization complete!
+12:53:51.992  connecting to meter at gpib address 1...
+12:53:51.999  meter identity: 8508A 431874115
+12:53:52.006  meter ping process started ok!
+12:53:52.013  meter connected!
+12:53:52.020  meter setting mode to Voltage::DC...
+12:53:52.025  ok!
+12:53:52.032  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:53:52.038  initializing meter [FL8508A]!
+12:53:52.045  Meter: Initialization complete!
+12:53:52.052  connecting to meter at gpib address 2...
+12:53:52.059  meter identity: 8508A 431874139
+12:53:52.065  meter ping process started ok!
+12:53:52.070  meter connected!
+12:53:52.077  meter setting mode to Voltage::DC...
+12:53:52.082  ok!
+12:53:52.090  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:54:01.386  socket [event:0] unregistering socket...
+12:54:01.387  socket [event:1] ok!
+12:54:01.396  Tester: engine closed
+12:54:01.403  meter terminating ping process...
+12:54:01.666  meter ping process termination complete!
+12:54:01.667  meter terminating ping process...
+12:54:01.930  meter ping process termination complete!
+
+==== AutoCalv2.exe started 2026-11-11 12:54:03 ====
+12:54:03.560  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:54:03.568  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:54:03.583  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:54:06.754  Calibration: starting the tester engine...
+12:54:06.911  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:54:06.929  loading dll <MacTest32Cal.dll>, Compiled:
+12:54:06.930  Nov 04, 2026
+12:54:06.939  loading function::SetEventHandler ...
+12:54:06.944  ok!
+12:54:06.949  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:54:06.955  loading function::GetSystemName ...
+12:54:06.961  ok!
+12:54:06.969  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:54:06.973  loading function::GetSystemNameEx ...
+12:54:06.978  ok!
+12:54:06.987  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:54:06.991  loading function::InitializeSystem ...
+12:54:06.996  ok!
+12:54:07.003  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:54:07.009  loading function::CloseSystem ...
+12:54:07.014  ok!
+12:54:07.022  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:54:07.027  loading function::SetActiveChan ...
+12:54:07.033  ok!
+12:54:07.040  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:54:07.046  loading function::GetActiveChan ...
+12:54:07.051  ok!
+12:54:07.059  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:54:07.067  loading function::GetChanSpec ...
+12:54:07.071  ok!
+12:54:07.080  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:54:07.085  loading function::SetOutput ...
+12:54:07.091  ok!
+12:54:07.098  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:54:07.104  loading function::PollChannels ...
+12:54:07.110  ok!
+12:54:07.117  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:54:07.123  loading function::CheckChannel ...
+12:54:07.129  ok!
+12:54:07.137  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:54:07.143  loading function::StopChannel ...
+12:54:07.149  ok!
+12:54:07.156  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:54:07.162  loading function::StopChannels ...
+12:54:07.168  ok!
+12:54:07.176  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:54:07.182  loading function::DownloadBoard ...
+12:54:07.188  ok!
+12:54:07.195  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:54:07.202  loading function::DownloadChannel ...
+12:54:07.208  ok!
+12:54:07.215  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:54:07.222  loading function::StartChannel ...
+12:54:07.228  ok!
+12:54:07.235  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:54:07.242  loading function::GetChannelCurrent ...
+12:54:07.248  ok!
+12:54:07.257  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:54:07.264  loading function::CheckDataUpdate ...
+12:54:07.271  ok!
+12:54:07.278  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:54:07.286  loading function::ResetCalibration ...
+12:54:07.293  ok!
+12:54:07.300  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:54:07.307  loading function::UpdateCalibrationData ...
+12:54:07.314  ok!
+12:54:07.321  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:54:07.328  loading function::DownloadChannelCalibration ...
+12:54:07.334  ok!
+12:54:07.342  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:54:07.349  loading function::SystemStatus ...
+12:54:07.356  ok!
+12:54:07.363  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:54:07.370  loading function::GetCtlrDownloadStatus ...
+12:54:07.376  ok!
+12:54:07.384  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:54:07.392  loading function::SetCtlrMode ...
+12:54:07.398  ok!
+12:54:07.405  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:54:07.413  loading function::SetAuxiliaryBoard ...
+12:54:07.419  ok!
+12:54:07.427  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:54:07.433  loading function::SetAuxiliaryPanel ...
+12:54:07.439  ok!
+12:54:07.447  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:54:07.454  loading function::DownloadAuxiliaryBoard ...
+12:54:07.461  ok!
+12:54:07.469  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:54:07.476  loading function::GetAuxBoardData ...
+12:54:07.484  ok!
+12:54:07.491  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:54:07.498  loading function::GetAuxPanelData ...
+12:54:07.505  ok!
+12:54:07.513  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:54:07.519  loading function::EnableAuxEmulation ...
+12:54:07.525  ok!
+12:54:07.533  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:54:07.540  loading function::EmulateSetpoint ...
+12:54:07.547  ok!
+12:54:07.554  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:54:07.562  loading function::GetNetStats ...
+12:54:07.569  ok!
+12:54:07.578  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:54:07.584  loading function::GetEngineTiming ...
+12:54:07.590  ok!
+12:54:07.599  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:54:07.606  loading function::SetEngineTiming ...
+12:54:07.612  ok!
+12:54:07.620  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:54:07.628  loading function::SilenceToggle ...
+12:54:07.635  ok!
+12:54:07.642  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:54:07.648  Tester: MacTest32Cal.dll loaded
+12:54:07.656   | initializing network...
+12:54:07.663  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:54:07.670  RS.Create(...)| Path: RawSocket.dll, Handle: 140705405140992, Compiled:
+12:54:07.677  Oct 13, 2026
+12:54:07.685  RawSocket::GetApiVersion :: 1.1 <ok>
+12:54:07.691  RawSocket::ShutdownService :: ok
+12:54:07.699  RawSocket::CreateSocket :: ok
+12:54:07.706  RawSocket::DestroySocket :: ok
+12:54:07.713  RawSocket::SendPacket :: ok
+12:54:07.720  RawSocket::SendPacketLen :: ok
+12:54:07.727  RawSocket::SetEthernetHeader :: ok
+12:54:07.735  RawSocket::SetPacketFilter :: ok
+12:54:07.743  socket [event:0] checkpoint! all callbacks assigned!
+12:54:07.751  socket [event:0] checkpoint! socket transmit handler initialized!
+12:54:07.758  socket [event:0] receive handler object initialization successful!
+12:54:07.766  socket [event:0] global socket receive handler initialization successful!
+12:54:07.773  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:54:07.779  socket [event:0] filter compilation: successful
+12:54:07.787  socket [event:0] filter registration successful! auto filter resumed!
+12:54:07.794  socket [event:0] socket registration successful!
+12:54:07.803  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:54:07.808  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:54:07.816  socket initialized!
+12:54:07.822  socket handle address: 000001D7BE8C8640
+12:54:07.830  Starting system...
+12:54:07.836  ok!
+12:54:07.844  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:54:07.850  checking controller boards...
+12:54:07.857  board: 2 ok!
+12:54:07.864  board: 1 ok!
+12:54:07.870  Setting Channel: 1 specifications...
+12:54:07.876  ok!
+12:54:07.888  Setting Channel: 1 configurations...
+12:54:07.894  ok!
+12:54:07.903  Setting raw-socket header for ctlr board...
+12:54:07.908  ok!
+12:54:07.915  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:54:07.922  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:54:07.929  socket [event:0] filter compilation: successful
+12:54:07.936  socket [event:0] filter registration successful! auto filter resumed!
+12:54:07.944  active channel = 1
+12:54:10.426  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:54:10.427  initializing meter [FL8508A]!
+12:54:10.435  Meter: Initialization complete!
+12:54:10.442  connecting to meter at gpib address 1...
+12:54:10.448  meter identity: 8508A 431874115
+12:54:10.456  meter ping process started ok!
+12:54:10.462  meter connected!
+12:54:10.468  meter setting mode to Voltage::DC...
+12:54:10.474  ok!
+12:54:10.482  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:54:10.488  initializing meter [FL8508A]!
+12:54:10.494  Meter: Initialization complete!
+12:54:10.500  connecting to meter at gpib address 2...
+12:54:10.507  meter identity: 8508A 431874139
+12:54:10.512  meter ping process started ok!
+12:54:10.519  meter connected!
+12:54:10.525  meter setting mode to Voltage::DC...
+12:54:10.530  ok!
+12:54:10.536  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:54:15.487  socket [event:0] unregistering socket...
+12:54:15.489  socket [event:1] ok!
+12:54:15.497  Tester: engine closed
+12:54:15.506  meter terminating ping process...
+12:54:15.769  meter ping process termination complete!
+12:54:15.770  meter terminating ping process...
+12:54:16.035  meter ping process termination complete!
+
+==== AutoCalv2.exe started 2026-11-11 12:54:18 ====
+12:54:18.897  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+12:54:18.905  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+12:54:18.919  shunt record blank :: nominal shunts seeded, not on the board until Write
+12:54:20.935  Calibration: starting the tester engine...
+12:54:21.095  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+12:54:21.115  loading dll <MacTest32Cal.dll>, Compiled:
+12:54:21.116  Nov 04, 2026
+12:54:21.125  loading function::SetEventHandler ...
+12:54:21.131  ok!
+12:54:21.139  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+12:54:21.147  loading function::GetSystemName ...
+12:54:21.153  ok!
+12:54:21.163  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+12:54:21.168  loading function::GetSystemNameEx ...
+12:54:21.174  ok!
+12:54:21.182  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+12:54:21.189  loading function::InitializeSystem ...
+12:54:21.196  ok!
+12:54:21.204  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+12:54:21.213  loading function::CloseSystem ...
+12:54:21.219  ok!
+12:54:21.226  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+12:54:21.232  loading function::SetActiveChan ...
+12:54:21.239  ok!
+12:54:21.246  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+12:54:21.253  loading function::GetActiveChan ...
+12:54:21.259  ok!
+12:54:21.267  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+12:54:21.273  loading function::GetChanSpec ...
+12:54:21.280  ok!
+12:54:21.287  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+12:54:21.294  loading function::SetOutput ...
+12:54:21.299  ok!
+12:54:21.306  Loading... FuncPtr(SetOutput) = 000000006E88D250
+12:54:21.313  loading function::PollChannels ...
+12:54:21.320  ok!
+12:54:21.327  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+12:54:21.335  loading function::CheckChannel ...
+12:54:21.343  ok!
+12:54:21.349  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+12:54:21.357  loading function::StopChannel ...
+12:54:21.364  ok!
+12:54:21.373  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+12:54:21.379  loading function::StopChannels ...
+12:54:21.385  ok!
+12:54:21.394  Loading... FuncPtr(StopChannels) = 000000006E88D410
+12:54:21.402  loading function::DownloadBoard ...
+12:54:21.409  ok!
+12:54:21.416  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+12:54:21.424  loading function::DownloadChannel ...
+12:54:21.431  ok!
+12:54:21.440  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+12:54:21.449  loading function::StartChannel ...
+12:54:21.455  ok!
+12:54:21.464  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+12:54:21.472  loading function::GetChannelCurrent ...
+12:54:21.479  ok!
+12:54:21.487  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+12:54:21.493  loading function::CheckDataUpdate ...
+12:54:21.501  ok!
+12:54:21.508  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+12:54:21.515  loading function::ResetCalibration ...
+12:54:21.521  ok!
+12:54:21.530  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+12:54:21.536  loading function::UpdateCalibrationData ...
+12:54:21.542  ok!
+12:54:21.551  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+12:54:21.558  loading function::DownloadChannelCalibration ...
+12:54:21.566  ok!
+12:54:21.576  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+12:54:21.586  loading function::SystemStatus ...
+12:54:21.592  ok!
+12:54:21.603  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+12:54:21.611  loading function::GetCtlrDownloadStatus ...
+12:54:21.620  ok!
+12:54:21.629  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+12:54:21.638  loading function::SetCtlrMode ...
+12:54:21.645  ok!
+12:54:21.653  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+12:54:21.663  loading function::SetAuxiliaryBoard ...
+12:54:21.670  ok!
+12:54:21.681  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+12:54:21.689  loading function::SetAuxiliaryPanel ...
+12:54:21.696  ok!
+12:54:21.704  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+12:54:21.712  loading function::DownloadAuxiliaryBoard ...
+12:54:21.720  ok!
+12:54:21.730  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+12:54:21.740  loading function::GetAuxBoardData ...
+12:54:21.747  ok!
+12:54:21.756  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+12:54:21.766  loading function::GetAuxPanelData ...
+12:54:21.773  ok!
+12:54:21.784  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+12:54:21.791  loading function::EnableAuxEmulation ...
+12:54:21.800  ok!
+12:54:21.811  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+12:54:21.817  loading function::EmulateSetpoint ...
+12:54:21.825  ok!
+12:54:21.835  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+12:54:21.843  loading function::GetNetStats ...
+12:54:21.851  ok!
+12:54:21.861  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+12:54:21.870  loading function::GetEngineTiming ...
+12:54:21.878  ok!
+12:54:21.889  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+12:54:21.902  loading function::SetEngineTiming ...
+12:54:21.908  ok!
+12:54:21.918  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+12:54:21.928  loading function::SilenceToggle ...
+12:54:21.935  ok!
+12:54:21.945  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+12:54:21.954  Tester: MacTest32Cal.dll loaded
+12:54:21.962   | initializing network...
+12:54:21.971  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+12:54:21.981  RS.Create(...)| Path: RawSocket.dll, Handle: 140705405140992, Compiled:
+12:54:21.988  Oct 13, 2026
+12:54:21.996  RawSocket::GetApiVersion :: 1.1 <ok>
+12:54:22.005  RawSocket::ShutdownService :: ok
+12:54:22.013  RawSocket::CreateSocket :: ok
+12:54:22.022  RawSocket::DestroySocket :: ok
+12:54:22.029  RawSocket::SendPacket :: ok
+12:54:22.037  RawSocket::SendPacketLen :: ok
+12:54:22.045  RawSocket::SetEthernetHeader :: ok
+12:54:22.052  RawSocket::SetPacketFilter :: ok
+12:54:22.060  socket [event:0] checkpoint! all callbacks assigned!
+12:54:22.068  socket [event:0] checkpoint! socket transmit handler initialized!
+12:54:22.075  socket [event:0] receive handler object initialization successful!
+12:54:22.082  socket [event:0] global socket receive handler initialization successful!
+12:54:22.090  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:54:22.097  socket [event:0] filter compilation: successful
+12:54:22.105  socket [event:0] filter registration successful! auto filter resumed!
+12:54:22.112  socket [event:0] socket registration successful!
+12:54:22.119  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+12:54:22.127  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+12:54:22.135  socket initialized!
+12:54:22.142  socket handle address: 000001F893348040
+12:54:22.150  Starting system...
+12:54:22.157  ok!
+12:54:22.166  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+12:54:22.172  checking controller boards...
+12:54:22.180  board: 2 ok!
+12:54:22.188  board: 1 ok!
+12:54:22.194  Setting Channel: 1 specifications...
+12:54:22.202  ok!
+12:54:22.211  Setting Channel: 1 configurations...
+12:54:22.217  ok!
+12:54:22.226  Setting raw-socket header for ctlr board...
+12:54:22.232  ok!
+12:54:22.240  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+12:54:22.248  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+12:54:22.255  socket [event:0] filter compilation: successful
+12:54:22.262  socket [event:0] filter registration successful! auto filter resumed!
+12:54:22.269  active channel = 1
+12:54:24.769  gpib gateway 192.168.126.216:1234 connected :: Prologix GPIB-ETHERNET Controller version 01.06.06.00
+12:54:24.770  initializing meter [FL8508A]!
+12:54:24.779  Meter: Initialization complete!
+12:54:24.787  connecting to meter at gpib address 1...
+12:54:24.798  meter identity: 8508A 431874115
+12:54:24.804  meter ping process started ok!
+12:54:24.812  meter connected!
+12:54:24.819  meter setting mode to Voltage::DC...
+12:54:24.826  ok!
+12:54:24.834  Fluke 8508A at GPIB address 1 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:54:24.842  initializing meter [FL8508A]!
+12:54:24.849  Meter: Initialization complete!
+12:54:24.863  connecting to meter at gpib address 2...
+12:54:24.870  meter identity: 8508A 431874139
+12:54:24.878  meter ping process started ok!
+12:54:24.887  meter connected!
+12:54:24.894  meter setting mode to Voltage::DC...
+12:54:24.900  ok!
+12:54:24.909  Fluke 8508A at GPIB address 2 :: DCV AUTO,FILT_OFF,RESL7,FAST_OFF,TWO_WR
+12:54:41.648  socket [event:0] unregistering socket...
+12:54:41.649  socket [event:1] ok!
+12:54:41.658  Tester: engine closed
+12:54:41.665  meter terminating ping process...
+12:54:41.926  meter ping process termination complete!
+12:54:41.927  meter terminating ping process...
+12:54:42.189  meter ping process termination complete!
+
+==== AutoCalv2.exe started 2026-11-11 15:45:54 ====
+15:45:54.571  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+15:45:54.579  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+15:45:54.593  shunt record blank :: nominal shunts seeded, not on the board until Write
+15:46:02.639  Calibration: starting the tester engine...
+15:46:02.807  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:46:03.717  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:46:03.717  loading dll <MacTest32Cal.dll>, Compiled:
+15:46:03.725  Nov 04, 2026
+15:46:03.732  loading function::SetEventHandler ...
+15:46:03.739  ok!
+15:46:03.746  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+15:46:03.755  loading function::GetSystemName ...
+15:46:03.759  ok!
+15:46:03.767  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+15:46:03.774  loading function::GetSystemNameEx ...
+15:46:03.780  ok!
+15:46:03.787  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+15:46:03.794  loading function::InitializeSystem ...
+15:46:03.802  ok!
+15:46:03.809  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+15:46:03.817  loading function::CloseSystem ...
+15:46:03.827  ok!
+15:46:03.838  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+15:46:03.846  loading function::SetActiveChan ...
+15:46:03.852  ok!
+15:46:03.859  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+15:46:03.865  loading function::GetActiveChan ...
+15:46:03.872  ok!
+15:46:03.880  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+15:46:03.888  loading function::GetChanSpec ...
+15:46:03.894  ok!
+15:46:03.902  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+15:46:03.910  loading function::SetOutput ...
+15:46:03.917  ok!
+15:46:03.925  Loading... FuncPtr(SetOutput) = 000000006E88D250
+15:46:03.933  loading function::PollChannels ...
+15:46:03.940  ok!
+15:46:03.948  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+15:46:03.955  loading function::CheckChannel ...
+15:46:03.963  ok!
+15:46:03.972  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+15:46:03.979  loading function::StopChannel ...
+15:46:03.988  ok!
+15:46:03.995  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+15:46:04.005  loading function::StopChannels ...
+15:46:04.010  ok!
+15:46:04.019  Loading... FuncPtr(StopChannels) = 000000006E88D410
+15:46:04.026  loading function::DownloadBoard ...
+15:46:04.034  ok!
+15:46:04.041  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+15:46:04.049  loading function::DownloadChannel ...
+15:46:04.055  ok!
+15:46:04.064  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+15:46:04.072  loading function::StartChannel ...
+15:46:04.079  ok!
+15:46:04.088  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+15:46:04.095  loading function::GetChannelCurrent ...
+15:46:04.102  ok!
+15:46:04.116  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+15:46:04.124  loading function::CheckDataUpdate ...
+15:46:04.132  ok!
+15:46:04.140  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+15:46:04.148  loading function::ResetCalibration ...
+15:46:04.155  ok!
+15:46:04.164  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+15:46:04.172  loading function::UpdateCalibrationData ...
+15:46:04.180  ok!
+15:46:04.189  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+15:46:04.197  loading function::DownloadChannelCalibration ...
+15:46:04.204  ok!
+15:46:04.212  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+15:46:04.221  loading function::SystemStatus ...
+15:46:04.229  ok!
+15:46:04.236  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+15:46:04.245  loading function::GetCtlrDownloadStatus ...
+15:46:04.252  ok!
+15:46:04.262  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+15:46:04.270  loading function::SetCtlrMode ...
+15:46:04.278  ok!
+15:46:04.287  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+15:46:04.295  loading function::SetAuxiliaryBoard ...
+15:46:04.303  ok!
+15:46:04.311  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+15:46:04.320  loading function::SetAuxiliaryPanel ...
+15:46:04.326  ok!
+15:46:04.336  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+15:46:04.344  loading function::DownloadAuxiliaryBoard ...
+15:46:04.352  ok!
+15:46:04.359  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+15:46:04.367  loading function::GetAuxBoardData ...
+15:46:04.374  ok!
+15:46:04.383  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+15:46:04.392  loading function::GetAuxPanelData ...
+15:46:04.399  ok!
+15:46:04.410  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+15:46:04.417  loading function::EnableAuxEmulation ...
+15:46:04.425  ok!
+15:46:04.434  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+15:46:04.442  loading function::EmulateSetpoint ...
+15:46:04.450  ok!
+15:46:04.459  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+15:46:04.467  loading function::GetNetStats ...
+15:46:04.475  ok!
+15:46:04.484  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+15:46:04.492  loading function::GetEngineTiming ...
+15:46:04.500  ok!
+15:46:04.509  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+15:46:04.517  loading function::SetEngineTiming ...
+15:46:04.527  ok!
+15:46:04.534  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+15:46:04.543  loading function::SilenceToggle ...
+15:46:04.551  ok!
+15:46:04.560  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+15:46:04.570  Tester: MacTest32Cal.dll loaded
+15:46:04.577   | initializing network...
+15:46:04.586  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:46:04.594  RS.Create(...)| Path: RawSocket.dll, Handle: 140705769259008, Compiled:
+15:46:04.603  Oct 13, 2026
+15:46:04.611  RawSocket::GetApiVersion :: 1.1 <ok>
+15:46:04.621  RawSocket::ShutdownService :: ok
+15:46:04.629  RawSocket::CreateSocket :: ok
+15:46:04.637  RawSocket::DestroySocket :: ok
+15:46:04.646  RawSocket::SendPacket :: ok
+15:46:04.655  RawSocket::SendPacketLen :: ok
+15:46:04.664  RawSocket::SetEthernetHeader :: ok
+15:46:04.671  RawSocket::SetPacketFilter :: ok
+15:46:04.680  socket [event:0] checkpoint! all callbacks assigned!
+15:46:04.688  socket [event:0] checkpoint! socket transmit handler initialized!
+15:46:04.697  socket [event:0] receive handler object initialization successful!
+15:46:04.705  socket [event:0] global socket receive handler initialization successful!
+15:46:04.712  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:46:04.721  socket [event:0] filter compilation: successful
+15:46:04.729  socket [event:0] filter registration successful! auto filter resumed!
+15:46:04.739  socket [event:0] socket registration successful!
+15:46:04.746  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:46:04.755  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:46:04.763  socket initialized!
+15:46:04.770  socket handle address: 00000278F71F7860
+15:46:04.778  Starting system...
+15:46:04.784  ok!
+15:46:04.794  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:46:04.801  checking controller boards...
+15:46:04.810  board: 2 ok!
+15:46:04.818  board: 1 ok!
+15:46:04.826  Setting Channel: 1 specifications...
+15:46:04.833  ok!
+15:46:04.841  Setting Channel: 1 configurations...
+15:46:04.848  ok!
+15:46:04.856  Setting raw-socket header for ctlr board...
+15:46:04.863  ok!
+15:46:04.871  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:46:04.879  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:46:04.888  socket [event:0] filter compilation: successful
+15:46:04.895  socket [event:0] filter registration successful! auto filter resumed!
+15:46:04.903  active channel = 1
+15:46:16.880  socket [event:0] unregistering socket...
+15:46:16.881  socket [event:1] ok!
+15:46:16.889  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-11 15:51:41 ====
+15:51:41.824  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+15:51:41.833  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+15:51:41.852  shunt record blank :: nominal shunts seeded, not on the board until Write
+15:51:43.492  Calibration: starting the tester engine...
+15:51:43.649  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:51:44.222  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:51:44.223  loading dll <MacTest32Cal.dll>, Compiled:
+15:51:44.230  Nov 04, 2026
+15:51:44.237  loading function::SetEventHandler ...
+15:51:44.243  ok!
+15:51:44.249  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+15:51:44.256  loading function::GetSystemName ...
+15:51:44.260  ok!
+15:51:44.267  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+15:51:44.273  loading function::GetSystemNameEx ...
+15:51:44.280  ok!
+15:51:44.289  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+15:51:44.296  loading function::InitializeSystem ...
+15:51:44.303  ok!
+15:51:44.311  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+15:51:44.318  loading function::CloseSystem ...
+15:51:44.323  ok!
+15:51:44.330  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+15:51:44.336  loading function::SetActiveChan ...
+15:51:44.342  ok!
+15:51:44.348  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+15:51:44.355  loading function::GetActiveChan ...
+15:51:44.361  ok!
+15:51:44.368  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+15:51:44.374  loading function::GetChanSpec ...
+15:51:44.380  ok!
+15:51:44.389  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+15:51:44.397  loading function::SetOutput ...
+15:51:44.402  ok!
+15:51:44.411  Loading... FuncPtr(SetOutput) = 000000006E88D250
+15:51:44.417  loading function::PollChannels ...
+15:51:44.424  ok!
+15:51:44.433  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+15:51:44.439  loading function::CheckChannel ...
+15:51:44.444  ok!
+15:51:44.452  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+15:51:44.460  loading function::StopChannel ...
+15:51:44.464  ok!
+15:51:44.472  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+15:51:44.479  loading function::StopChannels ...
+15:51:44.484  ok!
+15:51:44.491  Loading... FuncPtr(StopChannels) = 000000006E88D410
+15:51:44.497  loading function::DownloadBoard ...
+15:51:44.503  ok!
+15:51:44.510  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+15:51:44.517  loading function::DownloadChannel ...
+15:51:44.527  ok!
+15:51:44.539  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+15:51:44.546  loading function::StartChannel ...
+15:51:44.552  ok!
+15:51:44.560  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+15:51:44.567  loading function::GetChannelCurrent ...
+15:51:44.574  ok!
+15:51:44.581  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+15:51:44.587  loading function::CheckDataUpdate ...
+15:51:44.593  ok!
+15:51:44.601  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+15:51:44.608  loading function::ResetCalibration ...
+15:51:44.614  ok!
+15:51:44.624  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+15:51:44.632  loading function::UpdateCalibrationData ...
+15:51:44.640  ok!
+15:51:44.647  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+15:51:44.656  loading function::DownloadChannelCalibration ...
+15:51:44.663  ok!
+15:51:44.670  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+15:51:44.679  loading function::SystemStatus ...
+15:51:44.685  ok!
+15:51:44.693  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+15:51:44.701  loading function::GetCtlrDownloadStatus ...
+15:51:44.709  ok!
+15:51:44.717  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+15:51:44.725  loading function::SetCtlrMode ...
+15:51:44.732  ok!
+15:51:44.740  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+15:51:44.747  loading function::SetAuxiliaryBoard ...
+15:51:44.754  ok!
+15:51:44.761  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+15:51:44.769  loading function::SetAuxiliaryPanel ...
+15:51:44.776  ok!
+15:51:44.783  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+15:51:44.790  loading function::DownloadAuxiliaryBoard ...
+15:51:44.796  ok!
+15:51:44.805  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+15:51:44.812  loading function::GetAuxBoardData ...
+15:51:44.818  ok!
+15:51:44.827  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+15:51:44.836  loading function::GetAuxPanelData ...
+15:51:44.844  ok!
+15:51:44.853  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+15:51:44.860  loading function::EnableAuxEmulation ...
+15:51:44.865  ok!
+15:51:44.872  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+15:51:44.881  loading function::EmulateSetpoint ...
+15:51:44.887  ok!
+15:51:44.897  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+15:51:44.906  loading function::GetNetStats ...
+15:51:44.913  ok!
+15:51:44.921  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+15:51:44.928  loading function::GetEngineTiming ...
+15:51:44.936  ok!
+15:51:44.946  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+15:51:44.954  loading function::SetEngineTiming ...
+15:51:44.961  ok!
+15:51:44.969  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+15:51:44.976  loading function::SilenceToggle ...
+15:51:44.986  ok!
+15:51:44.993  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+15:51:45.001  Tester: MacTest32Cal.dll loaded
+15:51:45.008   | initializing network...
+15:51:45.016  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:51:45.023  RS.Create(...)| Path: RawSocket.dll, Handle: 140705769259008, Compiled:
+15:51:45.031  Oct 13, 2026
+15:51:45.038  RawSocket::GetApiVersion :: 1.1 <ok>
+15:51:45.045  RawSocket::ShutdownService :: ok
+15:51:45.055  RawSocket::CreateSocket :: ok
+15:51:45.062  RawSocket::DestroySocket :: ok
+15:51:45.070  RawSocket::SendPacket :: ok
+15:51:45.076  RawSocket::SendPacketLen :: ok
+15:51:45.088  RawSocket::SetEthernetHeader :: ok
+15:51:45.095  RawSocket::SetPacketFilter :: ok
+15:51:45.102  socket [event:0] checkpoint! all callbacks assigned!
+15:51:45.109  socket [event:0] checkpoint! socket transmit handler initialized!
+15:51:45.115  socket [event:0] receive handler object initialization successful!
+15:51:45.123  socket [event:0] global socket receive handler initialization successful!
+15:51:45.131  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:51:45.137  socket [event:0] filter compilation: successful
+15:51:45.145  socket [event:0] filter registration successful! auto filter resumed!
+15:51:45.158  socket [event:0] socket registration successful!
+15:51:45.167  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:51:45.174  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:51:45.180  socket initialized!
+15:51:45.187  socket handle address: 00000275991C61C0
+15:51:45.194  Starting system...
+15:51:45.201  ok!
+15:51:45.210  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:51:45.216  checking controller boards...
+15:51:45.226  board: 2 ok!
+15:51:45.232  board: 1 ok!
+15:51:45.239  Setting Channel: 1 specifications...
+15:51:45.245  ok!
+15:51:45.253  Setting Channel: 1 configurations...
+15:51:45.259  ok!
+15:51:45.267  Setting raw-socket header for ctlr board...
+15:51:45.277  ok!
+15:51:45.283  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:51:45.290  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:51:45.295  socket [event:0] filter compilation: successful
+15:51:45.304  socket [event:0] filter registration successful! auto filter resumed!
+15:51:45.310  active channel = 1
+15:52:25.631  socket [event:0] unregistering socket...
+15:52:25.634  socket [event:1] ok!
+15:52:25.641  Tester: engine closed
+15:53:51.278  Calibration: starting the tester engine...
+15:53:51.445  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:53:52.218  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:53:52.220   | initializing network...
+15:53:52.229  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:53:52.236  RS.Create(...)| Path: RawSocket.dll, Handle: 140704629456896, Compiled:
+15:53:52.242  Oct 13, 2026
+15:53:52.252  RawSocket::GetApiVersion :: 1.1 <ok>
+15:53:52.259  RawSocket::ShutdownService :: ok
+15:53:52.266  RawSocket::CreateSocket :: ok
+15:53:52.274  RawSocket::DestroySocket :: ok
+15:53:52.281  RawSocket::SendPacket :: ok
+15:53:52.290  RawSocket::SendPacketLen :: ok
+15:53:52.299  RawSocket::SetEthernetHeader :: ok
+15:53:52.306  RawSocket::SetPacketFilter :: ok
+15:53:52.314  socket [event:0] checkpoint! all callbacks assigned!
+15:53:52.321  socket [event:0] checkpoint! socket transmit handler initialized!
+15:53:52.332  socket [event:0] receive handler object initialization successful!
+15:53:52.340  socket [event:0] global socket receive handler initialization successful!
+15:53:52.349  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:53:52.358  socket [event:0] filter compilation: successful
+15:53:52.366  socket [event:0] filter registration successful! auto filter resumed!
+15:53:52.372  socket [event:0] socket registration successful!
+15:53:52.379  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:53:52.388  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:53:52.395  socket initialized!
+15:53:52.403  socket handle address: 00000275991BA3B0
+15:53:52.412  Starting system...
+15:53:52.420  ok!
+15:53:52.428  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:53:52.437  checking controller boards...
+15:53:52.444  board: 2 ok!
+15:53:52.451  board: 1 ok!
+15:53:52.458  Setting Channel: 1 specifications...
+15:53:52.464  ok!
+15:53:52.474  Setting Channel: 1 configurations...
+15:53:52.480  ok!
+15:53:52.488  Setting raw-socket header for ctlr board...
+15:53:52.496  ok!
+15:53:52.505  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:53:52.511  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:53:52.518  socket [event:0] filter compilation: successful
+15:53:52.524  socket [event:0] filter registration successful! auto filter resumed!
+15:53:52.531  active channel = 1
+15:53:54.764  Atmel-ICE connected, serial J42700070268, status OK
+15:53:54.765  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+15:53:55.123  socket [event:0] unregistering socket...
+15:53:55.124  socket [event:1] ok!
+15:53:55.131  Tester: engine closed
+15:54:21.679  Calibration: starting the tester engine...
+15:54:21.848  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:54:22.721  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:54:22.723   | initializing network...
+15:54:22.731  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:54:22.738  RS.Create(...)| Path: RawSocket.dll, Handle: 140705027719168, Compiled:
+15:54:22.743  Oct 13, 2026
+15:54:22.751  RawSocket::GetApiVersion :: 1.1 <ok>
+15:54:22.758  RawSocket::ShutdownService :: ok
+15:54:22.766  RawSocket::CreateSocket :: ok
+15:54:22.772  RawSocket::DestroySocket :: ok
+15:54:22.780  RawSocket::SendPacket :: ok
+15:54:22.786  RawSocket::SendPacketLen :: ok
+15:54:22.794  RawSocket::SetEthernetHeader :: ok
+15:54:22.801  RawSocket::SetPacketFilter :: ok
+15:54:22.808  socket [event:0] checkpoint! all callbacks assigned!
+15:54:22.814  socket [event:0] checkpoint! socket transmit handler initialized!
+15:54:22.821  socket [event:0] receive handler object initialization successful!
+15:54:22.827  socket [event:0] global socket receive handler initialization successful!
+15:54:22.836  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:54:22.842  socket [event:0] filter compilation: successful
+15:54:22.850  socket [event:0] filter registration successful! auto filter resumed!
+15:54:22.857  socket [event:0] socket registration successful!
+15:54:22.864  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:54:22.870  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:54:22.877  socket initialized!
+15:54:22.883  socket handle address: 000002759916E290
+15:54:22.890  Starting system...
+15:54:22.894  ok!
+15:54:22.901  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:54:22.914  checking controller boards...
+15:54:22.922  board: 2 ok!
+15:54:22.929  board: 1 ok!
+15:54:22.935  Setting Channel: 1 specifications...
+15:54:22.943  ok!
+15:54:22.948  Setting Channel: 1 configurations...
+15:54:22.954  ok!
+15:54:22.962  Setting raw-socket header for ctlr board...
+15:54:22.967  ok!
+15:54:22.975  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:54:22.982  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:54:22.988  socket [event:0] filter compilation: successful
+15:54:22.996  socket [event:0] filter registration successful! auto filter resumed!
+15:54:23.005  active channel = 1
+15:55:25.158  socket [event:0] unregistering socket...
+15:55:25.160  socket [event:1] ok!
+15:55:25.168  Tester: engine closed
+15:55:27.586  Calibration: starting the tester engine...
+15:55:27.738  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:55:28.717  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:55:28.719   | initializing network...
+15:55:28.728  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:55:28.733  RS.Create(...)| Path: RawSocket.dll, Handle: 140705233633280, Compiled:
+15:55:28.739  Oct 13, 2026
+15:55:28.750  RawSocket::GetApiVersion :: 1.1 <ok>
+15:55:28.754  RawSocket::ShutdownService :: ok
+15:55:28.761  RawSocket::CreateSocket :: ok
+15:55:28.768  RawSocket::DestroySocket :: ok
+15:55:28.773  RawSocket::SendPacket :: ok
+15:55:28.781  RawSocket::SendPacketLen :: ok
+15:55:28.786  RawSocket::SetEthernetHeader :: ok
+15:55:28.792  RawSocket::SetPacketFilter :: ok
+15:55:28.802  socket [event:0] checkpoint! all callbacks assigned!
+15:55:28.811  socket [event:0] checkpoint! socket transmit handler initialized!
+15:55:28.818  socket [event:0] receive handler object initialization successful!
+15:55:28.826  socket [event:0] global socket receive handler initialization successful!
+15:55:28.832  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:55:28.838  socket [event:0] filter compilation: successful
+15:55:28.844  socket [event:0] filter registration successful! auto filter resumed!
+15:55:28.851  socket [event:0] socket registration successful!
+15:55:28.858  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:55:28.863  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:55:28.870  socket initialized!
+15:55:28.875  socket handle address: 000002759916E290
+15:55:28.881  Starting system...
+15:55:28.889  ok!
+15:55:28.894  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:55:28.900  checking controller boards...
+15:55:28.905  board: 2 ok!
+15:55:28.913  board: 1 ok!
+15:55:28.918  Setting Channel: 1 specifications...
+15:55:28.925  ok!
+15:55:28.932  Setting Channel: 1 configurations...
+15:55:28.936  ok!
+15:55:28.944  Setting raw-socket header for ctlr board...
+15:55:28.951  ok!
+15:55:28.958  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:55:28.964  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:55:28.971  socket [event:0] filter compilation: successful
+15:55:28.978  socket [event:0] filter registration successful! auto filter resumed!
+15:55:28.986  active channel = 1
+15:55:49.379  socket [event:0] unregistering socket...
+15:55:49.380  socket [event:1] ok!
+15:55:49.389  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-11 16:01:23 ====
+16:01:23.100  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:01:23.107  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\Win64\Release\AutoCalv2.shunts.ini
+16:01:23.121  shunt record blank :: nominal shunts seeded, not on the board until Write
+16:01:25.501  Calibration: starting the tester engine...
+16:01:25.653  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:01:26.230  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+16:01:26.232  loading dll <MacTest32Cal.dll>, Compiled:
+16:01:26.239  Nov 04, 2026
+16:01:26.245  loading function::SetEventHandler ...
+16:01:26.250  ok!
+16:01:26.256  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:01:26.265  loading function::GetSystemName ...
+16:01:26.267  ok!
+16:01:26.274  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:01:26.280  loading function::GetSystemNameEx ...
+16:01:26.284  ok!
+16:01:26.291  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:01:26.298  loading function::InitializeSystem ...
+16:01:26.303  ok!
+16:01:26.311  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:01:26.315  loading function::CloseSystem ...
+16:01:26.320  ok!
+16:01:26.327  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:01:26.334  loading function::SetActiveChan ...
+16:01:26.340  ok!
+16:01:26.347  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:01:26.351  loading function::GetActiveChan ...
+16:01:26.357  ok!
+16:01:26.365  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:01:26.374  loading function::GetChanSpec ...
+16:01:26.380  ok!
+16:01:26.386  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:01:26.392  loading function::SetOutput ...
+16:01:26.398  ok!
+16:01:26.405  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:01:26.411  loading function::PollChannels ...
+16:01:26.415  ok!
+16:01:26.421  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:01:26.428  loading function::CheckChannel ...
+16:01:26.436  ok!
+16:01:26.441  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:01:26.450  loading function::StopChannel ...
+16:01:26.455  ok!
+16:01:26.463  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:01:26.469  loading function::StopChannels ...
+16:01:26.475  ok!
+16:01:26.482  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:01:26.489  loading function::DownloadBoard ...
+16:01:26.495  ok!
+16:01:26.503  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:01:26.510  loading function::DownloadChannel ...
+16:01:26.515  ok!
+16:01:26.525  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:01:26.531  loading function::StartChannel ...
+16:01:26.537  ok!
+16:01:26.544  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:01:26.551  loading function::GetChannelCurrent ...
+16:01:26.557  ok!
+16:01:26.564  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:01:26.570  loading function::CheckDataUpdate ...
+16:01:26.578  ok!
+16:01:26.584  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:01:26.591  loading function::ResetCalibration ...
+16:01:26.596  ok!
+16:01:26.603  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:01:26.610  loading function::UpdateCalibrationData ...
+16:01:26.615  ok!
+16:01:26.624  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:01:26.629  loading function::DownloadChannelCalibration ...
+16:01:26.634  ok!
+16:01:26.641  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:01:26.647  loading function::SystemStatus ...
+16:01:26.654  ok!
+16:01:26.661  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:01:26.669  loading function::GetCtlrDownloadStatus ...
+16:01:26.674  ok!
+16:01:26.682  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:01:26.689  loading function::SetCtlrMode ...
+16:01:26.695  ok!
+16:01:26.703  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:01:26.711  loading function::SetAuxiliaryBoard ...
+16:01:26.716  ok!
+16:01:26.724  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:01:26.730  loading function::SetAuxiliaryPanel ...
+16:01:26.737  ok!
+16:01:26.744  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:01:26.751  loading function::DownloadAuxiliaryBoard ...
+16:01:26.757  ok!
+16:01:26.765  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:01:26.773  loading function::GetAuxBoardData ...
+16:01:26.780  ok!
+16:01:26.787  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:01:26.794  loading function::GetAuxPanelData ...
+16:01:26.800  ok!
+16:01:26.810  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:01:26.816  loading function::EnableAuxEmulation ...
+16:01:26.824  ok!
+16:01:26.831  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:01:26.841  loading function::EmulateSetpoint ...
+16:01:26.847  ok!
+16:01:26.855  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:01:26.861  loading function::GetNetStats ...
+16:01:26.867  ok!
+16:01:26.876  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:01:26.884  loading function::GetEngineTiming ...
+16:01:26.890  ok!
+16:01:26.899  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:01:26.906  loading function::SetEngineTiming ...
+16:01:26.914  ok!
+16:01:26.921  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:01:26.928  loading function::SilenceToggle ...
+16:01:26.934  ok!
+16:01:26.943  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:01:26.949  Tester: MacTest32Cal.dll loaded
+16:01:26.956   | initializing network...
+16:01:26.965  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:01:26.972  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231011840, Compiled:
+16:01:26.981  Oct 13, 2026
+16:01:26.989  RawSocket::GetApiVersion :: 1.1 <ok>
+16:01:26.996  RawSocket::ShutdownService :: ok
+16:01:27.004  RawSocket::CreateSocket :: ok
+16:01:27.011  RawSocket::DestroySocket :: ok
+16:01:27.017  RawSocket::SendPacket :: ok
+16:01:27.024  RawSocket::SendPacketLen :: ok
+16:01:27.036  RawSocket::SetEthernetHeader :: ok
+16:01:27.043  RawSocket::SetPacketFilter :: ok
+16:01:27.050  socket [event:0] checkpoint! all callbacks assigned!
+16:01:27.056  socket [event:0] checkpoint! socket transmit handler initialized!
+16:01:27.062  socket [event:0] receive handler object initialization successful!
+16:01:27.068  socket [event:0] global socket receive handler initialization successful!
+16:01:27.077  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:01:27.084  socket [event:0] filter compilation: successful
+16:01:27.092  socket [event:0] filter registration successful! auto filter resumed!
+16:01:27.099  socket [event:0] socket registration successful!
+16:01:27.106  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:01:27.113  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:01:27.119  socket initialized!
+16:01:27.127  socket handle address: 00000159527CB4B0
+16:01:27.135  Starting system...
+16:01:27.141  ok!
+16:01:27.148  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:01:27.154  checking controller boards...
+16:01:27.160  board: 2 ok!
+16:01:27.166  board: 1 ok!
+16:01:27.174  Setting Channel: 1 specifications...
+16:01:27.179  ok!
+16:01:27.186  Setting Channel: 1 configurations...
+16:01:27.191  ok!
+16:01:27.201  Setting raw-socket header for ctlr board...
+16:01:27.206  ok!
+16:01:27.214  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:01:27.221  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:01:27.228  socket [event:0] filter compilation: successful
+16:01:27.234  socket [event:0] filter registration successful! auto filter resumed!
+16:01:27.240  active channel = 1
+16:03:04.575  socket [event:0] unregistering socket...
+16:03:04.575  socket [event:1] ok!
+16:03:04.584  Tester: engine closed
+16:03:33.901  Calibration: starting the tester engine...
+16:03:34.064  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:03:34.721  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+16:03:34.722   | initializing network...
+16:03:34.730  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:03:34.738  RS.Create(...)| Path: RawSocket.dll, Handle: 140705230028800, Compiled:
+16:03:34.745  Oct 13, 2026
+16:03:34.754  RawSocket::GetApiVersion :: 1.1 <ok>
+16:03:34.762  RawSocket::ShutdownService :: ok
+16:03:34.771  RawSocket::CreateSocket :: ok
+16:03:34.780  RawSocket::DestroySocket :: ok
+16:03:34.786  RawSocket::SendPacket :: ok
+16:03:34.793  RawSocket::SendPacketLen :: ok
+16:03:34.801  RawSocket::SetEthernetHeader :: ok
+16:03:34.808  RawSocket::SetPacketFilter :: ok
+16:03:34.814  socket [event:0] checkpoint! all callbacks assigned!
+16:03:34.823  socket [event:0] checkpoint! socket transmit handler initialized!
+16:03:34.830  socket [event:0] receive handler object initialization successful!
+16:03:34.836  socket [event:0] global socket receive handler initialization successful!
+16:03:34.842  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:03:34.849  socket [event:0] filter compilation: successful
+16:03:34.855  socket [event:0] filter registration successful! auto filter resumed!
+16:03:34.860  socket [event:0] socket registration successful!
+16:03:34.866  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:03:34.871  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:03:34.878  socket initialized!
+16:03:34.886  socket handle address: 00000159527EAC30
+16:03:34.891  Starting system...
+16:03:34.897  ok!
+16:03:34.905  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:03:34.910  checking controller boards...
+16:03:34.915  board: 2 ok!
+16:03:34.922  board: 1 ok!
+16:03:34.928  Setting Channel: 1 specifications...
+16:03:34.934  ok!
+16:03:34.942  Setting Channel: 1 configurations...
+16:03:34.947  ok!
+16:03:34.953  Setting raw-socket header for ctlr board...
+16:03:34.961  ok!
+16:03:34.968  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:03:34.973  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:03:34.979  socket [event:0] filter compilation: successful
+16:03:34.988  socket [event:0] filter registration successful! auto filter resumed!
+16:03:34.995  active channel = 1
+16:08:56.221  socket [event:0] unregistering socket...
+16:08:56.222  socket [event:1] ok!
+16:08:56.231  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-11 16:32:13 ====
+16:32:13.555  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:32:13.563  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:32:13.579  shunt record blank :: nominal shunts seeded, not on the board until Write
+
+==== AutoCalv2.exe started 2026-11-11 17:26:42 ====
+17:26:42.521  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:26:42.528  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:26:42.549  shunt record blank :: nominal shunts seeded, not on the board until Write
+17:26:44.064  Calibration: starting the tester engine...
+17:26:44.323  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+17:26:45.271  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+17:26:45.272  loading dll <MacTest32Cal.dll>, Compiled:
+17:26:45.280  Nov 04, 2026
+17:26:45.286  loading function::SetEventHandler ...
+17:26:45.293  ok!
+17:26:45.299  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+17:26:45.309  loading function::GetSystemName ...
+17:26:45.312  ok!
+17:26:45.319  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+17:26:45.326  loading function::GetSystemNameEx ...
+17:26:45.331  ok!
+17:26:45.338  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+17:26:45.344  loading function::InitializeSystem ...
+17:26:45.351  ok!
+17:26:45.359  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+17:26:45.366  loading function::CloseSystem ...
+17:26:45.372  ok!
+17:26:45.381  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+17:26:45.387  loading function::SetActiveChan ...
+17:26:45.392  ok!
+17:26:45.400  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+17:26:45.406  loading function::GetActiveChan ...
+17:26:45.413  ok!
+17:26:45.420  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+17:26:45.427  loading function::GetChanSpec ...
+17:26:45.432  ok!
+17:26:45.438  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+17:26:45.449  loading function::SetOutput ...
+17:26:45.454  ok!
+17:26:45.462  Loading... FuncPtr(SetOutput) = 000000006E88D250
+17:26:45.468  loading function::PollChannels ...
+17:26:45.474  ok!
+17:26:45.481  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+17:26:45.487  loading function::CheckChannel ...
+17:26:45.495  ok!
+17:26:45.504  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+17:26:45.509  loading function::StopChannel ...
+17:26:45.516  ok!
+17:26:45.524  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+17:26:45.530  loading function::StopChannels ...
+17:26:45.537  ok!
+17:26:45.544  Loading... FuncPtr(StopChannels) = 000000006E88D410
+17:26:45.552  loading function::DownloadBoard ...
+17:26:45.558  ok!
+17:26:45.568  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+17:26:45.574  loading function::DownloadChannel ...
+17:26:45.580  ok!
+17:26:45.588  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+17:26:45.595  loading function::StartChannel ...
+17:26:45.601  ok!
+17:26:45.609  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+17:26:45.618  loading function::GetChannelCurrent ...
+17:26:45.623  ok!
+17:26:45.631  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+17:26:45.642  loading function::CheckDataUpdate ...
+17:26:45.649  ok!
+17:26:45.658  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+17:26:45.665  loading function::ResetCalibration ...
+17:26:45.672  ok!
+17:26:45.679  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+17:26:45.686  loading function::UpdateCalibrationData ...
+17:26:45.694  ok!
+17:26:45.701  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+17:26:45.709  loading function::DownloadChannelCalibration ...
+17:26:45.715  ok!
+17:26:45.724  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+17:26:45.732  loading function::SystemStatus ...
+17:26:45.738  ok!
+17:26:45.745  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+17:26:45.753  loading function::GetCtlrDownloadStatus ...
+17:26:45.760  ok!
+17:26:45.768  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+17:26:45.775  loading function::SetCtlrMode ...
+17:26:45.781  ok!
+17:26:45.792  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+17:26:45.800  loading function::SetAuxiliaryBoard ...
+17:26:45.807  ok!
+17:26:45.816  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+17:26:45.823  loading function::SetAuxiliaryPanel ...
+17:26:45.829  ok!
+17:26:45.837  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+17:26:45.848  loading function::DownloadAuxiliaryBoard ...
+17:26:45.854  ok!
+17:26:45.862  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+17:26:45.870  loading function::GetAuxBoardData ...
+17:26:45.877  ok!
+17:26:45.885  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+17:26:45.892  loading function::GetAuxPanelData ...
+17:26:45.899  ok!
+17:26:45.909  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+17:26:45.916  loading function::EnableAuxEmulation ...
+17:26:45.924  ok!
+17:26:45.931  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+17:26:45.939  loading function::EmulateSetpoint ...
+17:26:45.945  ok!
+17:26:45.953  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+17:26:45.960  loading function::GetNetStats ...
+17:26:45.967  ok!
+17:26:45.975  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+17:26:45.982  loading function::GetEngineTiming ...
+17:26:45.989  ok!
+17:26:46.001  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+17:26:46.009  loading function::SetEngineTiming ...
+17:26:46.016  ok!
+17:26:46.024  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+17:26:46.030  loading function::SilenceToggle ...
+17:26:46.038  ok!
+17:26:46.047  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+17:26:46.055  Tester: MacTest32Cal.dll loaded
+17:26:46.062   | initializing network...
+17:26:46.069  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+17:26:46.077  RS.Create(...)| Path: RawSocket.dll, Handle: 140705769259008, Compiled:
+17:26:46.085  Oct 13, 2026
+17:26:46.093  RawSocket::GetApiVersion :: 1.1 <ok>
+17:26:46.101  RawSocket::ShutdownService :: ok
+17:26:46.109  RawSocket::CreateSocket :: ok
+17:26:46.119  RawSocket::DestroySocket :: ok
+17:26:46.128  RawSocket::SendPacket :: ok
+17:26:46.138  RawSocket::SendPacketLen :: ok
+17:26:46.145  RawSocket::SetEthernetHeader :: ok
+17:26:46.154  RawSocket::SetPacketFilter :: ok
+17:26:46.163  socket [event:0] checkpoint! all callbacks assigned!
+17:26:46.171  socket [event:0] checkpoint! socket transmit handler initialized!
+17:26:46.181  socket [event:0] receive handler object initialization successful!
+17:26:46.190  socket [event:0] global socket receive handler initialization successful!
+17:26:46.198  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+17:26:46.205  socket [event:0] filter compilation: successful
+17:26:46.213  socket [event:0] filter registration successful! auto filter resumed!
+17:26:46.221  socket [event:0] socket registration successful!
+17:26:46.229  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+17:26:46.236  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+17:26:46.244  socket initialized!
+17:26:46.253  socket handle address: 00000244056B2470
+17:26:46.261  Starting system...
+17:26:46.269  ok!
+17:26:46.276  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+17:26:46.282  checking controller boards...
+17:26:46.290  board: 2 ok!
+17:26:46.298  board: 1 ok!
+17:26:46.306  Setting Channel: 1 specifications...
+17:26:46.313  ok!
+17:26:46.322  Setting Channel: 1 configurations...
+17:26:46.329  ok!
+17:26:46.338  Setting raw-socket header for ctlr board...
+17:26:46.346  ok!
+17:26:46.353  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+17:26:46.360  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+17:26:46.366  socket [event:0] filter compilation: successful
+17:26:46.373  socket [event:0] filter registration successful! auto filter resumed!
+17:26:46.382  active channel = 1
+17:26:50.906  socket [event:0] unregistering socket...
+17:26:50.907  socket [event:1] ok!
+17:26:50.914  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-11 17:30:18 ====
+17:30:18.451  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:30:18.460  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:30:18.482  shunt record blank :: nominal shunts seeded, not on the board until Write
+17:30:23.620  Calibration: starting the tester engine...
+17:30:23.785  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+17:30:24.763  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+17:30:24.764  loading dll <MacTest32Cal.dll>, Compiled:
+17:30:24.772  Nov 04, 2026
+17:30:24.779  loading function::SetEventHandler ...
+17:30:24.786  ok!
+17:30:24.793  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+17:30:24.803  loading function::GetSystemName ...
+17:30:24.809  ok!
+17:30:24.817  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+17:30:24.824  loading function::GetSystemNameEx ...
+17:30:24.831  ok!
+17:30:24.838  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+17:30:24.849  loading function::InitializeSystem ...
+17:30:24.856  ok!
+17:30:24.864  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+17:30:24.870  loading function::CloseSystem ...
+17:30:24.877  ok!
+17:30:24.886  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+17:30:24.894  loading function::SetActiveChan ...
+17:30:24.901  ok!
+17:30:24.909  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+17:30:24.916  loading function::GetActiveChan ...
+17:30:24.923  ok!
+17:30:24.932  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+17:30:24.940  loading function::GetChanSpec ...
+17:30:24.947  ok!
+17:30:24.955  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+17:30:24.961  loading function::SetOutput ...
+17:30:24.967  ok!
+17:30:24.975  Loading... FuncPtr(SetOutput) = 000000006E88D250
+17:30:24.982  loading function::PollChannels ...
+17:30:24.988  ok!
+17:30:24.997  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+17:30:25.005  loading function::CheckChannel ...
+17:30:25.015  ok!
+17:30:25.022  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+17:30:25.029  loading function::StopChannel ...
+17:30:25.037  ok!
+17:30:25.047  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+17:30:25.054  loading function::StopChannels ...
+17:30:25.061  ok!
+17:30:25.069  Loading... FuncPtr(StopChannels) = 000000006E88D410
+17:30:25.076  loading function::DownloadBoard ...
+17:30:25.083  ok!
+17:30:25.092  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+17:30:25.100  loading function::DownloadChannel ...
+17:30:25.108  ok!
+17:30:25.116  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+17:30:25.124  loading function::StartChannel ...
+17:30:25.131  ok!
+17:30:25.140  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+17:30:25.148  loading function::GetChannelCurrent ...
+17:30:25.156  ok!
+17:30:25.165  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+17:30:25.174  loading function::CheckDataUpdate ...
+17:30:25.180  ok!
+17:30:25.188  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+17:30:25.198  loading function::ResetCalibration ...
+17:30:25.204  ok!
+17:30:25.213  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+17:30:25.221  loading function::UpdateCalibrationData ...
+17:30:25.227  ok!
+17:30:25.235  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+17:30:25.244  loading function::DownloadChannelCalibration ...
+17:30:25.251  ok!
+17:30:25.259  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+17:30:25.269  loading function::SystemStatus ...
+17:30:25.274  ok!
+17:30:25.282  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+17:30:25.289  loading function::GetCtlrDownloadStatus ...
+17:30:25.297  ok!
+17:30:25.305  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+17:30:25.313  loading function::SetCtlrMode ...
+17:30:25.320  ok!
+17:30:25.330  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+17:30:25.338  loading function::SetAuxiliaryBoard ...
+17:30:25.346  ok!
+17:30:25.356  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+17:30:25.364  loading function::SetAuxiliaryPanel ...
+17:30:25.370  ok!
+17:30:25.379  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+17:30:25.386  loading function::DownloadAuxiliaryBoard ...
+17:30:25.394  ok!
+17:30:25.401  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+17:30:25.414  loading function::GetAuxBoardData ...
+17:30:25.420  ok!
+17:30:25.429  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+17:30:25.438  loading function::GetAuxPanelData ...
+17:30:25.446  ok!
+17:30:25.456  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+17:30:25.463  loading function::EnableAuxEmulation ...
+17:30:25.471  ok!
+17:30:25.481  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+17:30:25.491  loading function::EmulateSetpoint ...
+17:30:25.501  ok!
+17:30:25.511  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+17:30:25.521  loading function::GetNetStats ...
+17:30:25.529  ok!
+17:30:25.537  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+17:30:25.546  loading function::GetEngineTiming ...
+17:30:25.551  ok!
+17:30:25.563  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+17:30:25.572  loading function::SetEngineTiming ...
+17:30:25.580  ok!
+17:30:25.593  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+17:30:25.600  loading function::SilenceToggle ...
+17:30:25.609  ok!
+17:30:25.619  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+17:30:25.627  Tester: MacTest32Cal.dll loaded
+17:30:25.637   | initializing network...
+17:30:25.647  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+17:30:25.657  RS.Create(...)| Path: RawSocket.dll, Handle: 140705769259008, Compiled:
+17:30:25.664  Oct 13, 2026
+17:30:25.672  RawSocket::GetApiVersion :: 1.1 <ok>
+17:30:25.680  RawSocket::ShutdownService :: ok
+17:30:25.689  RawSocket::CreateSocket :: ok
+17:30:25.699  RawSocket::DestroySocket :: ok
+17:30:25.707  RawSocket::SendPacket :: ok
+17:30:25.715  RawSocket::SendPacketLen :: ok
+17:30:25.724  RawSocket::SetEthernetHeader :: ok
+17:30:25.732  RawSocket::SetPacketFilter :: ok
+17:30:25.739  socket [event:0] checkpoint! all callbacks assigned!
+17:30:25.747  socket [event:0] checkpoint! socket transmit handler initialized!
+17:30:25.757  socket [event:0] receive handler object initialization successful!
+17:30:25.765  socket [event:0] global socket receive handler initialization successful!
+17:30:25.772  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+17:30:25.780  socket [event:0] filter compilation: successful
+17:30:25.788  socket [event:0] filter registration successful! auto filter resumed!
+17:30:25.797  socket [event:0] socket registration successful!
+17:30:25.804  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+17:30:25.818  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+17:30:25.826  socket initialized!
+17:30:25.833  socket handle address: 000001D1425AD300
+17:30:25.843  Starting system...
+17:30:25.850  ok!
+17:30:25.860  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+17:30:25.868  checking controller boards...
+17:30:25.876  board: 2 ok!
+17:30:25.884  board: 1 ok!
+17:30:25.891  Setting Channel: 1 specifications...
+17:30:25.896  ok!
+17:30:25.904  Setting Channel: 1 configurations...
+17:30:25.912  ok!
+17:30:25.921  Setting raw-socket header for ctlr board...
+17:30:25.928  ok!
+17:30:25.936  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+17:30:25.944  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+17:30:25.952  socket [event:0] filter compilation: successful
+17:30:25.959  socket [event:0] filter registration successful! auto filter resumed!
+17:30:25.967  active channel = 1
+17:30:26.023  Atmel-ICE connected, serial J42700070268, status OK
+17:30:26.025  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+17:30:26.375  socket [event:0] unregistering socket...
+17:30:26.376  socket [event:1] ok!
+17:30:26.385  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 10:06:24 ====
+10:06:24.255  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+10:06:24.264  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+10:06:24.280  shunt record blank :: nominal shunts seeded, not on the board until Write
+
+==== AutoCalv2.exe started 2026-11-12 10:07:28 ====
+10:07:28.530  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+10:07:28.539  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+10:07:28.555  shunt record blank :: nominal shunts seeded, not on the board until Write
+10:07:35.813  Calibration: starting the tester engine...
+10:07:36.039  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+10:07:36.720  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+10:07:36.721  loading dll <MacTest32Cal.dll>, Compiled:
+10:07:36.727  Nov 04, 2026
+10:07:36.735  loading function::SetEventHandler ...
+10:07:36.740  ok!
+10:07:36.747  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+10:07:36.757  loading function::GetSystemName ...
+10:07:36.761  ok!
+10:07:36.768  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+10:07:36.774  loading function::GetSystemNameEx ...
+10:07:36.779  ok!
+10:07:36.787  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+10:07:36.794  loading function::InitializeSystem ...
+10:07:36.806  ok!
+10:07:36.814  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+10:07:36.819  loading function::CloseSystem ...
+10:07:36.826  ok!
+10:07:36.835  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+10:07:36.841  loading function::SetActiveChan ...
+10:07:36.847  ok!
+10:07:36.856  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+10:07:36.864  loading function::GetActiveChan ...
+10:07:36.870  ok!
+10:07:36.877  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+10:07:36.884  loading function::GetChanSpec ...
+10:07:36.889  ok!
+10:07:36.898  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+10:07:36.908  loading function::SetOutput ...
+10:07:36.914  ok!
+10:07:36.926  Loading... FuncPtr(SetOutput) = 000000006E88D250
+10:07:36.934  loading function::PollChannels ...
+10:07:36.941  ok!
+10:07:36.950  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+10:07:36.956  loading function::CheckChannel ...
+10:07:36.964  ok!
+10:07:36.972  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+10:07:36.979  loading function::StopChannel ...
+10:07:36.986  ok!
+10:07:36.993  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+10:07:37.002  loading function::StopChannels ...
+10:07:37.008  ok!
+10:07:37.016  Loading... FuncPtr(StopChannels) = 000000006E88D410
+10:07:37.024  loading function::DownloadBoard ...
+10:07:37.030  ok!
+10:07:37.040  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+10:07:37.045  loading function::DownloadChannel ...
+10:07:37.053  ok!
+10:07:37.062  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+10:07:37.070  loading function::StartChannel ...
+10:07:37.079  ok!
+10:07:37.088  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+10:07:37.095  loading function::GetChannelCurrent ...
+10:07:37.101  ok!
+10:07:37.111  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+10:07:37.121  loading function::CheckDataUpdate ...
+10:07:37.129  ok!
+10:07:37.136  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+10:07:37.147  loading function::ResetCalibration ...
+10:07:37.154  ok!
+10:07:37.164  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+10:07:37.171  loading function::UpdateCalibrationData ...
+10:07:37.178  ok!
+10:07:37.185  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+10:07:37.193  loading function::DownloadChannelCalibration ...
+10:07:37.200  ok!
+10:07:37.206  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+10:07:37.216  loading function::SystemStatus ...
+10:07:37.221  ok!
+10:07:37.231  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+10:07:37.238  loading function::GetCtlrDownloadStatus ...
+10:07:37.243  ok!
+10:07:37.252  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+10:07:37.259  loading function::SetCtlrMode ...
+10:07:37.267  ok!
+10:07:37.278  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+10:07:37.285  loading function::SetAuxiliaryBoard ...
+10:07:37.292  ok!
+10:07:37.300  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+10:07:37.310  loading function::SetAuxiliaryPanel ...
+10:07:37.316  ok!
+10:07:37.324  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+10:07:37.330  loading function::DownloadAuxiliaryBoard ...
+10:07:37.336  ok!
+10:07:37.345  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+10:07:37.354  loading function::GetAuxBoardData ...
+10:07:37.361  ok!
+10:07:37.369  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+10:07:37.376  loading function::GetAuxPanelData ...
+10:07:37.384  ok!
+10:07:37.393  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+10:07:37.401  loading function::EnableAuxEmulation ...
+10:07:37.408  ok!
+10:07:37.418  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+10:07:37.425  loading function::EmulateSetpoint ...
+10:07:37.434  ok!
+10:07:37.445  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+10:07:37.454  loading function::GetNetStats ...
+10:07:37.459  ok!
+10:07:37.467  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+10:07:37.473  loading function::GetEngineTiming ...
+10:07:37.481  ok!
+10:07:37.496  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+10:07:37.503  loading function::SetEngineTiming ...
+10:07:37.510  ok!
+10:07:37.518  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+10:07:37.526  loading function::SilenceToggle ...
+10:07:37.534  ok!
+10:07:37.543  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+10:07:37.551  Tester: MacTest32Cal.dll loaded
+10:07:37.559   | initializing network...
+10:07:37.566  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+10:07:37.574  RS.Create(...)| Path: RawSocket.dll, Handle: 140705769259008, Compiled:
+10:07:37.585  Oct 13, 2026
+10:07:37.593  RawSocket::GetApiVersion :: 1.1 <ok>
+10:07:37.600  RawSocket::ShutdownService :: ok
+10:07:37.607  RawSocket::CreateSocket :: ok
+10:07:37.616  RawSocket::DestroySocket :: ok
+10:07:37.629  RawSocket::SendPacket :: ok
+10:07:37.639  RawSocket::SendPacketLen :: ok
+10:07:37.650  RawSocket::SetEthernetHeader :: ok
+10:07:37.656  RawSocket::SetPacketFilter :: ok
+10:07:37.663  socket [event:0] checkpoint! all callbacks assigned!
+10:07:37.671  socket [event:0] checkpoint! socket transmit handler initialized!
+10:07:37.679  socket [event:0] receive handler object initialization successful!
+10:07:37.687  socket [event:0] global socket receive handler initialization successful!
+10:07:37.693  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+10:07:37.701  socket [event:0] filter compilation: successful
+10:07:37.709  socket [event:0] filter registration successful! auto filter resumed!
+10:07:37.716  socket [event:0] socket registration successful!
+10:07:37.723  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+10:07:37.731  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+10:07:37.738  socket initialized!
+10:07:37.747  socket handle address: 0000023EED790680
+10:07:37.754  Starting system...
+10:07:37.761  ok!
+10:07:37.770  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+10:07:37.777  checking controller boards...
+10:07:37.784  board: 2 ok!
+10:07:37.791  board: 1 ok!
+10:07:37.799  Setting Channel: 1 specifications...
+10:07:37.806  ok!
+10:07:37.816  Setting Channel: 1 configurations...
+10:07:37.822  ok!
+10:07:37.830  Setting raw-socket header for ctlr board...
+10:07:37.837  ok!
+10:07:37.845  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+10:07:37.851  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+10:07:37.858  socket [event:0] filter compilation: successful
+10:07:37.867  socket [event:0] filter registration successful! auto filter resumed!
+10:07:37.875  active channel = 1
+10:07:39.341  Atmel-ICE connected, serial J42700070268, status OK
+10:07:39.344  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+10:07:39.686  socket [event:0] unregistering socket...
+10:07:39.687  socket [event:1] ok!
+10:07:39.697  Tester: engine closed
+10:07:50.017  Starting socket for 192.168.126.214
+10:07:50.648    192.168.126.51: no answer
+10:07:51.227    192.168.126.11: no answer
+10:07:51.239  192.168.126.214: no reply to ping, listening via 192.168.126.51
+10:07:51.241  192.168.126.214: retrying for up to 30 s (a board in its bootloader, or just reset, needs that long)
+10:07:52.800    192.168.126.51: no answer
+10:07:53.359    192.168.126.11: no answer
+10:07:55.286    192.168.126.51: no answer
+10:07:55.860    192.168.126.11: no answer
+10:07:57.799    192.168.126.51: no answer
+10:07:58.713  Closing 192.168.126.214
+10:07:58.716    192.168.126.11: no answer
+
+==== AutoCalv2.exe started 2026-11-12 10:09:45 ====
+10:09:45.768  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+10:09:45.776  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+10:09:45.792  shunt record blank :: nominal shunts seeded, not on the board until Write
+
+==== AutoCalv2.exe started 2026-11-12 10:11:51 ====
+10:11:51.780  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+10:11:51.788  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+10:11:51.803  shunt record blank :: nominal shunts seeded, not on the board until Write
