@@ -15,6 +15,10 @@ type
   TMeterStatMode= (smStatOFF, smStatON, smStatFuncAvgON, smStatFuncAvgOFF);
   TMeterNPLC = (nplcUNSET, nplcVOLT, nplcCURR, nplcTEMP);
   TCalcUncertUnits = (uuUnitUNSET, uuNanoVolt, uuMicroVolt, uuMilliVolt, uuVolt);
+  { the command set an FL8588A is spoken to in :: it must match the meter's own front-panel setting
+    <Remote Settings, Emulation: 8508A / None>, which no remote command changes. handed to the GPIB
+    constructors of TMultiMeter; every other identity ignores it }
+  T8588A_Protocol = (tpEmulated8508A, tpSCPI);
 
 type
   TMeterTypes = Set of TMeterType;
@@ -25,6 +29,7 @@ const
     '  1. Short the meter leads together at the tester connection point (same leads as a verify).'#13#10 +
     '  2. Keep hands off the leads and wait 1 minute for the junctions to settle.'#13#10 +
     '  3. Then start the measurement (DCV 100 mV, NPLC 10; E = largest |reading|).';
+
   { a real loop EMF is microvolts; millivolts means the leads are not shorted }
   THERMAL_EMF_SHORT_LIMIT_VOLTS = 1E-3;
   { DCV input resistance with auto impedance OFF <all ranges>; tolerance lives with the budget }
@@ -138,6 +143,29 @@ const
   FL_CMD_READ         = 'X?';             { = *TRG;RDG? }
   FL_CMD_RECALL       = 'RDG?';           { the reading of the last trigger <TGpibGateway.Trigger> }
   FL_READ_TIMEOUT_MS  = 30000;            { a high-resolution conversion takes seconds }
+
+  { Fluke 8588A native SCPI <remote programmers manual; emulation: None> :: T8588A_Protocol.tpSCPI }
+  FL88_CMD_VOLT_DC    = 'CONF:VOLT:DC';
+  FL88_CMD_VOLT_AC    = 'CONF:VOLT:AC';
+  FL88_CMD_CURR_DC    = 'CONF:CURR:DC';
+  FL88_CMD_CURR_AC    = 'CONF:CURR:AC';
+  FL88_CMD_RANG_V     = 'VOLT:DC:RANG';           { RANG <v> :: the range holding <v> }
+  FL88_CMD_RANG_V_AUTO= 'VOLT:DC:RANG:AUTO ON';
+  FL88_CMD_APER_MAN_V = 'VOLT:DC:APER:MODE MAN';  { the aperture is what NPLC says, not the meter's own choice }
+  FL88_CMD_APER_MAN_I = 'CURR:DC:APER:MODE MAN';
+  FL88_CMD_NPLC_V     = 'VOLT:DC:NPLC';
+  FL88_CMD_NPLC_I     = 'CURR:DC:NPLC';
+  FL88_CMD_HiZ_ON     = 'VOLT:DC:IMP AUTO';       { > 1 TOhm below the 100 V range, 10 MOhm from there up }
+  FL88_CMD_HiZ_OFF    = 'VOLT:DC:IMP 10M';
+  FL88_CMD_CONT_OFF   = 'INIT:CONT OFF';          { no free-running triggers :: a reading is taken when asked }
+  FL88_CMD_TRIG_IMM   = 'TRIG:SOUR IMM';
+  FL88_CMD_TRIG_EXT   = 'TRIG:SOUR EXT';
+  FL88_CMD_TRIG_BUS   = 'TRIG:SOUR BUS';          { *TRG or a Group Execute Trigger <TGpibGateway.Trigger> }
+  FL88_CMD_ARM        = 'INIT';                   { trigger source BUS :: before every trigger }
+  FL88_CMD_READ       = 'READ?';                  { = ABOR;INIT;FETC? }
+  FL88_CMD_RECALL     = 'FETC?';                  { the reading of the last trigger }
+  FL88_CMD_ERROR      = 'SYST:ERR?';
+  FL88_NO_READING     = 9.9E37;                   { 9.91E+37 :: the meter has no valid reading to give }
 
   CharSet1 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'E', '-', '+', '.'];
   CharSet2 = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'E', '-', '.'];
@@ -300,6 +328,7 @@ type
       DEFAULT_ADDR = '192.168.127.215';
       GPIB_PORT = 1234;                 { Prologix GPIB-ETHERNET }
       GPIB_METERS = [FL8508A, FL8588A];
+      PROTOCOL_METERS = [FL8588A];      { the meters a T8588A_Protocol means anything to }
       ACALMETERS = [KS34465A, KS34470A];
       IDN_METERS = [KS34465A, KS34470A];
 
@@ -421,8 +450,11 @@ type
       OwnBus: Boolean;                  { the gateway was created here and is freed here }
       GpibAddr: Byte;
       GpibSamples: Integer;             { readings per statistic <ConfigureRead> }
+      Protocol: T8588A_Protocol;        { PROTOCOL_METERS only }
 
       function IsGpib: Boolean;
+      function IsGpibScpi: Boolean;
+      procedure CheckGpibError(const Where: String);
       function ConnectGpib: Boolean;
       function GpibWrite(const Cmd: AnsiString): Boolean;
       function ReadGpib(var FltData: Double; Timeout: Single): Boolean;
@@ -455,9 +487,11 @@ type
     public
       constructor Create(var Config: PMeterSettings; OnEvent: TAppEventCallback = nil); overload;
       { a GPIB meter on its own :: creates and owns its gateway, whose address is Config.Socket.Addr <port 0 = TMeterUtils.GPIB_PORT> }
-      constructor Create(var Config: PMeterSettings; const GpibAddr: Byte; OnEvent: TAppEventCallback = nil); overload;
+      constructor Create(var Config: PMeterSettings; const GpibAddr: Byte; OnEvent: TAppEventCallback = nil;
+        const Protocol: T8588A_Protocol = tpEmulated8508A); overload;
       { a GPIB meter on a gateway the caller owns :: any number of meters may share one }
-      constructor Create(var Config: PMeterSettings; const Bus: TGpibGateway; const GpibAddr: Byte; OnEvent: TAppEventCallback = nil); overload;
+      constructor Create(var Config: PMeterSettings; const Bus: TGpibGateway; const GpibAddr: Byte; OnEvent: TAppEventCallback = nil;
+        const Protocol: T8588A_Protocol = tpEmulated8508A); overload;
       destructor Destroy; override;
 
       function Connect: Boolean;
@@ -1179,12 +1213,14 @@ begin
   end;
 end;
 
-constructor TMultiMeter.Create(var Config: PMeterSettings; const GpibAddr: Byte; OnEvent: TAppEventCallback);
+constructor TMultiMeter.Create(var Config: PMeterSettings; const GpibAddr: Byte; OnEvent: TAppEventCallback;
+  const Protocol: T8588A_Protocol);
 var
   Addr: String;
   Port: Word;
 begin
   Create(Config, OnEvent);
+  Self.Protocol := Protocol;
   AddrToStr(Self.Config.Socket.Addr.AsIPv4Addr.AsRAW, Addr);
   Port := Self.Config.Socket.Addr.Port;
   if Port = 0 then Port := TMeterUtils.GPIB_PORT;
@@ -1194,9 +1230,11 @@ begin
   OwnBus := True;
 end;
 
-constructor TMultiMeter.Create(var Config: PMeterSettings; const Bus: TGpibGateway; const GpibAddr: Byte; OnEvent: TAppEventCallback);
+constructor TMultiMeter.Create(var Config: PMeterSettings; const Bus: TGpibGateway; const GpibAddr: Byte; OnEvent: TAppEventCallback;
+  const Protocol: T8588A_Protocol);
 begin
   Create(Config, OnEvent);
+  Self.Protocol := Protocol;
   Self.Bus := Bus;
   Self.GpibAddr := GpibAddr;
   OwnBus := False;
@@ -1216,6 +1254,42 @@ end;
 
 procedure TMultiMeter.ConfigureRead(const Mode: TMeterMode; const Stat: TMeterStatMode; const HiZ: TMeterAutoHiZ; const NPLC: Single; const Samples: Integer; const RangeV: Single = 0);
 begin
+  { 8588A, native :: mode, then range, aperture and input impedance; statistics are host-side, as for the 8508A }
+  if IsGpibScpi then
+  begin
+    SetMode(Mode);
+    case Mode of
+      mmVoltageDC:
+      begin
+        if RangeV > 0 then
+          GpibWrite(AnsiString(format('%s %s', [FL88_CMD_RANG_V, FloatToStr(RangeV, TFormatSettings.Invariant)])))
+        else GpibWrite(FL88_CMD_RANG_V_AUTO);
+
+        if NPLC > 0 then
+        begin
+          GpibWrite(FL88_CMD_APER_MAN_V);
+          GpibWrite(AnsiString(format('%s %s', [FL88_CMD_NPLC_V, FloatToStr(NPLC, TFormatSettings.Invariant)])));
+        end;
+
+        case HiZ of
+          miAutoON: GpibWrite(FL88_CMD_HiZ_ON);
+          miAutoOFF: GpibWrite(FL88_CMD_HiZ_OFF);
+        end;
+      end;
+
+      mmCurrentDC:
+        if NPLC > 0 then
+        begin
+          GpibWrite(FL88_CMD_APER_MAN_I);
+          GpibWrite(AnsiString(format('%s %s', [FL88_CMD_NPLC_I, FloatToStr(NPLC, TFormatSettings.Invariant)])));
+        end;
+    end;
+
+    GpibSamples := Samples;
+    CheckGpibError('read-config');
+    Exit;
+  end;
+
   { 8508A :: mode, then the range; resolution and filter are in the mode command, statistics are host-side }
   if IsGpib then
   begin
@@ -1837,6 +1911,14 @@ begin
   if IsGpib then
   begin
     Result := False;
+    if IsGpibScpi then
+      case Mode of
+        mmVoltageDC: Result := GpibWrite(FL88_CMD_VOLT_DC);
+        mmVoltageAC: Result := GpibWrite(FL88_CMD_VOLT_AC);
+        mmCurrentDC: Result := GpibWrite(FL88_CMD_CURR_DC);
+        mmCurrentAC: Result := GpibWrite(FL88_CMD_CURR_AC);
+      end
+    else
     case Mode of
       mmVoltageDC: Result := GpibWrite(FL_CMD_VOLT_DC);
       mmVoltageAC: Result := GpibWrite(FL_CMD_VOLT_AC);
@@ -2048,6 +2130,18 @@ end;
 
 procedure TMultiMeter.SetTriggerSource(const Trigger: TMeterTrigger);
 begin
+  { 8588A, native :: with mtBus or mtExternal a Read waits for that trigger; the caller arms <FL88_CMD_ARM>,
+    triggers <TGpibGateway.Trigger> and fetches <FL88_CMD_RECALL> itself }
+  if IsGpibScpi then
+  begin
+    case Trigger of
+      mtImmediate: GpibWrite(FL88_CMD_TRIG_IMM);
+      mtExternal: GpibWrite(FL88_CMD_TRIG_EXT);
+      mtBus: GpibWrite(FL88_CMD_TRIG_BUS);
+    end;
+    Exit;
+  end;
+
   case Config.Identity of
     AG34410A:;
     KS34465A, KS34470A:
@@ -2841,7 +2935,12 @@ begin
     GpibWrite(KS_CMD_RST);
     AvoidBusyWait(ONE_SEC);
     GpibWrite(KS_CMD_CLR);
-    GpibWrite(FL_CMD_TRIG_EXT);
+    if IsGpibScpi then
+    begin
+      GpibWrite(FL88_CMD_CONT_OFF);
+      GpibWrite(FL88_CMD_TRIG_IMM);
+    end
+    else GpibWrite(FL_CMD_TRIG_EXT);
     Exit;
   end;
 
@@ -2947,10 +3046,34 @@ begin
   end;
 end;
 
-{$REGION ' GPIB METERS <Fluke 8508A, 8588A in 8508A emulation> '}
+{$REGION ' GPIB METERS <Fluke 8508A, 8588A in 8508A emulation or native SCPI> '}
 function TMultiMeter.IsGpib: Boolean;
 begin
   Result := Config.Identity in TMeterUtils.GPIB_METERS;
+end;
+
+{ an 8588A spoken to in its own SCPI <T8588A_Protocol.tpSCPI> }
+function TMultiMeter.IsGpibScpi: Boolean;
+begin
+  Result := (Config.Identity in TMeterUtils.PROTOCOL_METERS) and (Protocol = tpSCPI);
+end;
+
+{ journal what the meter refused :: '<number>,"<text>"' per entry, 0 = queue empty }
+procedure TMultiMeter.CheckGpibError(const Where: String);
+var
+  Reply: String;
+  I, P: Integer;
+begin
+  if not (IsGpibScpi and Assigned(Bus)) then Exit;
+
+  for I := 1 to 10 do
+  begin
+    if not Bus.Query(GpibAddr, FL88_CMD_ERROR, Reply, 2000) then Exit;
+    P := Pos(',', Reply);
+    if P = 0 then P := Length(Reply) +1;
+    if StrToIntDef(Trim(Copy(Reply, 1, P -1)), -1) = 0 then Exit;
+    AlertEvent(etAppError, format('meter <%s> error :: %s'#13#10, [Where, Reply]));
+  end;
 end;
 
 function TMultiMeter.GpibWrite(const Cmd: AnsiString): Boolean;
@@ -2989,6 +3112,13 @@ function TMultiMeter.ReadGpib(var FltData: Double; Timeout: Single): Boolean;
 var
   Reply: String;
 begin
+  { 8588A, native :: READ? arms, takes and returns one reading }
+  if IsGpibScpi then
+    Exit(Assigned(Bus)
+      and Bus.Query(GpibAddr, FL88_CMD_READ, Reply, Max(Round(Timeout *1000), FL_READ_TIMEOUT_MS))
+      and TryStrToFloat(Trim(Reply), FltData, TFormatSettings.Invariant)
+      and (Abs(FltData) < FL88_NO_READING));
+
   Result := Assigned(Bus)
     and Bus.Query(GpibAddr, FL_CMD_READ, Reply, Max(Round(Timeout *1000), FL_READ_TIMEOUT_MS))
     and TryStrToFloat(Trim(Reply), FltData, TFormatSettings.Invariant);
