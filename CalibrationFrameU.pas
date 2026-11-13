@@ -304,7 +304,8 @@ begin
   StatGrid.Cells[3, 0] := 'Result';
   StatGrid.Cells[4, 0] := 'Value';
   StatGrid.Cells[5, 0] := 'Detail';
-  StatGrid.ColWidths[5]:= StatGrid.ColWidths[5] +5;
+
+  StatGrid.ColWidths[5]:= StatGrid.ColWidths[5] +23;
 
   SettleTimer := TTimer.Create(Self);
   SettleTimer.Enabled := False;
@@ -762,6 +763,8 @@ begin
     ErrLbl.Caption := Format('Channel %d''s board is not answering: pick a channel on another board', [ChanEdit.Value]);
     Exit;
   end;
+
+
 
   var Chan := ChanEdit.Value -1;
   var Mode := TMaccorControlMode(ModeCombo.ItemIndex);

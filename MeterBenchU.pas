@@ -9,6 +9,11 @@ unit MeterBenchU;
   it speaks the 8500 series' character commands (instruction manual, section 2A) and is driven here, straight
   through the gateway. It has no identity query; its status reply stands in for one.
 
+  An 8588A whose Configurations sheet says native SCPI (FlukeMetersU; the meter's own Emulation setting must then
+  be None) is the same TMultiMeter created with T8588A_Protocol.tpSCPI. The choice is taken at Connect. Such a
+  meter is set up with SCPI lines (ApplyNative), is started with INIT instead of the group trigger and gives its
+  reading to FETC? (Fire, Recall).
+
   A sample is one Group Execute Trigger to every meter in use, so they start converting together, followed by
   the recall of each reading. A run waits the settling time, then takes a number of samples with the interval
   between them, on a task, and hands each one back on
@@ -112,6 +117,7 @@ type
       Addrs: array [0..BENCH_METERS -1] of Byte;
       Modes: array [0..BENCH_METERS -1] of TMeterMode;       { of an 8505A; a TMultiMeter keeps its own }
       Setups: array [0..BENCH_METERS -1] of AnsiString;      { the configuration line a TMultiMeter last got }
+      Native: array [0..BENCH_METERS -1] of Boolean;         { an 8588A connected in its own SCPI }
       SampleTask: ITask;
       Cancel: TEvent;
       MySession: Integer;                     { see Session in the implementation }
@@ -121,6 +127,12 @@ type
       function Connect8505(const Index: Integer; const Spec: TBenchSpec): Boolean;
       function SetMode8505(const Index: Integer; const Mode: TMeterMode): Boolean;
       function Apply(const Index: Integer; const Spec: TBenchSpec): Boolean;
+      function ApplyNative(const Index: Integer; const Spec: TBenchSpec): Boolean;
+      function SetupKey(const Index: Integer; const Spec: TBenchSpec): AnsiString;
+      { starts a conversion on every listed meter: the group trigger, or INIT to a native 8588A }
+      function Fire(const Addrs: TArray<Byte>; const Slots: TArray<Integer>): Boolean;
+      { the reading of the last Fire }
+      function Recall(const Slot: Integer; const Addr: Byte; out Value: Double): Boolean;
       function GetMode(const Index: Integer): TMeterMode;
 
     public
@@ -298,10 +310,121 @@ begin
   else Result := AnsiString(Format('DCV %s,FILT_OFF,RESL%d,%s,TWO_WR', [Range, Res, Speed]));
 end;
 
+{ a range the caller wants held, as SetupLine reads it }
+function HeldRange(const Spec: TBenchSpec): Boolean;
+begin
+  Result := (Spec.RangeV >= 0.1) and (Spec.RangeV <= 1000) and (Spec.Mode <> mmCurrentDC);
+end;
+
+function SpecDigits(const Spec: TBenchSpec): Integer;
+begin
+  Result := KindDigits(Spec.Kind);
+  if Result = 0 then Result := 7;
+  if Spec.Res6 then Result := 6;
+end;
+
+{
+  the same for an 8588A in its own SCPI, one program message: the range (RANG <v> = the range holding <v>) or
+  autorange, and the aperture left to the meter (AUTO) or its quick one (FAST). The resolution is not in it:
+  SCPI wants it in volts, which takes the range the meter chose (ApplyNative)
+}
+function NativeLine(const Spec: TBenchSpec): AnsiString;
+begin
+  var Speed := 'AUTO';
+  if Spec.Fast then Speed := 'FAST';
+  if Spec.Mode = mmCurrentDC then
+    Result := AnsiString(Format('CURR:DC:RANG:AUTO ON;:CURR:DC:APER:MODE %s', [Speed]))
+  else if HeldRange(Spec) then
+    Result := AnsiString(Format('%s %s;:VOLT:DC:APER:MODE %s', [FL88_CMD_RANG_V,
+      FloatToStrF(Spec.RangeV * 0.95, ffGeneral, 6, 0, TFormatSettings.Invariant), Speed]))
+  else
+    Result := AnsiString(Format('%s;:VOLT:DC:APER:MODE %s', [FL88_CMD_RANG_V_AUTO, Speed]));
+end;
+
+{ what Setups remembers of a meter's configuration: a spec that gives another key is sent again }
+function TMeterBench.SetupKey(const Index: Integer; const Spec: TBenchSpec): AnsiString;
+begin
+  if Native[Index] then Result := NativeLine(Spec) + AnsiString(Format(' #%d', [SpecDigits(Spec)]))
+  else Result := SetupLine(Spec);
+end;
+
+function TMeterBench.ApplyNative(const Index: Integer; const Spec: TBenchSpec): Boolean;
+var
+  Reply: String;
+  Range, Ten: Double;
+begin
+  var A := Addrs[Index];
+  Meters[Index].SetMode(Spec.Mode);
+  var Line := NativeLine(Spec);
+  Result := Bus.Write(A, Line);
+  if not Result then Exit;
+  var Shown := String(Line);
+
+  { digits of resolution, in volts of the range the meter took. On autorange it keeps its own default }
+  if HeldRange(Spec) and Bus.Query(A, FL88_CMD_RANG_V + '?', Reply, 3000)
+    and TryStrToFloat(Trim(Reply), Range, TFormatSettings.Invariant) and (Range > 0) then
+  begin
+    Ten := 10;
+    var Res := AnsiString('VOLT:DC:RES ' + FloatToStrF(Range * Power(Ten, -SpecDigits(Spec)), ffExponent, 3, 2,
+      TFormatSettings.Invariant));
+    Bus.Write(A, Res);
+    Shown := Shown + Format('; %s <range %s V>', [String(Res), Trim(Reply)]);
+  end;
+
+  { what the meter refused: '<number>,"<text>"' per entry, 0 = nothing more }
+  for var I := 1 to 10 do
+  begin
+    if not Bus.Query(A, FL88_CMD_ERROR, Reply, 2000) then Break;
+    var P := Pos(',', Reply);
+    if P = 0 then P := Length(Reply) +1;
+    if StrToIntDef(Trim(Copy(Reply, 1, P -1)), -1) = 0 then Break;
+    Say(Format('%s at GPIB address %d refused a setting :: %s'#13#10, [KIND_NAMES[Kinds[Index]], A, Trim(Reply)]));
+  end;
+
+  var Key := SetupKey(Index, Spec);
+  if Key <> Setups[Index] then
+    Say(Format('%s at GPIB address %d (native SCPI) :: %s'#13#10, [KIND_NAMES[Kinds[Index]], A, Shown]));
+  Setups[Index] := Key;
+end;
+
+function TMeterBench.Fire(const Addrs: TArray<Byte>; const Slots: TArray<Integer>): Boolean;
+var
+  Group: TArray<Byte>;
+begin
+  Result := Length(Addrs) > 0;
+  for var K := 0 to High(Slots) do
+    if not Native[Slots[K]] then Group := Group + [Addrs[K]];
+  if Length(Group) > 0 then Result := Bus.Trigger(Group);
+
+  { trigger source IMMediate (TMultiMeter.Reset): INIT is the start. One after the other, a gateway write apart }
+  for var K := 0 to High(Slots) do
+    if Native[Slots[K]] then Result := Bus.Write(Addrs[K], FL88_CMD_ARM) and Result;
+end;
+
+function TMeterBench.Recall(const Slot: Integer; const Addr: Byte; out Value: Double): Boolean;
+var
+  Reply: String;
+begin
+  Value := 0;
+  if not Native[Slot] then
+    Exit(Bus.Query(Addr, RECALLS[Kinds[Slot]], Reply, READ_TIMEOUT_MS) and ParseReading(Kinds[Slot], Reply, Value));
+
+  { FETC? answers 9.91E+37 while there is no reading yet: asked again until the conversion is in }
+  var Clock := TStopwatch.StartNew;
+  repeat
+    if not (Bus.Query(Addr, FL88_CMD_RECALL, Reply, READ_TIMEOUT_MS) and ParseReading(Kinds[Slot], Reply, Value)) then
+      Exit(False);
+    if Abs(Value) < FL88_NO_READING then Exit(True);
+    Sleep(100);
+  until Clock.ElapsedMilliseconds >= READ_TIMEOUT_MS;
+  Result := False;
+end;
+
 { what a meter measures and how: its mode, then (8508A family) the resolution and speed on top of it }
 function TMeterBench.Apply(const Index: Integer; const Spec: TBenchSpec): Boolean;
 begin
   if not Assigned(Meters[Index]) then Exit(SetMode8505(Index, Spec.Mode));
+  if Native[Index] then Exit(ApplyNative(Index, Spec));
 
   Meters[Index].SetMode(Spec.Mode);
   var Line := SetupLine(Spec);
@@ -393,7 +516,10 @@ begin
       var P: PMeterSettings := @Settings[I];
 
       { the shared-gateway constructor: the bench owns the gateway, each meter only its GPIB address }
-      Meters[I] := TMultiMeter.Create(P, Bus, Specs[I].GpibAddr, OnMeterEvent);
+      Native[I] := (Specs[I].Kind = bkFluke8588A) and TFlukeMeters.SavedScpi(fm8588A);
+      var Protocol := tpEmulated8508A;
+      if Native[I] then Protocol := tpSCPI;
+      Meters[I] := TMultiMeter.Create(P, Bus, Specs[I].GpibAddr, OnMeterEvent, Protocol);
       Up[I] := Meters[I].Connect;
       Setups[I] := '';
       if Up[I] then
@@ -445,6 +571,7 @@ begin
       Meters[I].SetReadPrecision(DEFAULT_READ_PRECISION);
     end;
     Up[I] := False;
+    Native[I] := False;
     FreeAndNil(Meters[I]);
   end;
   FreeAndNil(Bus);
@@ -478,7 +605,6 @@ begin
     var
       Addrs: TArray<Byte>;
       Slots: TArray<Integer>;
-      Reply: String;
     begin
       var Taken := 0;
 
@@ -486,7 +612,7 @@ begin
       for var I := 0 to BENCH_METERS -1 do
         if Want[I].Use and Up[I] then
         begin
-          if (GetMode(I) <> Want[I].Mode) or (Assigned(Meters[I]) and (SetupLine(Want[I]) <> Setups[I])) then
+          if (GetMode(I) <> Want[I].Mode) or (Assigned(Meters[I]) and (SetupKey(I, Want[I]) <> Setups[I])) then
             Apply(I, Want[I]);
           Addrs := Addrs + [Want[I].GpibAddr];
           Slots := Slots + [I];
@@ -504,13 +630,12 @@ begin
 
         while not Stable and (Clock.ElapsedMilliseconds < Hold.TimeoutMs) and (Cancel.WaitFor(0) <> wrSignaled) do
         begin
-          var Got := Bus.Trigger(Addrs);
+          var Got := Fire(Addrs, Slots);
           var Shown := '';                     { debug tap: the readings thrown away here are shown nowhere else }
           for var K := 0 to High(Slots) do
           begin
             var V: Double;
-            if Got and Bus.Query(Addrs[K], RECALLS[Kinds[Slots[K]]], Reply, READ_TIMEOUT_MS)
-              and ParseReading(Kinds[Slots[K]], Reply, V) then
+            if Got and Recall(Slots[K], Addrs[K], V) then
             begin
               Recent[K] := Recent[K] + [V];
               if Length(Recent[K]) > Hold.Window then Delete(Recent[K], 0, 1);
@@ -584,13 +709,12 @@ begin
           S.Time := Mark / 1000;
 
           { one trigger for all: the conversions start together. The readings are then collected in turn }
-          if Bus.Trigger(Addrs) then
+          if Fire(Addrs, Slots) then
           begin
             { the probe falls inside the meters' conversion: all three belong to the same moment }
             if Assigned(Ask) then S.ProbeOk := Ask(S.Probe);
             for var K := 0 to High(Slots) do
-              S.Ok[Slots[K]] := Bus.Query(Addrs[K], RECALLS[Kinds[Slots[K]]], Reply, READ_TIMEOUT_MS)
-                and ParseReading(Kinds[Slots[K]], Reply, S.Value[Slots[K]]);
+              S.Ok[Slots[K]] := Recall(Slots[K], Addrs[K], S.Value[Slots[K]]);
           end;
           S.Took := Watch.Elapsed.TotalMilliseconds - Mark;
 

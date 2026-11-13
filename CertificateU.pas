@@ -32,7 +32,8 @@ unit CertificateU;
   previous value at which of two boxes was on the bench. The MRS and the MCS are different tables for different
   shunts, and a box may use both, so the line follows the standards used instead: each accepted shunt's standard
   is looked up on the Ohm Labs sheet (OhmLabsU), and a typed Ohm Labs line is printed when its model names a set
-  one of them is in ("MRS" the MRS; "MCS" either MCS table; "MCS 0.01" or "MCS 0.001" that table alone).
+  one of them is in ("MRS" the MRS; "MCS" either MCS table; "MCS 0.01" or "MCS 0.001" that table alone). That
+  needs accepted shunts to go by: while there are none, every line of the list is printed.
 
   No VCL.
 }
@@ -63,7 +64,12 @@ type
     Temp, Humidity: String;                   { a number as text; '' = not given }
     PrevCalDate: TDate;                       { 0 = not given }
     Notes, Comments: String;
-    Standards: TCertStandards;                { besides the meters }
+    {
+      the comment that goes into the box (the record's comments field, 255 characters). '' = made up from the
+      procedure, the remarks and the notes (CertRecordComments). It is set when a Read finds another comment in
+      the box than that: the box's own text is then what Import brings back. Not on the printed certificate
+    }
+    RecordComments: String;    Standards: TCertStandards;                { besides the meters }
     FormNo, Rev, RevDate: String;             { the page footer }
 
     { the workbook's own }
@@ -73,6 +79,13 @@ type
     { True = Inputs hold the saved section. False = the defaults: Why = '' when nothing is saved yet, else what is wrong with the file }
     class function Load(out Inputs: TCertInputs; out Why: String): Boolean; static;
     function Save(out Why: String): Boolean;
+    {
+      the standards have a section of their own in the configuration file ("standards"), apart from the rest of
+      the sheet: a Read of the board may write it (RecordSummaryU.KeepReadStandards) whether or not the sheet
+      has ever been saved. True = List is that section's; False = there is none (Why = '') or it cannot be used
+    }
+    class function LoadStandards(out List: TCertStandards; out Why: String): Boolean; static;
+    class function SaveStandards(const List: TCertStandards; out Why: String): Boolean; static;
   end;
 
   { a row of the measurement table }
@@ -95,6 +108,7 @@ type
     MeterModel: String;                       { '8508A' }
     Shunts: array [1..CERT_SHUNTS] of TCertShunt;
     Standards: TCertStandards;                { the whole "Standards used" table: the meters, then the inputs' }
+    OtherStandards: TCertStandards;           { the part of it that is not the meters; not kept in the file }
     Gaps: TArray<String>;                     { why a shunt has no value, one line each; not kept in the file }
   end;
 
@@ -118,6 +132,11 @@ type
 { the sheet's formula cells }
 function CertNumber(const Serial: String; const CalDate: TDate; const Technician: String): String;
 function CertDue(const CalDate: TDate; const OwnerName: String; const MaxDiff: Double): TDate;
+{
+  the comment for the box's record: RecordComments when it is given, else "Method: <procedure>; Remarks:
+  <remarks>; Notes: <notes>", the parts that are there, as a certificate import used to compose them
+}
+function CertRecordComments(const I: TCertInputs): String;
 {
   the typed standards that belong on the certificate: every line that is not an Ohm Labs set, and of the Ohm
   Labs lines those whose model names a set in UsedSets (OHM_SET_NAME of the sets the accepted shunts' standards
@@ -170,9 +189,11 @@ const
   K_DIFF = 'diff_pct';
   K_NOTES = 'notes';
   K_STANDARDS = 'standards';
+  K_LINES = 'lines';
   K_MFR = 'mfr';
   K_CAL_DUE_STD = 'cal_due';
   K_COMMENTS = 'comments';
+  K_RECORD_COMMENTS = 'record_comments';
   K_FORM = 'form';
   K_FORM_NO = 'number';
   K_REV = 'rev';
@@ -230,6 +251,24 @@ begin
   end;
   if Pos(',', Technician) = 0 then Result := Result + Copy(Technician, 1, 1) + AfterSpace(Technician)
   else Result := Result + AfterSpace(Technician) + Copy(Technician, 1, 1);
+end;
+
+function CertRecordComments(const I: TCertInputs): String;
+begin
+  if Trim(I.RecordComments) <> '' then Exit(Trim(I.RecordComments));
+  Result := '';
+  var Method := Trim(Trim(I.Procedure1) + ' ' + Trim(I.Procedure2));
+  if Method <> '' then Result := 'Method: ' + Method;
+  if Trim(I.Remarks) <> '' then
+  begin
+    if Result <> '' then Result := Result + '; ';
+    Result := Result + 'Remarks: ' + Trim(I.Remarks);
+  end;
+  if Trim(I.Notes) <> '' then
+  begin
+    if Result <> '' then Result := Result + '; ';
+    Result := Result + 'Notes: ' + Trim(I.Notes);
+  end;
 end;
 
 function CertDue(const CalDate: TDate; const OwnerName: String; const MaxDiff: Double): TDate;
@@ -315,15 +354,15 @@ begin
   end;
 end;
 
-{ False when a line's date is not a date }
-function StandardsOf(const Obj: TJSONObject; out List: TCertStandards): Boolean;
+{ the lines under Key; False when a line's date is not a date }
+function StandardsOf(const Obj: TJSONObject; out List: TCertStandards; const Key: String = K_STANDARDS): Boolean;
 var
   Arr: TJSONArray;
   S: TCertStandard;
 begin
   List := nil;
   Result := True;
-  if (Obj = nil) or not Obj.TryGetValue<TJSONArray>(K_STANDARDS, Arr) then Exit;
+  if (Obj = nil) or not Obj.TryGetValue<TJSONArray>(Key, Arr) then Exit;
   for var V in Arr do
   begin
     if not (V is TJSONObject) then Continue;
@@ -361,6 +400,7 @@ begin
   Obj.AddPair(K_NOTES, I.Notes);
   Obj.AddPair(K_STANDARDS, StandardsJson(Standards));
   Obj.AddPair(K_COMMENTS, I.Comments);
+  if I.RecordComments <> '' then Obj.AddPair(K_RECORD_COMMENTS, I.RecordComments);
 
   var Form := TJSONObject.Create;
   Obj.AddPair(K_FORM, Form);
@@ -391,6 +431,7 @@ begin
   I.Humidity := NumberText(Obj, K_HUMIDITY);
   I.Notes := Text(Obj, K_NOTES);
   I.Comments := Text(Obj, K_COMMENTS);
+  I.RecordComments := Text(Obj, K_RECORD_COMMENTS);
   var Form := Child(Obj, K_FORM);
   I.FormNo := Text(Form, K_FORM_NO);
   I.Rev := Text(Form, K_REV);
@@ -466,18 +507,56 @@ begin
 end;
 
 class function TCertInputs.Load(out Inputs: TCertInputs; out Why: String): Boolean;
+var
+  Lines: TCertStandards;
+  Ignore: String;
 begin
   Inputs := Defaults;
   Result := False;
   var Section := TAppConfig.ReadSection(K_SECTION, Why);
-  if Section = nil then Exit;
+  if Section = nil then
+  begin
+    { the sheet has not been saved; the standards may still have been (a Read of the board saves them) }
+    if (Why = '') and LoadStandards(Lines, Ignore) then Inputs.Standards := Lines;
+    Exit;
+  end;
   try
     var Read: TCertInputs;
     Result := InputsOfJson(Section, Read, Why);
-    if Result then Inputs := Read;
+    if Result then
+    begin
+      Inputs := Read;
+      { the section of their own is the standards' place; a file from before it has them in the sheet's }
+      if LoadStandards(Lines, Ignore) then Inputs.Standards := Lines;
+    end;
   finally
     Section.Free;
   end;
+end;
+
+class function TCertInputs.LoadStandards(out List: TCertStandards; out Why: String): Boolean;
+begin
+  List := nil;
+  Result := False;
+  var Section := TAppConfig.ReadSection(K_STANDARDS, Why);
+  if Section = nil then Exit;
+  try
+    Result := (Section.GetValue(K_LINES) is TJSONArray) and StandardsOf(Section, List, K_LINES);
+    if not Result then
+    begin
+      List := nil;
+      Why := Format('"%s" has no "%s", or a date in it is not yyyy-mm-dd', [K_STANDARDS, K_LINES]);
+    end;
+  finally
+    Section.Free;
+  end;
+end;
+
+class function TCertInputs.SaveStandards(const List: TCertStandards; out Why: String): Boolean;
+begin
+  var Section := TJSONObject.Create;
+  Section.AddPair(K_LINES, StandardsJson(List));
+  Result := TAppConfig.WriteSection(K_STANDARDS, Section, Why);
 end;
 
 function TCertInputs.Save(out Why: String): Boolean;
@@ -485,8 +564,10 @@ begin
   Why := Check;
   if Why <> '' then Exit(False);
   var Section := TJSONObject.Create;
-  InputsToJson(Self, Section, Standards);
-  Result := TAppConfig.WriteSection(K_SECTION, Section, Why);
+  InputsToJson(Self, Section, nil);
+  { the standards are the "standards" section's: the sheet's own section does not carry a second copy }
+  Section.RemovePair(K_STANDARDS).Free;
+  Result := TAppConfig.WriteSection(K_SECTION, Section, Why) and SaveStandards(Standards, Why);
 end;
 
 { TCertificateData }
@@ -663,7 +744,13 @@ begin
           S.Due := Meter.Units[I].Due;
           Cert.Standards := Cert.Standards + [S];
         end;
-      Cert.Standards := Cert.Standards + CertTypedStandards(Cert.Inputs.Standards, UsedSets);
+      {
+        an Ohm Labs line is left out when shunts have been accepted and none of them was measured against its
+        set. With no shunt accepted there is nothing to say which sets were used: the list stands as it is
+      }
+      if Length(Entries) = 0 then Cert.OtherStandards := Cert.Inputs.Standards
+      else Cert.OtherStandards := CertTypedStandards(Cert.Inputs.Standards, UsedSets);
+      Cert.Standards := Cert.Standards + Cert.OtherStandards;
 
       { the certificate member, in the sheet's order from the top }
       var Section := TJSONObject.Create;

@@ -2,7 +2,7 @@ object CalibrationFrame: TCalibrationFrame
   Left = 0
   Top = 0
   Width = 721
-  Height = 716
+  Height = 750
   Margins.Left = 1
   Margins.Right = 4
   DoubleBuffered = True
@@ -52,7 +52,7 @@ object CalibrationFrame: TCalibrationFrame
     Left = 6
     Top = 152
     Width = 709
-    Height = 545
+    Height = 569
     Margins.Left = 6
     Margins.Right = 6
     Margins.Bottom = 6
@@ -60,13 +60,15 @@ object CalibrationFrame: TCalibrationFrame
     Caption = ' Control '
     TabOrder = 1
     object ErrLbl: TLabel
-      Left = 2
-      Top = 523
-      Width = 705
-      Height = 20
-      Align = alBottom
+      AlignWithMargins = True
+      Left = 5
+      Top = 546
+      Width = 699
+      Height = 18
+      Align = alTop
       Alignment = taCenter
       AutoSize = False
+      Caption = '...'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -12
@@ -75,20 +77,23 @@ object CalibrationFrame: TCalibrationFrame
       ParentFont = False
       Layout = tlCenter
       StyleName = 'Windows'
+      ExplicitLeft = 2
       ExplicitTop = 510
       ExplicitWidth = 724
+      ExplicitHeight = 20
     end
     object StatGB: TGroupBox
       AlignWithMargins = True
       Left = 5
       Top = 305
       Width = 697
-      Height = 232
+      Height = 235
       Margins.Top = 0
       Margins.Right = 5
       Align = alTop
       Caption = ' Statistics '
       TabOrder = 0
+      ExplicitHeight = 232
       object AcceptPanel: TPanel
         Left = 2
         Top = 197
@@ -102,7 +107,7 @@ object CalibrationFrame: TCalibrationFrame
           693
           31)
         object AcceptBtn: TSpeedButton
-          Left = 592
+          Left = 596
           Top = 3
           Width = 94
           Height = 25

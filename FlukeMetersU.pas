@@ -50,6 +50,8 @@ type
 
   TFlukeMeter = record
     Digits: Integer;
+    { 8588A only: spoken to in its own SCPI (the meter's Emulation set to None) instead of as an 8508A }
+    Scpi: Boolean;
     Units: array [0..FLUKE_UNITS -1] of TFlukeUnit;
     Ranges: TFlukeRanges;
 
@@ -78,11 +80,15 @@ type
 
       { the digits of resolution to use now: what is saved for the type, else its default }
       class function SavedDigits(const Model: TFlukeModel): Integer; static;
+      { whether the type is to be spoken to in native SCPI now: what is saved for it; never for a type without the choice }
+      class function SavedScpi(const Model: TFlukeModel): Boolean; static;
   end;
 
 const
   FLUKE_MODEL_NAME: array [TFlukeModel] of String = ('8508A', '8588A');
   FLUKE_DEFAULT_DIGITS: array [TFlukeModel] of Integer = (7, 8);
+  { the types that have a command set of their own besides the 8508A's }
+  FLUKE_HAS_SCPI: array [TFlukeModel] of Boolean = (False, True);
 
 implementation
 
@@ -92,6 +98,9 @@ const
   K_MANUFACTURER = 'manufacturer';
   K_MODEL = 'model';
   K_DIGITS = 'digits';
+  K_PROTOCOL = 'protocol';                    { 8588A: V_SCPI or V_8508A; absent = V_8508A }
+  V_SCPI = 'scpi';
+  V_8508A = '8508a';
   K_UNITS = 'units';
   K_SERIAL = 'serial';
   K_DUE = 'cal_due';
@@ -208,6 +217,17 @@ var
       Exit;
     end;
 
+    var Protocol := '';
+    if FLUKE_HAS_SCPI[Model] and Obj.TryGetValue<String>(K_PROTOCOL, Protocol) then
+    begin
+      M.Scpi := SameText(Trim(Protocol), V_SCPI);
+      if not (M.Scpi or SameText(Trim(Protocol), V_8508A)) then
+      begin
+        Why := Format('%s: "%s" must be "%s" or "%s"', [Name, K_PROTOCOL, V_8508A, V_SCPI]);
+        Exit;
+      end;
+    end;
+
     { the meters of the pair, in their order; one the file does not give stays blank }
     if Obj.TryGetValue<TJSONArray>(K_UNITS, Items) then
       for var I := 0 to Min(Items.Count, FLUKE_UNITS) -1 do
@@ -305,6 +325,10 @@ begin
       Obj.AddPair(K_MANUFACTURER, FLUKE_MANUFACTURER);
       Obj.AddPair(K_MODEL, FLUKE_MODEL_NAME[M]);
       Obj.AddPair(K_DIGITS, TJSONNumber.Create(Meter.Digits));
+      if FLUKE_HAS_SCPI[M] then
+      begin
+        if Meter.Scpi then Obj.AddPair(K_PROTOCOL, V_SCPI) else Obj.AddPair(K_PROTOCOL, V_8508A);
+      end;
 
       var Units := TJSONArray.Create;
       Obj.AddPair(K_UNITS, Units);
@@ -344,6 +368,19 @@ begin
   try
     All.Load(Why);                            { a missing or faulty section leaves the defaults }
     Result := All.Meters[Model].Digits;
+  finally
+    All.Free;
+  end;
+end;
+
+class function TFlukeMeters.SavedScpi(const Model: TFlukeModel): Boolean;
+var
+  Why: String;
+begin
+  var All := TFlukeMeters.Create;
+  try
+    All.Load(Why);
+    Result := FLUKE_HAS_SCPI[Model] and All.Meters[Model].Scpi;
   finally
     All.Free;
   end;

@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'AutoCalibrator 528LB (Rev E) Test Application'
-  ClientHeight = 894
+  ClientHeight = 937
   ClientWidth = 756
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,11 +20,11 @@ object MainForm: TMainForm
   object Splitter: TSplitter
     AlignWithMargins = True
     Left = 3
-    Top = 730
+    Top = 802
     Width = 750
     Height = 3
     Cursor = crVSplit
-    Align = alTop
+    Align = alBottom
     Beveled = True
     StyleName = 'Windows'
     ExplicitLeft = 8
@@ -36,10 +36,10 @@ object MainForm: TMainForm
     Left = 3
     Top = 3
     Width = 750
-    Height = 718
+    Height = 790
     Margins.Bottom = 6
-    ActivePage = CalibrationTab
-    Align = alTop
+    ActivePage = ControlsTab
+    Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -48,6 +48,7 @@ object MainForm: TMainForm
     ParentFont = False
     TabOrder = 0
     OnChanging = PagesChanging
+    ExplicitHeight = 747
     object ControlsTab: TTabSheet
       Caption = ' Controls '
     end
@@ -71,10 +72,11 @@ object MainForm: TMainForm
         Left = 3
         Top = 3
         Width = 736
-        Height = 682
+        Height = 754
         ActivePage = OhmLabsTab
         Align = alClient
         TabOrder = 0
+        ExplicitHeight = 682
         object OhmLabsTab: TTabSheet
           Caption = ' Ohm Labs '
         end
@@ -96,12 +98,12 @@ object MainForm: TMainForm
   object Memo: TRichEdit
     AlignWithMargins = True
     Left = 6
-    Top = 739
+    Top = 811
     Width = 744
-    Height = 121
+    Height = 92
     Margins.Left = 6
     Margins.Right = 6
-    Align = alClient
+    Align = alBottom
     Color = clInactiveBorder
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
@@ -111,10 +113,11 @@ object MainForm: TMainForm
     ParentFont = False
     ScrollBars = ssVertical
     TabOrder = 1
+    ExplicitTop = 813
   end
   object BottomPanel: TPanel
     Left = 0
-    Top = 863
+    Top = 906
     Width = 756
     Height = 31
     Align = alBottom
@@ -122,6 +125,7 @@ object MainForm: TMainForm
     ShowCaption = False
     TabOrder = 2
     StyleName = 'Windows'
+    ExplicitTop = 863
     object StartBtn: TSpeedButton
       AlignWithMargins = True
       Left = 157

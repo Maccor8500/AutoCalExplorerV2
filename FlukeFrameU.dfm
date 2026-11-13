@@ -193,6 +193,21 @@ object FlukeFrame: TFlukeFrame
       150
       150)
   end
+  object ScpiBox: TCheckBox
+    Left = 490
+    Top = 115
+    Width = 220
+    Height = 17
+    Hint =
+      'Speak to the meters in their own SCPI. Their front panel must sa' +
+      'y Emulation: None; unticked, it must say 8508A. Used at the next' +
+      ' Connect.'
+    Caption = 'Native SCPI (Emulation: None)'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+    OnClick = ScpiBoxClick
+  end
   object DefaultsBtn: TButton
     Left = 10
     Top = 400

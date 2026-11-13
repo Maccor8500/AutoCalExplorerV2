@@ -118,5 +118,130 @@
       "rev": "Rev. 04",
       "rev_date": "06/30/2021"
     }
+  },
+  "record": {
+    "source": "Written to 192.168.126.214",
+    "saved": "2026-11-12T17:02:22",
+    "serial": "Prototype",
+    "model": "BT700507",
+    "certificate_number": "PrototypeDEC2022JB",
+    "manufacturer": "Maccor",
+    "owner": "Maccor, Inc.",
+    "technician": "Baldus, J.",
+    "calibration_date": "2022-12-07",
+    "prev_cal_date": "2026-11-10",
+    "calibration_due": "2023-06-05",
+    "temp_C": 23.54,
+    "humidity_pct": 17,
+    "comments": "Method: LOP-72-01 Calibration of AutoCalibrators; Notes: Temperature Coefficient of Resistance uncertainty has been accounted for, but not shown due to negligible impact on overall uncertainty.",
+    "shunts": [
+      {
+        "shunt": 1,
+        "measured_ohm": 10001.86,
+        "prev_ohm": 10000.44,
+        "diff_pct": 0.014241,
+        "unc_ppm": 6.51
+      },
+      {
+        "shunt": 2,
+        "measured_ohm": 99.99935,
+        "prev_ohm": 100,
+        "diff_pct": 0.006670001,
+        "unc_ppm": 7.87
+      },
+      {
+        "shunt": 3,
+        "measured_ohm": 1.001928,
+        "prev_ohm": 0.9999139,
+        "diff_pct": 0.201328,
+        "unc_ppm": 9.65
+      },
+      {
+        "shunt": 4,
+        "measured_ohm": 0.049707,
+        "prev_ohm": 0.049724,
+        "diff_pct": -0.033384,
+        "unc_ppm": 8.7
+      },
+      {
+        "shunt": 5,
+        "measured_ohm": 0.005013,
+        "prev_ohm": 49989.75,
+        "diff_pct": -100,
+        "unc_ppm": 7.61
+      },
+      {
+        "shunt": 6,
+        "measured_ohm": 9.9734,
+        "prev_ohm": 499.4564,
+        "diff_pct": -98.0031,
+        "unc_ppm": 7.99
+      },
+      {
+        "shunt": 7,
+        "measured_ohm": 499.6061,
+        "prev_ohm": 4.980285,
+        "diff_pct": 9931.68,
+        "unc_ppm": 9.25
+      },
+      {
+        "shunt": 8,
+        "measured_ohm": 100.028,
+        "prev_ohm": 0.010019,
+        "diff_pct": 998284,
+        "unc_ppm": 14.26
+      }
+    ],
+    "standards": [
+      {
+        "serial": "431874115",
+        "mfr": "Fluke",
+        "model": "8508A",
+        "cal_due": "2023-10-11"
+      },
+      {
+        "serial": "431874139",
+        "mfr": "Fluke",
+        "model": "8508A",
+        "cal_due": "2023-10-10"
+      },
+      {
+        "serial": "10195",
+        "mfr": "Ohm Labs",
+        "model": "MRS",
+        "cal_due": "2023-09-01"
+      },
+      {
+        "serial": "221238210",
+        "mfr": "Control Company",
+        "model": "4410",
+        "cal_due": "2024-02-09"
+      },
+      {
+        "serial": "",
+        "mfr": "",
+        "model": "",
+        "cal_due": ""
+      },
+      {
+        "serial": "",
+        "mfr": "",
+        "model": "",
+        "cal_due": ""
+      },
+      {
+        "serial": "",
+        "mfr": "",
+        "model": "",
+        "cal_due": ""
+      },
+      {
+        "serial": "",
+        "mfr": "",
+        "model": "",
+        "cal_due": ""
+      }
+    ],
+    "firmware": "AutoCalibrator 0.5.5 Nov 12 2026 16:57:56"
   }
 }

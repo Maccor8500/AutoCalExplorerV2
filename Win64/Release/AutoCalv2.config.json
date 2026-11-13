@@ -18,8 +18,77 @@
     "remarks": "",
     "temp_C": 23.54,
     "humidity_pct": 17,
+    "prev_cal_date": "2026-11-10",
     "notes": "Temperature Coefficient of Resistance uncertainty has been accounted for, but not shown due to negligible impact on overall uncertainty.",
-    "standards": [
+    "comments": "MACCOR, Inc. hereby certifies that the above-referenced instrument meets or exceeds its published specifications, and measurement and calibration procedures are compliant with ISO/IEC 17025:2017.  Calibration and measurement procedures are defined in the MACCOR Laboratory Quality and Procedure Manual (LQPM) and associated procedures.  Procedures use primary or secondary standards whose calibration is traceable, through NIST or other National Measurement Institute, to the International System of Units (SI) or to accepted intrinsic standards of measurement, or whose accuracy have been determined by ratio-type calibration techniques.  The reported expanded uncertainty is based on standard uncertainty multiplied by a coverage factor k=2, providing a level of confidence of approximately 95%.  The reported data is valid only at the time of test and does not take into account the effects of supply voltage/current, humidity, long-term drift, transportation or other factors that may affect the stability of the tested device. This document relates only to the items, identified herein, and complies with all requirements of the referenced Purchase Order associated with this certificate.",
+    "record_comments": "Method: LOP-72-01 Calibration of AutoCalibrators; Notes: Temperature Coefficient of Resistance uncertainty has been accounted for, but not shown due to negligible impact on overall uncertainty.",
+    "form": {
+      "number": "LDF-78-03",
+      "rev": "Rev. 04",
+      "rev_date": "06/30/2021"
+    }
+  },
+  "meters": {
+    "models": [
+      {
+        "manufacturer": "Fluke",
+        "model": "8508A",
+        "digits": 7,
+        "units": [
+          {
+            "serial": "431874115",
+            "cal_due": "2023-10-11"
+          },
+          {
+            "serial": "431874139",
+            "cal_due": "2023-10-10"
+          }
+        ],
+        "dcv_accuracy": [
+          {
+            "range_V": 0.2,
+            "ppm_reading": 4.5,
+            "ppm_range": 0.6,
+            "cal_unc_V": 0
+          },
+          {
+            "range_V": 2,
+            "ppm_reading": 3,
+            "ppm_range": 0.3,
+            "cal_unc_V": 0
+          }
+        ]
+      },
+      {
+        "manufacturer": "Fluke",
+        "model": "8588A",
+        "digits": 8,
+        "protocol": "8508a",
+        "units": [
+          {
+          },
+          {
+          }
+        ],
+        "dcv_accuracy": [
+          {
+            "range_V": 0.2,
+            "ppm_reading": 4.5,
+            "ppm_range": 0.6,
+            "cal_unc_V": 0
+          },
+          {
+            "range_V": 2,
+            "ppm_reading": 3,
+            "ppm_range": 0.3,
+            "cal_unc_V": 0
+          }
+        ]
+      }
+    ]
+  },
+  "standards": {
+    "lines": [
       {
         "serial": "10195",
         "mfr": "Ohm Labs",
@@ -27,23 +96,11 @@
         "cal_due": "2023-09-01"
       },
       {
-        "serial": "18471",
-        "mfr": "Ohm Labs",
-        "model": "MCS",
-        "cal_due": "2023-09-07"
-      },
-      {
         "serial": "221238210",
         "mfr": "Control Company",
         "model": "4410",
         "cal_due": "2024-02-09"
       }
-    ],
-    "comments": "MACCOR, Inc. hereby certifies that the above-referenced instrument meets or exceeds its published specifications, and measurement and calibration procedures are compliant with ISO/IEC 17025:2017.  Calibration and measurement procedures are defined in the MACCOR Laboratory Quality and Procedure Manual (LQPM) and associated procedures.  Procedures use primary or secondary standards whose calibration is traceable, through NIST or other National Measurement Institute, to the International System of Units (SI) or to accepted intrinsic standards of measurement, or whose accuracy have been determined by ratio-type calibration techniques.  The reported expanded uncertainty is based on standard uncertainty multiplied by a coverage factor k=2, providing a level of confidence of approximately 95%.  The reported data is valid only at the time of test and does not take into account the effects of supply voltage/current, humidity, long-term drift, transportation or other factors that may affect the stability of the tested device. This document relates only to the items, identified herein, and complies with all requirements of the referenced Purchase Order associated with this certificate.",
-    "form": {
-      "number": "LDF-78-03",
-      "rev": "Rev. 04",
-      "rev_date": "06/30/2021"
-    }
+    ]
   }
 }

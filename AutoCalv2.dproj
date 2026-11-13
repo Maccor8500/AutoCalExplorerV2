@@ -158,7 +158,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
         </DCCReference>
         <DCCReference Include="CertViewFormU.pas">
             <Form>CertViewForm</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="FlukeFrameU.pas">
             <Form>FlukeFrame</Form>
@@ -194,7 +193,6 @@ $(PostBuildEvent)]]></PostBuildEvent>
             <ResourceId>avr_dude</ResourceId>
         </RcItem>
         <RcItem Include="HeaderImage.png">
-            <ContainerId>ResourceItem</ContainerId>
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>header_image</ResourceId>
         </RcItem>
@@ -239,6 +237,12 @@ $(PostBuildEvent)]]></PostBuildEvent>
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="..\..\..\..\Delphi\MacCommonCode\Julius\avrdude-v8.1-windows-x64.zip" Configuration="Release" Class="ProjectFile">
+                    <Platform Name="Win64">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="HeaderImage.png" Configuration="Release" Class="ProjectFile">
                     <Platform Name="Win64">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -1228,7 +1232,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>if exist &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul</PostBuildEvent>
+        <PostBuildEvent>if exist &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' And '$(Platform)'=='Win64'">
@@ -1236,7 +1240,7 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <PreBuildEventIgnoreExitCode>False</PreBuildEventIgnoreExitCode>
         <PreLinkEvent/>
         <PreLinkEventIgnoreExitCode>False</PreLinkEventIgnoreExitCode>
-        <PostBuildEvent>if exist &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul</PostBuildEvent>
+        <PostBuildEvent>if exist &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacCommonCode\Julius\RawSocket\x64\$(Config)\RawSocket.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTest32Cal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\MacUniModCal\$(Platform)\$(Config)\MacTestCal.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul&amp;&amp;if exist &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; xcopy /y /d &quot;..\..\..\..\Delphi\Libraries\PDFium\pdfium.dll&quot; &quot;$(Platform)\$(Config)\&quot; &gt;nul</PostBuildEvent>
         <PostBuildEventIgnoreExitCode>False</PostBuildEventIgnoreExitCode>
     </PropertyGroup>
 </Project>

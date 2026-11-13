@@ -4,14 +4,21 @@ unit RecordFrameU;
   Calibration Record tab: the calibration record (system_info_t) that the box holds. The tab changes only when
   one of its buttons is pressed; nothing repaints it behind the user's back.
 
-    Read     downloads what the board has in its EEPROM and paints it, as it is
+    Read     downloads what the board has in its EEPROM and paints it, as it is. Whatever of it does not match
+             the local copy (identity, conditions, comments, shunts, standards) is then put where it belongs
+             in the configuration and data files, with a warning that says what (RecordSummaryU.KeepReadLocal):
+             an Import afterwards paints what was read. A shunt that has been accepted keeps its measurement
     Import   brings in what the configuration and data files have (RecordSummaryU) and paints it: identity,
              dates, conditions, comments, the shunts the certificate has a value for and the standards used.
-             What the files do not cover stays as it is painted, so Read then Import gives the board's record
-             with the files over it
-    Write    writes what is painted. The board's current record is read first and compared with it: where they
-             differ the differences are listed and the write waits for a yes, so a stale read (painted a while
-             ago, the board changed since) is not written back unnoticed
+             The data file's own record of the box goes in first; where the files hold none, what they do
+             not cover stays as it is painted
+    Write    writes what is painted: a push to the hardware. The board's current record is read first and
+             compared with it: where they differ the differences are listed and the write waits for a yes,
+             so a stale read (painted a while ago, the board changed since) is not written back unnoticed.
+             After the write the record is read back. On the board as written: a successful write, and the
+             one case where Write touches the data file, whose record of the box is brought up to date with
+             what was written, with a notice in the log. Not as written (the firmware cut a digit): a warning
+             that says where, the tab shows what the board really holds, and the data file is left alone
 
   Every field is editable except the firmware section, which only the board fills. A small grey dot beside a
   measured value marks a shunt that came from the files and is not what the board last gave.
@@ -111,10 +118,18 @@ type
       record was read; where it differs from ToWrite the differences are listed and the user decides
     }
     function ConfirmWrite(const ToWrite, Current: TSystemInfo; const Got: Boolean): Boolean;
+    {
+      on the main thread, after the write and its read back (GotBack = it answered): paints what the board
+      holds, and either brings the data file's record up to date with a notice (written as sent) or warns
+    }
+    procedure WriteDone(const Written, Back: TSystemInfo; const GotBack, Commit: Boolean; const Address: String);
     function Writing: Boolean;
     function Reading: Boolean;
 
   public
+    { a Read wrote to the configuration file (the standards): whoever shows that file should load it again }
+    OnConfigChanged: TProc;
+
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
     { the record is not touched while a firmware update runs: the Firmware tab calls this when that changes }
@@ -362,6 +377,30 @@ begin
           HasRead := True;
           for var I := 0 to CHANS -1 do Measured[I] := False;
           Paint('Read from ' + Board.Address + ' at ' + FormatDateTime('hh:nn:ss', Now));
+
+          {
+            whatever of the record the local files do not have, or have differently, is put where it belongs in
+            them (RecordSummaryU.KeepReadLocal), with a warning that says what: an Import then paints what was read
+          }
+          var Changes: TArray<String>;
+          var Why: String;
+          var Done := KeepReadLocal(Read, 'Read from ' + Board.Address, Changes, Why);
+          if Length(Changes) > 0 then
+          begin
+            Log(Format('WARNING: the record read from the board did not match the local copy in %d place(s) :: the local copy was brought up to date:',
+              [Length(Changes)]));
+            for var C in Changes do Log('  ' + C);
+            { the Configurations sheets show what they loaded: they are told to load again }
+            if Assigned(OnConfigChanged) then OnConfigChanged();
+
+            var Text := Format('The record read from the board did not match the local copy in %d place(s).', [Length(Changes)])
+              + #13#10#13#10 + 'The local copy was updated to match the board:' + #13#10;
+            for var I := 0 to Min(High(Changes), SHOWN_DIFFERENCES -1) do Text := Text + '  ' + Changes[I] + #13#10;
+            if Length(Changes) > SHOWN_DIFFERENCES then
+              Text := Text + Format('  ... and %d more (all of them are in the log)', [Length(Changes) - SHOWN_DIFFERENCES]) + #13#10;
+            MessageDlg(Text, mtWarning, [mbOK], 0);
+          end;
+          if not Done then Log('Read: the local copy could not be brought up to date :: ' + Why);
         end
         else
         begin
@@ -479,21 +518,14 @@ begin
       Go := (FBoard = Board) and ConfirmWrite(Snapshot, Current, Got);
     end);
     var Ok := Go and Board.WriteSystemInfo(Snapshot, Commit);
+    { what the board holds now, to see that it is what was sent }
+    var Back: TSystemInfo;
+    var GotBack := Ok and Board.ReadSystemInfo(Back);
     TThread.Queue(nil, procedure
     begin
       if Go and (FBoard = Board) then
       begin
-        if Ok then
-        begin
-          { what was sent is what the board holds now: the reference from here on, and the dots go }
-          LastRead := Snapshot;
-          if Got then LastRead.Firmware := Current.Firmware;
-          HasRead := True;
-          for var I := 0 to CHANS -1 do Measured[I] := False;
-          Info := LastRead;
-          Paint(StrTernary(Commit, 'Written to the board''s EEPROM', 'Written to the board (not committed)') + ' at '
-            + FormatDateTime('hh:nn:ss', Now));
-        end
+        if Ok then WriteDone(Snapshot, Back, GotBack, Commit, Board.Address)
         else
         begin
           SourceLabel.Caption := 'Write failed';
@@ -501,9 +533,93 @@ begin
         end;
       end;
       EnableButtons;
-      if Ok then TConfetti.Celebrate(Self);
     end);
   end);
+end;
+
+procedure TRecordFrame.WriteDone(const Written, Back: TSystemInfo; const GotBack, Commit: Boolean; const Address: String);
+var
+  Stored: TSystemInfo;
+  Why: String;
+begin
+  var Where := StrTernary(Commit, 'the board''s EEPROM', 'the board (not committed)');
+  var At := ' at ' + FormatDateTime('hh:nn:ss', Now);
+  for var I := 0 to CHANS -1 do Measured[I] := False;
+  HasRead := True;
+
+  if not GotBack then
+  begin
+    { sent, and the board said yes to every section; what it holds could not be looked at }
+    LastRead := Written;
+    Info := Written;
+    Paint('Written, not verified' + At, 'Written to ' + Where + ', but the record could not be read back to check it');
+    Log('WARNING: written to ' + Where + ', but the record could not be read back: it is not known to be as written');
+    MessageDlg('The record was written, but it could not be read back, so it is not known to be on the board as written.'
+      + #13#10#13#10 + 'Press Read to see what the board holds.', mtWarning, [mbOK], 0);
+    Exit;
+  end;
+
+  var Diffs := RecordDifferences(Written, Back, True, 'the board has', 'written');
+  if Length(Diffs) > 0 then
+  begin
+    { the board holds something else than was sent: that is what the tab shows from here on }
+    LastRead := Back;
+    Info := Back;
+    Paint(Format('Written, %d value(s) not as written', [Length(Diffs)]) + At,
+      Format('Written to %s, but %d value(s) read back differently: the tab shows what the board holds', [Where, Length(Diffs)]));
+    Log(Format('WARNING: written to %s, but the board holds %d value(s) differently from what was written:', [Where, Length(Diffs)]));
+    for var D in Diffs do Log('  ' + D);
+    Log(Format('  %s was not touched', [ExtractFileName(TAppData.FileName)]));
+
+    var Text := Format('The record was written, but %d value(s) read back differently from what was written:', [Length(Diffs)]) + #13#10#13#10;
+    for var I := 0 to Min(High(Diffs), SHOWN_DIFFERENCES -1) do Text := Text + Diffs[I] + #13#10;
+    if Length(Diffs) > SHOWN_DIFFERENCES then
+      Text := Text + Format('... and %d more (all of them are in the log)', [Length(Diffs) - SHOWN_DIFFERENCES]) + #13#10;
+    Text := Text + #13#10 + 'The tab now shows what the board holds. ' + ExtractFileName(TAppData.FileName) + ' was not changed.';
+    MessageDlg(Text, mtWarning, [mbOK], 0);
+    Exit;
+  end;
+
+  { on the board as written: a successful write. What was typed stays on the tab, digit for digit }
+  LastRead := Written;
+  LastRead.Firmware := Back.Firmware;
+  Info := LastRead;
+  var Line := 'Written and verified' + At;
+  var Detail := 'Written to ' + Where + ' and read back the same';
+  Log('Written to ' + Where + ' and read back the same');
+
+  {
+    the one case where Write touches the data file: its record of the box is brought up to date with what is
+    now known to be in the box. A notice, not a warning; nothing when the file already has it
+  }
+  var Name := ExtractFileName(TAppData.FileName);
+  var Had := LoadStoredRecord(Stored, Why);
+  var Changes: TArray<String> := nil;
+  if Had then Changes := RecordDifferences(Written, Stored, False, 'the file had', 'written');
+  if (not Had) or (Length(Changes) > 0) then
+  begin
+    if SaveStoredRecord(LastRead, 'Written to ' + Address, Why) then
+    begin
+      if Had then
+      begin
+        Log(Format('Notice: %s brought up to date with what was written (%d value(s)):', [Name, Length(Changes)]));
+        for var C in Changes do Log('  ' + C);
+        Line := Line + ' :: ' + Name + ' updated';
+        Detail := Detail + Format(' :: %s brought up to date (%d value(s), listed in the log)', [Name, Length(Changes)]);
+      end
+      else
+      begin
+        Log(Format('Notice: %s had no valid record of the box :: what was written was saved to it', [Name]));
+        Line := Line + ' :: ' + Name + ' updated';
+        Detail := Detail + Format(' :: saved to %s, which had no valid record of the box', [Name]);
+      end;
+    end
+    else
+      Log(Format('Notice: %s could not be brought up to date with what was written :: %s', [Name, Why]));
+  end;
+
+  Paint(Line, Detail);
+  TConfetti.Celebrate(Self);
 end;
 
 procedure TRecordFrame.StateBtnClick(Sender: TObject);

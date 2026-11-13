@@ -219,8 +219,8 @@ object CertificateFrame: TCertificateFrame
     Height = 15
     AutoSize = False
     Caption = 
-      'Standards used, besides the meters  ::  an Ohm Labs line (MRS, M' +
-      'CS) is printed only when a shunt was measured against it'
+      'Standards used  ::  meters (grey) are set on their Fluke sheets ' +
+      ' ::  an Ohm Labs line prints only when a shunt used it'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -12
@@ -395,6 +395,7 @@ object CertificateFrame: TCertificateFrame
     TabOrder = 18
     StyleName = 'Iceberg Classico'
     OnDrawCell = StdGridDrawCell
+    OnSelectCell = StdGridSelectCell
     ColWidths = (
       170
       180

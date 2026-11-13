@@ -542,7 +542,17 @@ begin
 
   for var I := 0 to CHANS -1 do
   begin
-    if not Call(FC_SYS_UPDATE, SU_SHUNT, Reply, TAutoCalProtocol.ShuntToJSON(Info, I), True) then begin Reply.Free; Exit; end;
+    {
+      each number once more as text, under its key with _text appended. The firmware's JSON parser keeps a
+      float's digits only up to 8388607 and drops the one past that (99.99935 arrived as 99.9993); firmware
+      0.5.5 on reads the text instead and keeps every digit a float holds. An older firmware ignores the text
+    }
+    var Shunt := TAutoCalProtocol.ShuntToJSON(Info, I);
+    Shunt.AddPair('current_text',     Info.Shunts[I].JsonText(sfCurrent));
+    Shunt.AddPair('previous_text',    Info.Shunts[I].JsonText(sfPrevious));
+    Shunt.AddPair('difference_text',  Info.Shunts[I].JsonText(sfDifference));
+    Shunt.AddPair('uncertainty_text', Info.Shunts[I].JsonText(sfUncertainty));
+    if not Call(FC_SYS_UPDATE, SU_SHUNT, Reply, Shunt, True) then begin Reply.Free; Exit; end;
     Reply.Free;
   end;
 

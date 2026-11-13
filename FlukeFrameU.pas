@@ -45,6 +45,8 @@ type
     DefaultsBtn: TButton;
     ReloadBtn: TButton;
     SaveBtn: TButton;
+    ScpiBox: TCheckBox;
+    procedure ScpiBoxClick(Sender: TObject);
     procedure DigitsSpinChange(Sender: TObject);
     procedure DuePickChange(Sender: TObject);
     procedure SpecGridDrawCell(Sender: TObject; ACol, ARow: LongInt; Rect: TRect; State: TGridDrawState);
@@ -76,6 +78,8 @@ type
     destructor Destroy; override;
     { once, after the frame has its parent: the type this sheet is for }
     procedure Open(const AModel: TFlukeModel);
+    { the configuration file changed behind the sheet (a Read of the board saved the meters' lines): what is saved, again }
+    procedure ReloadSheet;
   end;
 
 implementation
@@ -122,7 +126,13 @@ begin
   Opened := True;
   TitleLbl.Caption := FLUKE_MANUFACTURER + ' ' + FLUKE_MODEL_NAME[Model];
   MetersLbl.Caption := Format('Meters (x%d)', [FLUKE_UNITS]);
+  ScpiBox.Visible := FLUKE_HAS_SCPI[Model];
   Reload;
+end;
+
+procedure TFlukeFrame.ReloadSheet;
+begin
+  if Opened then Reload;
 end;
 
 procedure TFlukeFrame.Say(const Text: String; const Bad: Boolean);
@@ -144,9 +154,17 @@ end;
 
 procedure TFlukeFrame.ShowDigitsNote;
 begin
-  DigitsNoteLbl.Caption := Format('sent to the meter as RESL%d at Connect  ::  resolution %s V  ::  default %d',
-    [DigitsSpin.Value, FloatToStrF(Power(10, -DigitsSpin.Value), ffGeneral, 3, 0, TFormatSettings.Invariant),
+  var Sent := Format('RESL%d', [DigitsSpin.Value]);
+  if ScpiBox.Visible and ScpiBox.Checked then Sent := 'its resolution on a fixed range';
+  DigitsNoteLbl.Caption := Format('sent to the meter as %s at Connect  ::  resolution %s V  ::  default %d',
+    [Sent, FloatToStrF(Power(10, -DigitsSpin.Value), ffGeneral, 3, 0, TFormatSettings.Invariant),
     FLUKE_DEFAULT_DIGITS[Model]]);
+end;
+
+procedure TFlukeFrame.ScpiBoxClick(Sender: TObject);
+begin
+  if Loading or not Opened then Exit;
+  ShowDigitsNote;
 end;
 
 procedure TFlukeFrame.ShowDue(const Index: Integer);
@@ -168,6 +186,7 @@ begin
   Loading := True;
   try
     DigitsSpin.Value := EnsureRange(Meter.Digits, FLUKE_MIN_DIGITS, FLUKE_MAX_DIGITS);
+    ScpiBox.Checked := Meter.Scpi;
     ShowDigitsNote;
 
     for var I := 0 to FLUKE_UNITS -1 do
@@ -202,6 +221,7 @@ begin
   Result := False;
   Meter := Default(TFlukeMeter);
   Meter.Digits := DigitsSpin.Value;
+  Meter.Scpi := FLUKE_HAS_SCPI[Model] and ScpiBox.Checked;
 
   for var I := 0 to FLUKE_UNITS -1 do
   begin

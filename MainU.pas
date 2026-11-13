@@ -147,6 +147,12 @@ begin
   CertificateFrame := TCertificateFrame.Create(Self);
   CertificateFrame.Parent := CertificateTab;
   CertificateFrame.Align := alClient;
+  { a Read of the board may save its standards to the configuration file: the sheets that show them load again }
+  RecordFrame.OnConfigChanged := procedure
+    begin
+      CertificateFrame.ReloadSheet;
+      for var Model := Low(TFlukeModel) to High(TFlukeModel) do FlukeFrames[Model].ReloadSheet;
+    end;
   ConfigPages.ActivePage := OhmLabsTab;
 
   Pages.ActivePage := ControlsTab;

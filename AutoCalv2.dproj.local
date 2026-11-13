@@ -7,7 +7,8 @@
     <Transaction>2026/11/06 11:49:42.000.405,C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\AutoCalv2.dproj=C:\Users\jolaoye\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2026/11/06 13:36:32.000.081,=C:\Data\Maccor_Software\Development\Delphi\MacCommonCode\Julius\avrdude-main.zip</Transaction>
     <Transaction>2026/11/06 13:53:50.000.863,=C:\Data\Maccor_Software\Development\Delphi\MacCommonCode\Julius\avrdude-v8.1-windows-x64.zip</Transaction>
-    <Transaction>2026/11/11 12:44:33.821,=C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\ShuntCfgFormU.pas</Transaction>
+    <Transaction>2026/11/11 12:44:33.000.821,=C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\Delphi\ShuntCfgFormU.pas</Transaction>
+    <Transaction>2026/11/11 16:46:36.000.082,=C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\HeaderImage.png</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="..\..\..\..\..\Development"/>
@@ -33,8 +34,24 @@
     <File Path="CalibrationFrameU.dfm"/>
     <File Path="MaccorTesterU.pas"/>
     <File Path="MeterBenchU.pas"/>
-    <File Path="WorkbookDataU.pas"/>
     <File Path="ShuntCfgFormU.pas"/>
     <File Path="ShuntCfgFormU.dfm"/>
+    <File Path="AppConfigU.pas"/>
+    <File Path="CalDataU.pas"/>
+    <File Path="FlukeFrameU.pas"/>
+    <File Path="FlukeFrameU.dfm"/>
+    <File Path="FlukeMetersU.pas"/>
+    <File Path="HeaderImage.png"/>
+    <File Path="OhmLabsFrameU.pas"/>
+    <File Path="OhmLabsFrameU.dfm"/>
+    <File Path="OhmLabsU.pas"/>
+    <File Path="CertificateFrameU.pas"/>
+    <File Path="CertificateFrameU.dfm"/>
+    <File Path="CertificatePdfU.pas"/>
+    <File Path="CertificateU.pas"/>
+    <File Path="CertViewFormU.pas"/>
+    <File Path="CertViewFormU.dfm"/>
+    <File Path="MeterSheetU.pas"/>
+    <File Path="RecordSummaryU.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

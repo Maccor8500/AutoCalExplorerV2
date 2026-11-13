@@ -2305,3 +2305,2489 @@
 10:11:51.780  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
 10:11:51.788  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
 10:11:51.803  shunt record blank :: nominal shunts seeded, not on the board until Write
+
+==== AutoCalv2.exe started 2026-11-12 15:57:08 ====
+15:57:08.945  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+15:57:08.956  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+15:57:11.314  Calibration: starting the tester engine...
+15:57:11.475  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+15:57:12.380  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+15:57:12.381  loading dll <MacTest32Cal.dll>, Compiled:
+15:57:12.389  Nov 04, 2026
+15:57:12.398  loading function::SetEventHandler ...
+15:57:12.405  ok!
+15:57:12.414  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+15:57:12.421  loading function::GetSystemName ...
+15:57:12.430  ok!
+15:57:12.439  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+15:57:12.445  loading function::GetSystemNameEx ...
+15:57:12.452  ok!
+15:57:12.460  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+15:57:12.469  loading function::InitializeSystem ...
+15:57:12.478  ok!
+15:57:12.486  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+15:57:12.494  loading function::CloseSystem ...
+15:57:12.499  ok!
+15:57:12.508  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+15:57:12.515  loading function::SetActiveChan ...
+15:57:12.522  ok!
+15:57:12.530  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+15:57:12.538  loading function::GetActiveChan ...
+15:57:12.545  ok!
+15:57:12.559  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+15:57:12.567  loading function::GetChanSpec ...
+15:57:12.574  ok!
+15:57:12.584  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+15:57:12.590  loading function::SetOutput ...
+15:57:12.597  ok!
+15:57:12.605  Loading... FuncPtr(SetOutput) = 000000006E88D250
+15:57:12.613  loading function::PollChannels ...
+15:57:12.619  ok!
+15:57:12.628  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+15:57:12.636  loading function::CheckChannel ...
+15:57:12.643  ok!
+15:57:12.651  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+15:57:12.659  loading function::StopChannel ...
+15:57:12.666  ok!
+15:57:12.675  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+15:57:12.683  loading function::StopChannels ...
+15:57:12.690  ok!
+15:57:12.698  Loading... FuncPtr(StopChannels) = 000000006E88D410
+15:57:12.706  loading function::DownloadBoard ...
+15:57:12.713  ok!
+15:57:12.722  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+15:57:12.729  loading function::DownloadChannel ...
+15:57:12.735  ok!
+15:57:12.745  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+15:57:12.753  loading function::StartChannel ...
+15:57:12.760  ok!
+15:57:12.769  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+15:57:12.776  loading function::GetChannelCurrent ...
+15:57:12.784  ok!
+15:57:12.791  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+15:57:12.801  loading function::CheckDataUpdate ...
+15:57:12.807  ok!
+15:57:12.815  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+15:57:12.823  loading function::ResetCalibration ...
+15:57:12.831  ok!
+15:57:12.840  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+15:57:12.849  loading function::UpdateCalibrationData ...
+15:57:12.856  ok!
+15:57:12.865  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+15:57:12.873  loading function::DownloadChannelCalibration ...
+15:57:12.880  ok!
+15:57:12.889  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+15:57:12.896  loading function::SystemStatus ...
+15:57:12.905  ok!
+15:57:12.913  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+15:57:12.923  loading function::GetCtlrDownloadStatus ...
+15:57:12.929  ok!
+15:57:12.939  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+15:57:12.946  loading function::SetCtlrMode ...
+15:57:12.954  ok!
+15:57:12.963  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+15:57:12.974  loading function::SetAuxiliaryBoard ...
+15:57:12.981  ok!
+15:57:12.990  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+15:57:12.998  loading function::SetAuxiliaryPanel ...
+15:57:13.005  ok!
+15:57:13.012  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+15:57:13.020  loading function::DownloadAuxiliaryBoard ...
+15:57:13.028  ok!
+15:57:13.037  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+15:57:13.045  loading function::GetAuxBoardData ...
+15:57:13.052  ok!
+15:57:13.060  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+15:57:13.068  loading function::GetAuxPanelData ...
+15:57:13.075  ok!
+15:57:13.083  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+15:57:13.091  loading function::EnableAuxEmulation ...
+15:57:13.097  ok!
+15:57:13.106  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+15:57:13.113  loading function::EmulateSetpoint ...
+15:57:13.120  ok!
+15:57:13.129  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+15:57:13.135  loading function::GetNetStats ...
+15:57:13.142  ok!
+15:57:13.150  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+15:57:13.157  loading function::GetEngineTiming ...
+15:57:13.164  ok!
+15:57:13.173  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+15:57:13.180  loading function::SetEngineTiming ...
+15:57:13.199  ok!
+15:57:13.207  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+15:57:13.215  loading function::SilenceToggle ...
+15:57:13.221  ok!
+15:57:13.229  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+15:57:13.237  Tester: MacTest32Cal.dll loaded
+15:57:13.243   | initializing network...
+15:57:13.252  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+15:57:13.258  RS.Create(...)| Path: RawSocket.dll, Handle: 140704508870656, Compiled:
+15:57:13.270  Oct 13, 2026
+15:57:13.282  RawSocket::GetApiVersion :: 1.1 <ok>
+15:57:13.289  RawSocket::ShutdownService :: ok
+15:57:13.296  RawSocket::CreateSocket :: ok
+15:57:13.304  RawSocket::DestroySocket :: ok
+15:57:13.311  RawSocket::SendPacket :: ok
+15:57:13.319  RawSocket::SendPacketLen :: ok
+15:57:13.326  RawSocket::SetEthernetHeader :: ok
+15:57:13.335  RawSocket::SetPacketFilter :: ok
+15:57:13.341  socket [event:0] checkpoint! all callbacks assigned!
+15:57:13.349  socket [event:0] checkpoint! socket transmit handler initialized!
+15:57:13.356  socket [event:0] receive handler object initialization successful!
+15:57:13.363  socket [event:0] global socket receive handler initialization successful!
+15:57:13.370  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:57:13.377  socket [event:0] filter compilation: successful
+15:57:13.384  socket [event:0] filter registration successful! auto filter resumed!
+15:57:13.392  socket [event:0] socket registration successful!
+15:57:13.398  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+15:57:13.406  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+15:57:13.412  socket initialized!
+15:57:13.423  socket handle address: 0000014662D7DEE0
+15:57:13.433  Starting system...
+15:57:13.439  ok!
+15:57:13.448  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+15:57:13.468  checking controller boards...
+15:57:13.472  board: 2 ok!
+15:57:13.477  board: 1 ok!
+15:57:13.484  Setting Channel: 1 specifications...
+15:57:13.491  ok!
+15:57:13.498  Setting Channel: 1 configurations...
+15:57:13.506  ok!
+15:57:13.513  Setting raw-socket header for ctlr board...
+15:57:13.519  ok!
+15:57:13.527  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+15:57:13.534  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+15:57:13.540  socket [event:0] filter compilation: successful
+15:57:13.548  socket [event:0] filter registration successful! auto filter resumed!
+15:57:13.553  active channel = 1
+15:57:14.103  Starting socket for 192.168.126.214
+15:57:14.177  192.168.126.214 reached via 192.168.126.51
+15:57:14.178  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 19708 | }
+15:57:14.189  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 19708 | }
+15:57:14.199  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+15:57:21.357  socket [event:0] unregistering socket...
+15:57:21.358  socket [event:1] ok!
+15:57:21.366  Tester: engine closed
+15:57:26.216  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19709 | }
+15:57:26.239  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19709 | }
+15:57:26.517  Calibration record read: Prototype / PrototypeDEC2022JB
+15:58:56.613  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19728 | }
+15:58:56.634  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19728 | }
+15:58:56.913  Calibration record read: Prototype / PrototypeDEC2022JB
+15:58:56.915  Write: the board's current record differs from what is shown in 1 place(s):
+15:58:56.921    Shunt 2 measured: the board has 100.0066, to write 99.99935
+15:59:49.281  Write: not written
+15:59:50.263  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19747 | }
+15:59:50.286  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19747 | }
+15:59:50.564  Calibration record read: Prototype / PrototypeDEC2022JB
+16:02:54.149  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19766 | }
+16:02:54.171  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19766 | }
+16:02:54.448  Calibration record read: Prototype / PrototypeDEC2022JB
+16:03:19.140  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19785 | }
+16:03:19.162  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19785 | }
+16:03:19.440  Calibration record read: Prototype / PrototypeDEC2022JB
+16:03:19.442  Write: the board's current record differs from what is shown in 1 place(s):
+16:03:19.448    Shunt 2 measured: the board has 100.0066, to write 99.99935
+16:03:22.341  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 19804 | }
+16:03:22.361  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 19804 | }
+16:03:22.564  Calibration record staged on the board
+16:03:22.566  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 19822 | }
+16:03:22.609  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 19822 | }
+16:03:22.614  Calibration record committed to EEPROM
+16:03:26.983  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19823 | }
+16:03:27.003  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19823 | }
+16:03:27.255  Calibration record read: Prototype / PrototypeDEC2022JB
+16:03:48.302  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19842 | }
+16:03:48.323  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19842 | }
+16:03:48.588  Calibration record read: Prototype / PrototypeDEC2022JB
+16:04:15.822  Calibration: starting the tester engine...
+16:04:15.969  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:04:16.889  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+16:04:16.891   | initializing network...
+16:04:16.899  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:04:16.906  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231536128, Compiled:
+16:04:16.911  Oct 13, 2026
+16:04:16.917  RawSocket::GetApiVersion :: 1.1 <ok>
+16:04:16.924  RawSocket::ShutdownService :: ok
+16:04:16.929  RawSocket::CreateSocket :: ok
+16:04:16.937  RawSocket::DestroySocket :: ok
+16:04:16.942  RawSocket::SendPacket :: ok
+16:04:16.948  RawSocket::SendPacketLen :: ok
+16:04:16.955  RawSocket::SetEthernetHeader :: ok
+16:04:16.960  RawSocket::SetPacketFilter :: ok
+16:04:16.967  socket [event:0] checkpoint! all callbacks assigned!
+16:04:16.972  socket [event:0] checkpoint! socket transmit handler initialized!
+16:04:16.978  socket [event:0] receive handler object initialization successful!
+16:04:16.984  socket [event:0] global socket receive handler initialization successful!
+16:04:16.991  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:04:16.997  socket [event:0] filter compilation: successful
+16:04:17.003  socket [event:0] filter registration successful! auto filter resumed!
+16:04:17.010  socket [event:0] socket registration successful!
+16:04:17.016  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:04:17.022  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:04:17.028  socket initialized!
+16:04:17.034  socket handle address: 0000014662D773B0
+16:04:17.040  Starting system...
+16:04:17.046  ok!
+16:04:17.052  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:04:17.058  checking controller boards...
+16:04:17.065  board: 2 ok!
+16:04:17.070  board: 1 ok!
+16:04:17.076  Setting Channel: 1 specifications...
+16:04:17.082  ok!
+16:04:17.088  Setting Channel: 1 configurations...
+16:04:17.094  ok!
+16:04:17.102  Setting raw-socket header for ctlr board...
+16:04:17.106  ok!
+16:04:17.113  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:04:17.119  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:04:17.126  socket [event:0] filter compilation: successful
+16:04:17.133  socket [event:0] filter registration successful! auto filter resumed!
+16:04:17.139  active channel = 1
+16:05:17.629  Tester: board download requested for channel 1's board...
+16:05:17.775  Downloading board: 1 <V5_cntl8.BIN [61303 Bytes]>
+16:05:17.777  Downloading Controller [board: 1]
+16:05:17.784  Bytes: 1000 /61303 | 2%
+16:05:17.891  Bytes: 2000 /61303 | 3%
+16:05:18.000  Bytes: 3000 /61303 | 5%
+16:05:18.109  Bytes: 4000 /61303 | 6%
+16:05:18.219  Bytes: 5000 /61303 | 8%
+16:05:18.327  Bytes: 6000 /61303 | 10%
+16:05:18.437  Bytes: 7000 /61303 | 11%
+16:05:18.545  Bytes: 8000 /61303 | 13%
+16:05:18.654  Bytes: 9000 /61303 | 15%
+16:05:18.764  Bytes: 10000 /61303 | 16%
+16:05:18.874  Bytes: 11000 /61303 | 18%
+16:05:18.981  Bytes: 12000 /61303 | 19%
+16:05:19.091  Bytes: 13000 /61303 | 21%
+16:05:19.200  Bytes: 14000 /61303 | 23%
+16:05:19.310  Bytes: 15000 /61303 | 24%
+16:05:19.420  Bytes: 16000 /61303 | 26%
+16:05:19.529  Bytes: 17000 /61303 | 27%
+16:05:19.638  Bytes: 18000 /61303 | 29%
+16:05:19.751  Bytes: 19000 /61303 | 31%
+16:05:19.860  Bytes: 20000 /61303 | 32%
+16:05:19.971  Bytes: 21000 /61303 | 34%
+16:05:20.079  Bytes: 22000 /61303 | 35%
+16:05:20.189  Bytes: 23000 /61303 | 37%
+16:05:20.299  Bytes: 24000 /61303 | 39%
+16:05:20.408  Bytes: 25000 /61303 | 40%
+16:05:20.514  Bytes: 26000 /61303 | 42%
+16:05:20.624  Bytes: 27000 /61303 | 44%
+16:05:20.734  Bytes: 28000 /61303 | 45%
+16:05:20.843  Bytes: 29000 /61303 | 47%
+16:05:20.950  Bytes: 30000 /61303 | 48%
+16:05:21.059  Bytes: 31000 /61303 | 50%
+16:05:21.169  Bytes: 32000 /61303 | 52%
+16:05:21.279  Bytes: 33000 /61303 | 53%
+16:05:21.389  Bytes: 34000 /61303 | 55%
+16:05:21.498  Bytes: 35000 /61303 | 56%
+16:05:21.605  Bytes: 36000 /61303 | 58%
+16:05:21.716  Bytes: 37000 /61303 | 60%
+16:05:21.824  Bytes: 38000 /61303 | 61%
+16:05:21.934  Bytes: 39000 /61303 | 63%
+16:05:22.042  Bytes: 40000 /61303 | 65%
+16:05:22.149  Bytes: 41000 /61303 | 66%
+16:05:22.259  Bytes: 42000 /61303 | 68%
+16:05:22.370  Bytes: 43000 /61303 | 69%
+16:05:22.480  Bytes: 44000 /61303 | 71%
+16:05:22.588  Bytes: 45000 /61303 | 73%
+16:05:22.699  Bytes: 46000 /61303 | 74%
+16:05:22.807  Bytes: 47000 /61303 | 76%
+16:05:22.915  Bytes: 48000 /61303 | 77%
+16:05:23.024  Bytes: 49000 /61303 | 79%
+16:05:23.137  Bytes: 50000 /61303 | 81%
+16:05:23.245  Bytes: 51000 /61303 | 82%
+16:05:23.356  Bytes: 52000 /61303 | 84%
+16:05:23.464  Bytes: 53000 /61303 | 85%
+16:05:23.573  Bytes: 54000 /61303 | 87%
+16:05:23.684  Bytes: 55000 /61303 | 89%
+16:05:23.794  Bytes: 56000 /61303 | 90%
+16:05:23.902  Bytes: 57000 /61303 | 92%
+16:05:24.013  Bytes: 58000 /61303 | 94%
+16:05:24.122  Bytes: 59000 /61303 | 95%
+16:05:24.233  Bytes: 60000 /61303 | 97%
+16:05:24.341  Bytes: 61000 /61303 | 98%
+16:05:24.451  Bytes: 61303 /61303 | 100%
+16:05:24.561   | ...
+16:05:24.593  downloading calibration:
+16:05:24.593  channel: 01...
+16:05:25.237  ok.
+16:05:25.298  channel: 02...
+16:05:25.937  ok.
+16:05:25.999  channel: 03...
+16:05:26.638  ok.
+16:05:26.701  channel: 04...
+16:05:27.341  ok.
+16:05:27.404  channel: 05...
+16:05:28.045  ok.
+16:05:28.108  channel: 06...
+16:05:28.747  ok.
+16:05:28.809  channel: 07...
+16:05:29.448  ok.
+16:05:29.510  channel: 08...
+16:05:30.154  ok.
+16:05:30.216   | ...
+16:05:30.217  downloading board: 1 complete
+16:05:30.232  Tester: board download finished (the engine's messages above say how it went)
+16:06:36.948  socket [event:0] unregistering socket...
+16:06:36.950  socket [event:1] ok!
+16:06:36.957  Tester: engine closed
+16:06:45.567  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19861 | }
+16:06:45.588  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19861 | }
+16:06:45.862  Calibration record read: Prototype / PrototypeDEC2022JB
+16:06:56.714  Calibration: starting the tester engine...
+16:06:56.863  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:06:57.376  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+16:06:57.378   | initializing network...
+16:06:57.384  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:06:57.390  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:06:57.395  Oct 13, 2026
+16:06:57.401  RawSocket::GetApiVersion :: 1.1 <ok>
+16:06:57.408  RawSocket::ShutdownService :: ok
+16:06:57.413  RawSocket::CreateSocket :: ok
+16:06:57.419  RawSocket::DestroySocket :: ok
+16:06:57.424  RawSocket::SendPacket :: ok
+16:06:57.430  RawSocket::SendPacketLen :: ok
+16:06:57.436  RawSocket::SetEthernetHeader :: ok
+16:06:57.443  RawSocket::SetPacketFilter :: ok
+16:06:57.449  socket [event:0] checkpoint! all callbacks assigned!
+16:06:57.456  socket [event:0] checkpoint! socket transmit handler initialized!
+16:06:57.462  socket [event:0] receive handler object initialization successful!
+16:06:57.468  socket [event:0] global socket receive handler initialization successful!
+16:06:57.475  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:06:57.480  socket [event:0] filter compilation: successful
+16:06:57.487  socket [event:0] filter registration successful! auto filter resumed!
+16:06:57.492  socket [event:0] socket registration successful!
+16:06:57.497  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:06:57.504  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:06:57.510  socket initialized!
+16:06:57.516  socket handle address: 0000014662D773B0
+16:06:57.522  Starting system...
+16:06:57.527  ok!
+16:06:57.536  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:06:57.540  checking controller boards...
+16:06:57.546  board: 2 ok!
+16:06:57.553  board: 1 ok!
+16:06:57.558  Setting Channel: 1 specifications...
+16:06:57.564  ok!
+16:06:57.571  Setting Channel: 1 configurations...
+16:06:57.577  ok!
+16:06:57.583  Setting raw-socket header for ctlr board...
+16:06:57.589  ok!
+16:06:57.595  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:06:57.602  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:06:57.608  socket [event:0] filter compilation: successful
+16:06:57.615  socket [event:0] filter registration successful! auto filter resumed!
+16:06:57.621  active channel = 1
+16:08:23.888  socket [event:0] unregistering socket...
+16:08:23.890  socket [event:1] ok!
+16:08:23.898  Tester: engine closed
+16:08:23.912  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 16:10:52 ====
+16:10:52.729  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:10:52.739  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:10:55.771  Calibration: starting the tester engine...
+16:10:55.929  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:10:56.878  Meters: Auto Connect given up, the GPIB gateway at 192.168.126.216 did not answer 2 pings
+16:10:56.879  loading dll <MacTest32Cal.dll>, Compiled:
+16:10:56.887  Nov 04, 2026
+16:10:56.893  loading function::SetEventHandler ...
+16:10:56.899  ok!
+16:10:56.905  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:10:56.911  loading function::GetSystemName ...
+16:10:56.917  ok!
+16:10:56.926  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:10:56.929  loading function::GetSystemNameEx ...
+16:10:56.934  ok!
+16:10:56.941  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:10:56.946  loading function::InitializeSystem ...
+16:10:56.952  ok!
+16:10:56.959  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:10:56.965  loading function::CloseSystem ...
+16:10:56.972  ok!
+16:10:56.978  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:10:56.984  loading function::SetActiveChan ...
+16:10:56.990  ok!
+16:10:56.998  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:10:57.004  loading function::GetActiveChan ...
+16:10:57.011  ok!
+16:10:57.018  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:10:57.024  loading function::GetChanSpec ...
+16:10:57.030  ok!
+16:10:57.037  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:10:57.044  loading function::SetOutput ...
+16:10:57.050  ok!
+16:10:57.058  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:10:57.064  loading function::PollChannels ...
+16:10:57.070  ok!
+16:10:57.077  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:10:57.083  loading function::CheckChannel ...
+16:10:57.090  ok!
+16:10:57.100  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:10:57.106  loading function::StopChannel ...
+16:10:57.114  ok!
+16:10:57.121  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:10:57.129  loading function::StopChannels ...
+16:10:57.136  ok!
+16:10:57.143  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:10:57.149  loading function::DownloadBoard ...
+16:10:57.157  ok!
+16:10:57.165  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:10:57.171  loading function::DownloadChannel ...
+16:10:57.178  ok!
+16:10:57.186  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:10:57.194  loading function::StartChannel ...
+16:10:57.201  ok!
+16:10:57.209  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:10:57.218  loading function::GetChannelCurrent ...
+16:10:57.224  ok!
+16:10:57.232  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:10:57.241  loading function::CheckDataUpdate ...
+16:10:57.246  ok!
+16:10:57.255  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:10:57.261  loading function::ResetCalibration ...
+16:10:57.267  ok!
+16:10:57.276  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:10:57.282  loading function::UpdateCalibrationData ...
+16:10:57.289  ok!
+16:10:57.297  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:10:57.305  loading function::DownloadChannelCalibration ...
+16:10:57.311  ok!
+16:10:57.320  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:10:57.327  loading function::SystemStatus ...
+16:10:57.334  ok!
+16:10:57.342  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:10:57.350  loading function::GetCtlrDownloadStatus ...
+16:10:57.356  ok!
+16:10:57.366  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:10:57.373  loading function::SetCtlrMode ...
+16:10:57.380  ok!
+16:10:57.387  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:10:57.396  loading function::SetAuxiliaryBoard ...
+16:10:57.402  ok!
+16:10:57.412  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:10:57.419  loading function::SetAuxiliaryPanel ...
+16:10:57.424  ok!
+16:10:57.432  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:10:57.439  loading function::DownloadAuxiliaryBoard ...
+16:10:57.447  ok!
+16:10:57.455  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:10:57.464  loading function::GetAuxBoardData ...
+16:10:57.469  ok!
+16:10:57.478  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:10:57.491  loading function::GetAuxPanelData ...
+16:10:57.495  ok!
+16:10:57.505  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:10:57.512  loading function::EnableAuxEmulation ...
+16:10:57.520  ok!
+16:10:57.527  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:10:57.535  loading function::EmulateSetpoint ...
+16:10:57.541  ok!
+16:10:57.550  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:10:57.557  loading function::GetNetStats ...
+16:10:57.564  ok!
+16:10:57.573  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:10:57.581  loading function::GetEngineTiming ...
+16:10:57.589  ok!
+16:10:57.601  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:10:57.608  loading function::SetEngineTiming ...
+16:10:57.615  ok!
+16:10:57.624  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:10:57.631  loading function::SilenceToggle ...
+16:10:57.643  ok!
+16:10:57.651  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:10:57.659  Tester: MacTest32Cal.dll loaded
+16:10:57.667   | initializing network...
+16:10:57.676  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:10:57.681  RS.Create(...)| Path: RawSocket.dll, Handle: 140704535085056, Compiled:
+16:10:57.689  Oct 13, 2026
+16:10:57.697  RawSocket::GetApiVersion :: 1.1 <ok>
+16:10:57.707  RawSocket::ShutdownService :: ok
+16:10:57.713  RawSocket::CreateSocket :: ok
+16:10:57.721  RawSocket::DestroySocket :: ok
+16:10:57.729  RawSocket::SendPacket :: ok
+16:10:57.737  RawSocket::SendPacketLen :: ok
+16:10:57.744  RawSocket::SetEthernetHeader :: ok
+16:10:57.751  RawSocket::SetPacketFilter :: ok
+16:10:57.760  socket [event:0] checkpoint! all callbacks assigned!
+16:10:57.766  socket [event:0] checkpoint! socket transmit handler initialized!
+16:10:57.774  socket [event:0] receive handler object initialization successful!
+16:10:57.783  socket [event:0] global socket receive handler initialization successful!
+16:10:57.791  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:10:57.799  socket [event:0] filter compilation: successful
+16:10:57.808  socket [event:0] filter registration successful! auto filter resumed!
+16:10:57.817  socket [event:0] socket registration successful!
+16:10:57.823  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:10:57.832  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:10:57.838  socket initialized!
+16:10:57.845  socket handle address: 000001C1CF5403A0
+16:10:57.851  Starting system...
+16:10:57.858  ok!
+16:10:57.866  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:10:57.874  checking controller boards...
+16:10:57.882  board: 2 ok!
+16:10:57.888  board: 1 ok!
+16:10:57.897  Setting Channel: 1 specifications...
+16:10:57.902  ok!
+16:10:57.910  Setting Channel: 1 configurations...
+16:10:57.917  ok!
+16:10:57.926  Setting raw-socket header for ctlr board...
+16:10:57.932  ok!
+16:10:57.940  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:10:57.946  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:10:57.953  socket [event:0] filter compilation: successful
+16:10:57.961  socket [event:0] filter registration successful! auto filter resumed!
+16:10:57.969  active channel = 1
+16:11:03.921  Shunt plan: shunt 4 current 1.95 A, standard 0.1000116 Ω
+16:12:40.803  Starting socket for 192.168.126.214
+16:12:40.872  192.168.126.214 reached via 192.168.126.51
+16:12:40.873  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 3249 | }
+16:12:40.883  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 3249 | }
+16:12:40.892  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+16:12:43.039  Calibration: channel 1, Discharge R4, 1.95 A through shunt 4 (box position 1)
+16:12:43.041  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 6, |         "FNum": 1 |     }, |     "id": 3250 | }
+16:12:43.051  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 6, |         "FNum": 1, |         "status": "OK" |     }, |     "id": 3250 | }
+16:12:43.059  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 2, |         "FNum": 0 |     }, |     "id": 3251 | }
+16:12:43.065  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 2, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 3251 | }
+16:12:43.073  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 4, |         "FNum": 3 |     }, |     "id": 3252 | }
+16:12:43.077  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 4, |         "FNum": 3, |         "status": "OK" |     }, |     "id": 3252 | }
+16:12:43.084  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 3, |         "FNum": 3 |     }, |     "id": 3253 | }
+16:12:43.090  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 3, |         "FNum": 3, |         "status": "OK" |     }, |     "id": 3253 | }
+16:12:43.094  Chan: 01, Mode: Discharge, Range: 4, Curr: [0x63D7 (1.95003A )], Ctrl: Const. Current
+16:16:32.739  Calibration: channel stopped, relays released
+16:16:32.741  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 2, |         "FNum": 8 |     }, |     "id": 3254 | }
+16:16:32.755  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 2, |         "FNum": 8, |         "status": "OK" |     }, |     "id": 3254 | }
+16:16:32.764  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 4, |         "FNum": 8 |     }, |     "id": 3255 | }
+16:16:32.774  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 4, |         "FNum": 8, |         "status": "OK" |     }, |     "id": 3255 | }
+16:16:32.785  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 3, |         "FNum": 8 |     }, |     "id": 3256 | }
+16:16:32.794  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 3, |         "FNum": 8, |         "status": "OK" |     }, |     "id": 3256 | }
+16:16:36.253  Closing 192.168.126.214
+16:16:38.000  socket [event:0] unregistering socket...
+16:16:38.001  socket [event:1] ok!
+16:16:38.010  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:16:50 ====
+16:16:50.853  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:16:50.860  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:16:52.381  Atmel-ICE connected, serial J42700070268, status OK
+16:16:52.382  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+16:16:54.880  Calibration: starting the tester engine...
+16:16:55.035  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:16:55.048  loading dll <MacTest32Cal.dll>, Compiled:
+16:16:55.049  Nov 04, 2026
+16:16:55.057  loading function::SetEventHandler ...
+16:16:55.063  ok!
+16:16:55.070  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:16:55.079  loading function::GetSystemName ...
+16:16:55.083  ok!
+16:16:55.090  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:16:55.097  loading function::GetSystemNameEx ...
+16:16:55.101  ok!
+16:16:55.108  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:16:55.115  loading function::InitializeSystem ...
+16:16:55.121  ok!
+16:16:55.129  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:16:55.134  loading function::CloseSystem ...
+16:16:55.140  ok!
+16:16:55.147  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:16:55.154  loading function::SetActiveChan ...
+16:16:55.159  ok!
+16:16:55.166  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:16:55.171  loading function::GetActiveChan ...
+16:16:55.177  ok!
+16:16:55.184  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:16:55.191  loading function::GetChanSpec ...
+16:16:55.196  ok!
+16:16:55.204  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:16:55.211  loading function::SetOutput ...
+16:16:55.217  ok!
+16:16:55.224  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:16:55.230  loading function::PollChannels ...
+16:16:55.236  ok!
+16:16:55.244  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:16:55.251  loading function::CheckChannel ...
+16:16:55.256  ok!
+16:16:55.264  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:16:55.272  loading function::StopChannel ...
+16:16:55.277  ok!
+16:16:55.285  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:16:55.292  loading function::StopChannels ...
+16:16:55.297  ok!
+16:16:55.305  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:16:55.312  loading function::DownloadBoard ...
+16:16:55.318  ok!
+16:16:55.326  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:16:55.333  loading function::DownloadChannel ...
+16:16:55.339  ok!
+16:16:55.347  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:16:55.355  loading function::StartChannel ...
+16:16:55.361  ok!
+16:16:55.369  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:16:55.375  loading function::GetChannelCurrent ...
+16:16:55.382  ok!
+16:16:55.389  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:16:55.397  loading function::CheckDataUpdate ...
+16:16:55.403  ok!
+16:16:55.410  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:16:55.417  loading function::ResetCalibration ...
+16:16:55.423  ok!
+16:16:55.432  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:16:55.440  loading function::UpdateCalibrationData ...
+16:16:55.444  ok!
+16:16:55.452  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:16:55.459  loading function::DownloadChannelCalibration ...
+16:16:55.466  ok!
+16:16:55.474  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:16:55.481  loading function::SystemStatus ...
+16:16:55.487  ok!
+16:16:55.496  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:16:55.506  loading function::GetCtlrDownloadStatus ...
+16:16:55.512  ok!
+16:16:55.520  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:16:55.527  loading function::SetCtlrMode ...
+16:16:55.535  ok!
+16:16:55.543  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:16:55.550  loading function::SetAuxiliaryBoard ...
+16:16:55.556  ok!
+16:16:55.564  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:16:55.572  loading function::SetAuxiliaryPanel ...
+16:16:55.579  ok!
+16:16:55.587  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:16:55.595  loading function::DownloadAuxiliaryBoard ...
+16:16:55.604  ok!
+16:16:55.611  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:16:55.620  loading function::GetAuxBoardData ...
+16:16:55.628  ok!
+16:16:55.636  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:16:55.644  loading function::GetAuxPanelData ...
+16:16:55.652  ok!
+16:16:55.660  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:16:55.668  loading function::EnableAuxEmulation ...
+16:16:55.675  ok!
+16:16:55.683  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:16:55.692  loading function::EmulateSetpoint ...
+16:16:55.699  ok!
+16:16:55.708  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:16:55.716  loading function::GetNetStats ...
+16:16:55.725  ok!
+16:16:55.733  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:16:55.741  loading function::GetEngineTiming ...
+16:16:55.747  ok!
+16:16:55.758  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:16:55.765  loading function::SetEngineTiming ...
+16:16:55.772  ok!
+16:16:55.779  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:16:55.786  loading function::SilenceToggle ...
+16:16:55.792  ok!
+16:16:55.801  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:16:55.809  Tester: MacTest32Cal.dll loaded
+16:16:55.817   | initializing network...
+16:16:55.824  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:16:55.834  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231536128, Compiled:
+16:16:55.841  Oct 13, 2026
+16:16:55.849  RawSocket::GetApiVersion :: 1.1 <ok>
+16:16:55.857  RawSocket::ShutdownService :: ok
+16:16:55.865  RawSocket::CreateSocket :: ok
+16:16:55.873  RawSocket::DestroySocket :: ok
+16:16:55.881  RawSocket::SendPacket :: ok
+16:16:55.888  RawSocket::SendPacketLen :: ok
+16:16:55.896  RawSocket::SetEthernetHeader :: ok
+16:16:55.905  RawSocket::SetPacketFilter :: ok
+16:16:55.913  socket [event:0] checkpoint! all callbacks assigned!
+16:16:55.921  socket [event:0] checkpoint! socket transmit handler initialized!
+16:16:55.927  socket [event:0] receive handler object initialization successful!
+16:16:55.935  socket [event:0] global socket receive handler initialization successful!
+16:16:55.942  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:16:55.949  socket [event:0] filter compilation: successful
+16:16:55.958  socket [event:0] filter registration successful! auto filter resumed!
+16:16:55.965  socket [event:0] socket registration successful!
+16:16:55.972  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:16:55.978  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:16:55.986  socket initialized!
+16:16:55.992  socket handle address: 00000230E9F3C130
+16:16:56.001  Starting system...
+16:16:56.006  ok!
+16:16:56.015  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:16:56.022  checking controller boards...
+16:16:56.029  board: 2 ok!
+16:16:56.035  board: 1 ok!
+16:16:56.042  Setting Channel: 1 specifications...
+16:16:56.049  ok!
+16:16:56.063  Setting Channel: 1 configurations...
+16:16:56.065  ok!
+16:16:56.072  Setting raw-socket header for ctlr board...
+16:16:56.079  ok!
+16:16:56.087  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:16:56.096  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:16:56.104  socket [event:0] filter compilation: successful
+16:16:56.113  socket [event:0] filter registration successful! auto filter resumed!
+16:16:56.120  active channel = 1
+16:19:33.597  socket [event:0] unregistering socket...
+16:19:33.600  socket [event:1] ok!
+16:19:33.609  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:19:36 ====
+16:19:36.383  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:19:36.392  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:19:38.180  Calibration: starting the tester engine...
+16:19:38.354  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:19:38.367  loading dll <MacTest32Cal.dll>, Compiled:
+16:19:38.368  Nov 04, 2026
+16:19:38.375  loading function::SetEventHandler ...
+16:19:38.382  ok!
+16:19:38.389  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:19:38.395  loading function::GetSystemName ...
+16:19:38.401  ok!
+16:19:38.407  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:19:38.417  loading function::GetSystemNameEx ...
+16:19:38.421  ok!
+16:19:38.429  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:19:38.436  loading function::InitializeSystem ...
+16:19:38.442  ok!
+16:19:38.451  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:19:38.456  loading function::CloseSystem ...
+16:19:38.462  ok!
+16:19:38.469  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:19:38.476  loading function::SetActiveChan ...
+16:19:38.482  ok!
+16:19:38.489  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:19:38.495  loading function::GetActiveChan ...
+16:19:38.501  ok!
+16:19:38.510  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:19:38.515  loading function::GetChanSpec ...
+16:19:38.522  ok!
+16:19:38.529  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:19:38.537  loading function::SetOutput ...
+16:19:38.542  ok!
+16:19:38.550  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:19:38.557  loading function::PollChannels ...
+16:19:38.563  ok!
+16:19:38.571  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:19:38.577  loading function::CheckChannel ...
+16:19:38.583  ok!
+16:19:38.590  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:19:38.597  loading function::StopChannel ...
+16:19:38.603  ok!
+16:19:38.610  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:19:38.617  loading function::StopChannels ...
+16:19:38.624  ok!
+16:19:38.633  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:19:38.640  loading function::DownloadBoard ...
+16:19:38.647  ok!
+16:19:38.655  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:19:38.663  loading function::DownloadChannel ...
+16:19:38.670  ok!
+16:19:38.678  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:19:38.686  loading function::StartChannel ...
+16:19:38.694  ok!
+16:19:38.702  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:19:38.710  loading function::GetChannelCurrent ...
+16:19:38.714  ok!
+16:19:38.722  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:19:38.730  loading function::CheckDataUpdate ...
+16:19:38.737  ok!
+16:19:38.744  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:19:38.751  loading function::ResetCalibration ...
+16:19:38.759  ok!
+16:19:38.767  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:19:38.776  loading function::UpdateCalibrationData ...
+16:19:38.782  ok!
+16:19:38.790  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:19:38.798  loading function::DownloadChannelCalibration ...
+16:19:38.805  ok!
+16:19:38.813  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:19:38.820  loading function::SystemStatus ...
+16:19:38.827  ok!
+16:19:38.837  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:19:38.844  loading function::GetCtlrDownloadStatus ...
+16:19:38.851  ok!
+16:19:38.859  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:19:38.867  loading function::SetCtlrMode ...
+16:19:38.875  ok!
+16:19:38.885  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:19:38.891  loading function::SetAuxiliaryBoard ...
+16:19:38.898  ok!
+16:19:38.906  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:19:38.914  loading function::SetAuxiliaryPanel ...
+16:19:38.921  ok!
+16:19:38.930  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:19:38.938  loading function::DownloadAuxiliaryBoard ...
+16:19:38.946  ok!
+16:19:38.954  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:19:38.964  loading function::GetAuxBoardData ...
+16:19:38.970  ok!
+16:19:38.978  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:19:38.985  loading function::GetAuxPanelData ...
+16:19:38.991  ok!
+16:19:39.000  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:19:39.008  loading function::EnableAuxEmulation ...
+16:19:39.014  ok!
+16:19:39.024  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:19:39.029  loading function::EmulateSetpoint ...
+16:19:39.035  ok!
+16:19:39.044  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:19:39.052  loading function::GetNetStats ...
+16:19:39.060  ok!
+16:19:39.067  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:19:39.074  loading function::GetEngineTiming ...
+16:19:39.082  ok!
+16:19:39.091  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:19:39.098  loading function::SetEngineTiming ...
+16:19:39.104  ok!
+16:19:39.113  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:19:39.121  loading function::SilenceToggle ...
+16:19:39.129  ok!
+16:19:39.137  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:19:39.145  Tester: MacTest32Cal.dll loaded
+16:19:39.153   | initializing network...
+16:19:39.161  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:19:39.169  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231536128, Compiled:
+16:19:39.175  Oct 13, 2026
+16:19:39.183  RawSocket::GetApiVersion :: 1.1 <ok>
+16:19:39.191  RawSocket::ShutdownService :: ok
+16:19:39.199  RawSocket::CreateSocket :: ok
+16:19:39.206  RawSocket::DestroySocket :: ok
+16:19:39.215  RawSocket::SendPacket :: ok
+16:19:39.223  RawSocket::SendPacketLen :: ok
+16:19:39.231  RawSocket::SetEthernetHeader :: ok
+16:19:39.238  RawSocket::SetPacketFilter :: ok
+16:19:39.245  socket [event:0] checkpoint! all callbacks assigned!
+16:19:39.252  socket [event:0] checkpoint! socket transmit handler initialized!
+16:19:39.260  socket [event:0] receive handler object initialization successful!
+16:19:39.268  socket [event:0] global socket receive handler initialization successful!
+16:19:39.275  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:19:39.282  socket [event:0] filter compilation: successful
+16:19:39.289  socket [event:0] filter registration successful! auto filter resumed!
+16:19:39.297  socket [event:0] socket registration successful!
+16:19:39.305  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:19:39.312  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:19:39.323  socket initialized!
+16:19:39.327  socket handle address: 000001C273E54660
+16:19:39.335  Starting system...
+16:19:39.341  ok!
+16:19:39.349  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:19:39.356  checking controller boards...
+16:19:39.364  board: 2 ok!
+16:19:39.371  board: 1 ok!
+16:19:39.378  Setting Channel: 1 specifications...
+16:19:39.384  ok!
+16:19:39.392  Setting Channel: 1 configurations...
+16:19:39.398  ok!
+16:19:39.406  Setting raw-socket header for ctlr board...
+16:19:39.412  ok!
+16:19:39.419  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:19:39.425  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:19:39.433  socket [event:0] filter compilation: successful
+16:19:39.439  socket [event:0] filter registration successful! auto filter resumed!
+16:19:39.447  active channel = 1
+16:22:12.243  socket [event:0] unregistering socket...
+16:22:12.245  socket [event:1] ok!
+16:22:12.253  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:22:14 ====
+16:22:14.805  [Unhandled] :: Grid index out of range <thread: main> | AutoCalv2.exe + $6458D2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $5081B | AutoCalv2.exe + $11B70 | AutoCalv2.exe + $11BD4 | AutoCalv2.exe + $4946A0 | AutoCalv2.exe + $49FB0B | AutoCalv2.exe + $6E3B01 | AutoCalv2.exe + $7020FC | AutoCalv2.exe + $36E24A | AutoCalv2.exe + $36DA65 | AutoCalv2.exe + $10070 | AutoCalv2.exe + $36D90C | AutoCalv2.exe + $381982 | AutoCalv2.exe + $78EB62 | KERNEL32.DLL + $2DDA7 | ntdll.dll + $7EE4C |  |  | Error Code: 0 | Message: The operation completed successfully.
+16:22:19.572  [Unhandled] :: Access violation at address 0000000000964C60 in module 'AutoCalv2.exe' (offset 6E4C60). Read of address 00000000000008CA <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $6458D2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6E4C60 | AutoCalv2.exe + $702798 | AutoCalv2.exe + $291C13 | AutoCalv2.exe + $292CB2 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $221DFD | AutoCalv2.exe + $229B40 | AutoCalv2.exe + $2218D5 | AutoCalv2.exe + $229D6E | AutoCalv2.exe + $22B09B | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $221DFD | AutoCalv2.exe + $229B40 | AutoCalv2.exe + $3710D0 | AutoCalv2.exe + $228C0C | AutoCalv2.exe + $142D66 | USER32.dll + $152E6 | USER32.dll + $16FA5 | USER32.dll + $16974 | USER32.dll + $1675F | COMCTL32.dll + $11C9A | COMCTL32.dll + $49290 | COMCTL32.dll + $F1075 | COMCTL32.dll + $11BAD7 | COMCTL32.dll + $5CAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+16:22:21.583  [Unhandled] :: Access violation at address 0000000000976794 in module 'AutoCalv2.exe' (offset 6F6794). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $6458D2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6F6794 | AutoCalv2.exe + $7033DC | AutoCalv2.exe + $379635 | AutoCalv2.exe + $3794B4 | AutoCalv2.exe + $376E39 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $221DFD | AutoCalv2.exe + $229B40 | AutoCalv2.exe + $3710D0 | AutoCalv2.exe + $228C0C | AutoCalv2.exe + $142D66 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+16:22:23.782  [Unhandled] :: Access violation at address 0000000000976794 in module 'AutoCalv2.exe' (offset 6F6794). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $6458D2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6F6794 | AutoCalv2.exe + $7033DC | AutoCalv2.exe + $379635 | AutoCalv2.exe + $3794B4 | AutoCalv2.exe + $376E39 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $221DFD | AutoCalv2.exe + $229B40 | AutoCalv2.exe + $3710D0 | AutoCalv2.exe + $228C0C | AutoCalv2.exe + $142D66 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+16:22:31.356  [Unhandled] :: Access violation at address 0000000000976794 in module 'AutoCalv2.exe' (offset 6F6794). Read of address 0000000000000690 <thread: main> <active form: MainForm: TMainForm> | AutoCalv2.exe + $6458D2 | AutoCalv2.exe + $4F6A7 | AutoCalv2.exe + $507A7 | AutoCalv2.exe + $11257 | ntdll.dll + $1664AF | ntdll.dll + $C4065 | ntdll.dll + $165DEE | AutoCalv2.exe + $6F6794 | AutoCalv2.exe + $7033DC | AutoCalv2.exe + $379635 | AutoCalv2.exe + $3794B4 | AutoCalv2.exe + $376E39 | AutoCalv2.exe + $FD84 | AutoCalv2.exe + $221DFD | AutoCalv2.exe + $229B40 | AutoCalv2.exe + $3710D0 | AutoCalv2.exe + $228C0C | AutoCalv2.exe + $142D66 | USER32.dll + $152E6 | USER32.dll + $14B6C | USER32.dll + $3F593 | ntdll.dll + $165D94 | win32u.dll + $1384 | USER32.dll + $17DDB | USER32.dll + $17C74 | uxtheme.dll + $67BD | uxtheme.dll + $58376 | uxtheme.dll + $88D6 | uxtheme.dll + $8091 | USER32.dll + $1792A | USER32.dll + $152E6 | USER32.dll + $14DAC |  |  | Error Code: 0 | Message: The operation completed successfully.
+
+==== AutoCalv2.exe started 2026-11-12 16:22:56 ====
+16:22:56.429  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:22:56.437  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:22:58.195  Atmel-ICE connected, serial J42700070268, status OK
+16:22:58.196  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+16:22:59.153  Calibration: starting the tester engine...
+16:22:59.312  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:22:59.324  loading dll <MacTest32Cal.dll>, Compiled:
+16:22:59.324  Nov 04, 2026
+16:22:59.331  loading function::SetEventHandler ...
+16:22:59.337  ok!
+16:22:59.343  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:22:59.351  loading function::GetSystemName ...
+16:22:59.355  ok!
+16:22:59.362  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:22:59.368  loading function::GetSystemNameEx ...
+16:22:59.374  ok!
+16:22:59.381  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:22:59.387  loading function::InitializeSystem ...
+16:22:59.391  ok!
+16:22:59.399  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:22:59.406  loading function::CloseSystem ...
+16:22:59.411  ok!
+16:22:59.417  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:22:59.424  loading function::SetActiveChan ...
+16:22:59.429  ok!
+16:22:59.436  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:22:59.444  loading function::GetActiveChan ...
+16:22:59.458  ok!
+16:22:59.467  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:22:59.473  loading function::GetChanSpec ...
+16:22:59.479  ok!
+16:22:59.488  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:22:59.494  loading function::SetOutput ...
+16:22:59.500  ok!
+16:22:59.508  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:22:59.513  loading function::PollChannels ...
+16:22:59.520  ok!
+16:22:59.530  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:22:59.535  loading function::CheckChannel ...
+16:22:59.541  ok!
+16:22:59.549  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:22:59.555  loading function::StopChannel ...
+16:22:59.561  ok!
+16:22:59.568  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:22:59.575  loading function::StopChannels ...
+16:22:59.581  ok!
+16:22:59.589  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:22:59.597  loading function::DownloadBoard ...
+16:22:59.603  ok!
+16:22:59.611  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:22:59.617  loading function::DownloadChannel ...
+16:22:59.624  ok!
+16:22:59.632  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:22:59.638  loading function::StartChannel ...
+16:22:59.644  ok!
+16:22:59.653  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:22:59.658  loading function::GetChannelCurrent ...
+16:22:59.665  ok!
+16:22:59.672  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:22:59.680  loading function::CheckDataUpdate ...
+16:22:59.687  ok!
+16:22:59.695  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:22:59.703  loading function::ResetCalibration ...
+16:22:59.709  ok!
+16:22:59.718  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:22:59.724  loading function::UpdateCalibrationData ...
+16:22:59.731  ok!
+16:22:59.739  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:22:59.746  loading function::DownloadChannelCalibration ...
+16:22:59.752  ok!
+16:22:59.759  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:22:59.766  loading function::SystemStatus ...
+16:22:59.773  ok!
+16:22:59.781  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:22:59.789  loading function::GetCtlrDownloadStatus ...
+16:22:59.795  ok!
+16:22:59.803  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:22:59.811  loading function::SetCtlrMode ...
+16:22:59.817  ok!
+16:22:59.824  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:22:59.831  loading function::SetAuxiliaryBoard ...
+16:22:59.839  ok!
+16:22:59.847  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:22:59.856  loading function::SetAuxiliaryPanel ...
+16:22:59.861  ok!
+16:22:59.871  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:22:59.880  loading function::DownloadAuxiliaryBoard ...
+16:22:59.887  ok!
+16:22:59.895  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:22:59.902  loading function::GetAuxBoardData ...
+16:22:59.909  ok!
+16:22:59.917  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:22:59.925  loading function::GetAuxPanelData ...
+16:22:59.930  ok!
+16:22:59.939  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:22:59.946  loading function::EnableAuxEmulation ...
+16:22:59.952  ok!
+16:22:59.961  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:22:59.969  loading function::EmulateSetpoint ...
+16:22:59.976  ok!
+16:22:59.985  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:22:59.993  loading function::GetNetStats ...
+16:23:00.002  ok!
+16:23:00.010  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:23:00.020  loading function::GetEngineTiming ...
+16:23:00.028  ok!
+16:23:00.037  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:23:00.046  loading function::SetEngineTiming ...
+16:23:00.053  ok!
+16:23:00.062  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:23:00.069  loading function::SilenceToggle ...
+16:23:00.075  ok!
+16:23:00.084  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:23:00.091  Tester: MacTest32Cal.dll loaded
+16:23:00.098   | initializing network...
+16:23:00.106  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:23:00.113  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:23:00.122  Oct 13, 2026
+16:23:00.130  RawSocket::GetApiVersion :: 1.1 <ok>
+16:23:00.138  RawSocket::ShutdownService :: ok
+16:23:00.144  RawSocket::CreateSocket :: ok
+16:23:00.154  RawSocket::DestroySocket :: ok
+16:23:00.161  RawSocket::SendPacket :: ok
+16:23:00.169  RawSocket::SendPacketLen :: ok
+16:23:00.176  RawSocket::SetEthernetHeader :: ok
+16:23:00.183  RawSocket::SetPacketFilter :: ok
+16:23:00.191  socket [event:0] checkpoint! all callbacks assigned!
+16:23:00.211  socket [event:0] checkpoint! socket transmit handler initialized!
+16:23:00.216  socket [event:0] receive handler object initialization successful!
+16:23:00.221  socket [event:0] global socket receive handler initialization successful!
+16:23:00.229  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:00.237  socket [event:0] filter compilation: successful
+16:23:00.243  socket [event:0] filter registration successful! auto filter resumed!
+16:23:00.252  socket [event:0] socket registration successful!
+16:23:00.258  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:23:00.265  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:23:00.271  socket initialized!
+16:23:00.279  socket handle address: 000001B07619B190
+16:23:00.286  Starting system...
+16:23:00.293  ok!
+16:23:00.301  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:23:00.308  checking controller boards...
+16:23:00.315  board: 2 ok!
+16:23:00.321  board: 1 ok!
+16:23:00.329  Setting Channel: 1 specifications...
+16:23:00.334  ok!
+16:23:00.343  Setting Channel: 1 configurations...
+16:23:00.352  ok!
+16:23:00.359  Setting raw-socket header for ctlr board...
+16:23:00.365  ok!
+16:23:00.372  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:23:00.380  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:00.388  socket [event:0] filter compilation: successful
+16:23:00.395  socket [event:0] filter registration successful! auto filter resumed!
+16:23:00.402  active channel = 1
+16:23:22.359  socket [event:0] unregistering socket...
+16:23:22.362  socket [event:1] ok!
+16:23:22.369  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:23:30 ====
+16:23:30.292  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:23:30.300  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:23:31.761  Calibration: starting the tester engine...
+16:23:31.928  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:23:31.942  loading dll <MacTest32Cal.dll>, Compiled:
+16:23:31.943  Nov 04, 2026
+16:23:31.953  loading function::SetEventHandler ...
+16:23:31.961  ok!
+16:23:31.969  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:23:31.977  loading function::GetSystemName ...
+16:23:31.986  ok!
+16:23:31.995  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:23:32.005  loading function::GetSystemNameEx ...
+16:23:32.010  ok!
+16:23:32.018  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:23:32.027  loading function::InitializeSystem ...
+16:23:32.032  ok!
+16:23:32.042  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:23:32.049  loading function::CloseSystem ...
+16:23:32.058  ok!
+16:23:32.067  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:23:32.074  loading function::SetActiveChan ...
+16:23:32.082  ok!
+16:23:32.090  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:23:32.099  loading function::GetActiveChan ...
+16:23:32.105  ok!
+16:23:32.114  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:23:32.121  loading function::GetChanSpec ...
+16:23:32.128  ok!
+16:23:32.137  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:23:32.144  loading function::SetOutput ...
+16:23:32.150  ok!
+16:23:32.160  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:23:32.167  loading function::PollChannels ...
+16:23:32.175  ok!
+16:23:32.185  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:23:32.195  loading function::CheckChannel ...
+16:23:32.201  ok!
+16:23:32.211  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:23:32.218  loading function::StopChannel ...
+16:23:32.225  ok!
+16:23:32.234  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:23:32.242  loading function::StopChannels ...
+16:23:32.249  ok!
+16:23:32.257  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:23:32.267  loading function::DownloadBoard ...
+16:23:32.274  ok!
+16:23:32.283  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:23:32.291  loading function::DownloadChannel ...
+16:23:32.300  ok!
+16:23:32.309  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:23:32.317  loading function::StartChannel ...
+16:23:32.323  ok!
+16:23:32.332  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:23:32.339  loading function::GetChannelCurrent ...
+16:23:32.347  ok!
+16:23:32.361  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:23:32.370  loading function::CheckDataUpdate ...
+16:23:32.380  ok!
+16:23:32.389  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:23:32.399  loading function::ResetCalibration ...
+16:23:32.407  ok!
+16:23:32.417  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:23:32.426  loading function::UpdateCalibrationData ...
+16:23:32.435  ok!
+16:23:32.444  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:23:32.453  loading function::DownloadChannelCalibration ...
+16:23:32.461  ok!
+16:23:32.470  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:23:32.481  loading function::SystemStatus ...
+16:23:32.489  ok!
+16:23:32.498  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:23:32.509  loading function::GetCtlrDownloadStatus ...
+16:23:32.515  ok!
+16:23:32.525  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:23:32.533  loading function::SetCtlrMode ...
+16:23:32.540  ok!
+16:23:32.551  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:23:32.559  loading function::SetAuxiliaryBoard ...
+16:23:32.567  ok!
+16:23:32.576  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:23:32.587  loading function::SetAuxiliaryPanel ...
+16:23:32.594  ok!
+16:23:32.604  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:23:32.614  loading function::DownloadAuxiliaryBoard ...
+16:23:32.621  ok!
+16:23:32.631  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:23:32.640  loading function::GetAuxBoardData ...
+16:23:32.647  ok!
+16:23:32.657  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:23:32.665  loading function::GetAuxPanelData ...
+16:23:32.673  ok!
+16:23:32.683  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:23:32.689  loading function::EnableAuxEmulation ...
+16:23:32.697  ok!
+16:23:32.708  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:23:32.715  loading function::EmulateSetpoint ...
+16:23:32.723  ok!
+16:23:32.733  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:23:32.741  loading function::GetNetStats ...
+16:23:32.749  ok!
+16:23:32.759  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:23:32.770  loading function::GetEngineTiming ...
+16:23:32.777  ok!
+16:23:32.789  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:23:32.799  loading function::SetEngineTiming ...
+16:23:32.807  ok!
+16:23:32.818  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:23:32.826  loading function::SilenceToggle ...
+16:23:32.835  ok!
+16:23:32.842  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:23:32.854  Tester: MacTest32Cal.dll loaded
+16:23:32.864   | initializing network...
+16:23:32.874  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:23:32.887  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:23:32.895  Oct 13, 2026
+16:23:32.905  RawSocket::GetApiVersion :: 1.1 <ok>
+16:23:32.915  RawSocket::ShutdownService :: ok
+16:23:32.922  RawSocket::CreateSocket :: ok
+16:23:32.931  RawSocket::DestroySocket :: ok
+16:23:32.939  RawSocket::SendPacket :: ok
+16:23:32.946  RawSocket::SendPacketLen :: ok
+16:23:32.958  RawSocket::SetEthernetHeader :: ok
+16:23:32.964  RawSocket::SetPacketFilter :: ok
+16:23:32.974  socket [event:0] checkpoint! all callbacks assigned!
+16:23:32.982  socket [event:0] checkpoint! socket transmit handler initialized!
+16:23:32.992  socket [event:0] receive handler object initialization successful!
+16:23:33.000  socket [event:0] global socket receive handler initialization successful!
+16:23:33.009  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:33.018  socket [event:0] filter compilation: successful
+16:23:33.026  socket [event:0] filter registration successful! auto filter resumed!
+16:23:33.035  socket [event:0] socket registration successful!
+16:23:33.043  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:23:33.052  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:23:33.060  socket initialized!
+16:23:33.071  socket handle address: 000001E51C2E4A10
+16:23:33.082  Starting system...
+16:23:33.087  ok!
+16:23:33.097  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:23:33.102  checking controller boards...
+16:23:33.109  board: 2 ok!
+16:23:33.117  board: 1 ok!
+16:23:33.124  Setting Channel: 1 specifications...
+16:23:33.130  ok!
+16:23:33.138  Setting Channel: 1 configurations...
+16:23:33.145  ok!
+16:23:33.153  Setting raw-socket header for ctlr board...
+16:23:33.161  ok!
+16:23:33.169  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:23:33.176  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:33.184  socket [event:0] filter compilation: successful
+16:23:33.191  socket [event:0] filter registration successful! auto filter resumed!
+16:23:33.197  active channel = 1
+16:23:34.642  socket [event:0] unregistering socket...
+16:23:34.644  socket [event:1] ok!
+16:23:34.651  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:23:40 ====
+16:23:40.350  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:23:40.360  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:23:42.233  Calibration: starting the tester engine...
+16:23:42.408  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:23:42.422  loading dll <MacTest32Cal.dll>, Compiled:
+16:23:42.423  Nov 04, 2026
+16:23:42.431  loading function::SetEventHandler ...
+16:23:42.439  ok!
+16:23:42.446  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:23:42.452  loading function::GetSystemName ...
+16:23:42.461  ok!
+16:23:42.468  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:23:42.483  loading function::GetSystemNameEx ...
+16:23:42.490  ok!
+16:23:42.498  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:23:42.504  loading function::InitializeSystem ...
+16:23:42.511  ok!
+16:23:42.517  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:23:42.527  loading function::CloseSystem ...
+16:23:42.532  ok!
+16:23:42.542  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:23:42.547  loading function::SetActiveChan ...
+16:23:42.556  ok!
+16:23:42.565  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:23:42.572  loading function::GetActiveChan ...
+16:23:42.578  ok!
+16:23:42.587  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:23:42.598  loading function::GetChanSpec ...
+16:23:42.605  ok!
+16:23:42.614  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:23:42.623  loading function::SetOutput ...
+16:23:42.629  ok!
+16:23:42.640  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:23:42.648  loading function::PollChannels ...
+16:23:42.656  ok!
+16:23:42.663  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:23:42.671  loading function::CheckChannel ...
+16:23:42.676  ok!
+16:23:42.685  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:23:42.693  loading function::StopChannel ...
+16:23:42.700  ok!
+16:23:42.708  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:23:42.716  loading function::StopChannels ...
+16:23:42.723  ok!
+16:23:42.733  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:23:42.741  loading function::DownloadBoard ...
+16:23:42.747  ok!
+16:23:42.764  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:23:42.768  loading function::DownloadChannel ...
+16:23:42.772  ok!
+16:23:42.779  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:23:42.787  loading function::StartChannel ...
+16:23:42.793  ok!
+16:23:42.803  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:23:42.809  loading function::GetChannelCurrent ...
+16:23:42.818  ok!
+16:23:42.825  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:23:42.831  loading function::CheckDataUpdate ...
+16:23:42.840  ok!
+16:23:42.852  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:23:42.858  loading function::ResetCalibration ...
+16:23:42.871  ok!
+16:23:42.883  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:23:42.892  loading function::UpdateCalibrationData ...
+16:23:42.899  ok!
+16:23:42.907  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:23:42.919  loading function::DownloadChannelCalibration ...
+16:23:42.925  ok!
+16:23:42.938  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:23:42.945  loading function::SystemStatus ...
+16:23:42.952  ok!
+16:23:42.960  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:23:42.969  loading function::GetCtlrDownloadStatus ...
+16:23:42.977  ok!
+16:23:42.985  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:23:42.994  loading function::SetCtlrMode ...
+16:23:43.000  ok!
+16:23:43.009  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:23:43.016  loading function::SetAuxiliaryBoard ...
+16:23:43.022  ok!
+16:23:43.034  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:23:43.043  loading function::SetAuxiliaryPanel ...
+16:23:43.050  ok!
+16:23:43.057  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:23:43.064  loading function::DownloadAuxiliaryBoard ...
+16:23:43.070  ok!
+16:23:43.078  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:23:43.084  loading function::GetAuxBoardData ...
+16:23:43.091  ok!
+16:23:43.098  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:23:43.105  loading function::GetAuxPanelData ...
+16:23:43.110  ok!
+16:23:43.118  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:23:43.125  loading function::EnableAuxEmulation ...
+16:23:43.137  ok!
+16:23:43.145  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:23:43.153  loading function::EmulateSetpoint ...
+16:23:43.159  ok!
+16:23:43.167  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:23:43.173  loading function::GetNetStats ...
+16:23:43.181  ok!
+16:23:43.188  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:23:43.195  loading function::GetEngineTiming ...
+16:23:43.206  ok!
+16:23:43.214  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:23:43.221  loading function::SetEngineTiming ...
+16:23:43.227  ok!
+16:23:43.234  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:23:43.241  loading function::SilenceToggle ...
+16:23:43.249  ok!
+16:23:43.256  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:23:43.261  Tester: MacTest32Cal.dll loaded
+16:23:43.269   | initializing network...
+16:23:43.275  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:23:43.284  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:23:43.291  Oct 13, 2026
+16:23:43.299  RawSocket::GetApiVersion :: 1.1 <ok>
+16:23:43.305  RawSocket::ShutdownService :: ok
+16:23:43.314  RawSocket::CreateSocket :: ok
+16:23:43.320  RawSocket::DestroySocket :: ok
+16:23:43.330  RawSocket::SendPacket :: ok
+16:23:43.337  RawSocket::SendPacketLen :: ok
+16:23:43.342  RawSocket::SetEthernetHeader :: ok
+16:23:43.351  RawSocket::SetPacketFilter :: ok
+16:23:43.357  socket [event:0] checkpoint! all callbacks assigned!
+16:23:43.368  socket [event:0] checkpoint! socket transmit handler initialized!
+16:23:43.376  socket [event:0] receive handler object initialization successful!
+16:23:43.381  socket [event:0] global socket receive handler initialization successful!
+16:23:43.388  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:43.396  socket [event:0] filter compilation: successful
+16:23:43.403  socket [event:0] filter registration successful! auto filter resumed!
+16:23:43.409  socket [event:0] socket registration successful!
+16:23:43.417  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:23:43.424  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:23:43.430  socket initialized!
+16:23:43.437  socket handle address: 000001974534B560
+16:23:43.444  Starting system...
+16:23:43.449  ok!
+16:23:43.458  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:23:43.463  checking controller boards...
+16:23:43.469  board: 2 ok!
+16:23:43.476  board: 1 ok!
+16:23:43.483  Setting Channel: 1 specifications...
+16:23:43.489  ok!
+16:23:43.497  Setting Channel: 1 configurations...
+16:23:43.506  ok!
+16:23:43.514  Setting raw-socket header for ctlr board...
+16:23:43.518  ok!
+16:23:43.527  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:23:43.535  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:43.543  socket [event:0] filter compilation: successful
+16:23:43.548  socket [event:0] filter registration successful! auto filter resumed!
+16:23:43.555  active channel = 1
+16:23:44.967  socket [event:0] unregistering socket...
+16:23:44.968  socket [event:1] ok!
+16:23:44.977  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:23:48 ====
+16:23:48.569  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:23:48.577  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:23:49.690  Calibration: starting the tester engine...
+16:23:49.857  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:23:49.868  loading dll <MacTest32Cal.dll>, Compiled:
+16:23:49.868  Nov 04, 2026
+16:23:49.876  loading function::SetEventHandler ...
+16:23:49.882  ok!
+16:23:49.889  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:23:49.896  loading function::GetSystemName ...
+16:23:49.903  ok!
+16:23:49.909  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:23:49.917  loading function::GetSystemNameEx ...
+16:23:49.921  ok!
+16:23:49.927  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:23:49.935  loading function::InitializeSystem ...
+16:23:49.939  ok!
+16:23:49.946  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:23:49.952  loading function::CloseSystem ...
+16:23:49.959  ok!
+16:23:49.967  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:23:49.974  loading function::SetActiveChan ...
+16:23:49.980  ok!
+16:23:49.990  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:23:49.997  loading function::GetActiveChan ...
+16:23:50.004  ok!
+16:23:50.013  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:23:50.020  loading function::GetChanSpec ...
+16:23:50.028  ok!
+16:23:50.036  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:23:50.043  loading function::SetOutput ...
+16:23:50.050  ok!
+16:23:50.059  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:23:50.065  loading function::PollChannels ...
+16:23:50.072  ok!
+16:23:50.079  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:23:50.087  loading function::CheckChannel ...
+16:23:50.095  ok!
+16:23:50.106  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:23:50.116  loading function::StopChannel ...
+16:23:50.123  ok!
+16:23:50.131  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:23:50.140  loading function::StopChannels ...
+16:23:50.146  ok!
+16:23:50.156  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:23:50.164  loading function::DownloadBoard ...
+16:23:50.174  ok!
+16:23:50.182  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:23:50.193  loading function::DownloadChannel ...
+16:23:50.202  ok!
+16:23:50.211  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:23:50.221  loading function::StartChannel ...
+16:23:50.228  ok!
+16:23:50.235  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:23:50.242  loading function::GetChannelCurrent ...
+16:23:50.249  ok!
+16:23:50.256  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:23:50.263  loading function::CheckDataUpdate ...
+16:23:50.269  ok!
+16:23:50.281  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:23:50.287  loading function::ResetCalibration ...
+16:23:50.293  ok!
+16:23:50.302  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:23:50.310  loading function::UpdateCalibrationData ...
+16:23:50.315  ok!
+16:23:50.323  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:23:50.331  loading function::DownloadChannelCalibration ...
+16:23:50.336  ok!
+16:23:50.344  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:23:50.351  loading function::SystemStatus ...
+16:23:50.357  ok!
+16:23:50.365  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:23:50.374  loading function::GetCtlrDownloadStatus ...
+16:23:50.379  ok!
+16:23:50.389  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:23:50.395  loading function::SetCtlrMode ...
+16:23:50.402  ok!
+16:23:50.410  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:23:50.417  loading function::SetAuxiliaryBoard ...
+16:23:50.422  ok!
+16:23:50.430  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:23:50.438  loading function::SetAuxiliaryPanel ...
+16:23:50.446  ok!
+16:23:50.454  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:23:50.460  loading function::DownloadAuxiliaryBoard ...
+16:23:50.466  ok!
+16:23:50.477  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:23:50.483  loading function::GetAuxBoardData ...
+16:23:50.489  ok!
+16:23:50.498  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:23:50.506  loading function::GetAuxPanelData ...
+16:23:50.512  ok!
+16:23:50.520  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:23:50.528  loading function::EnableAuxEmulation ...
+16:23:50.535  ok!
+16:23:50.543  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:23:50.550  loading function::EmulateSetpoint ...
+16:23:50.559  ok!
+16:23:50.566  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:23:50.573  loading function::GetNetStats ...
+16:23:50.581  ok!
+16:23:50.590  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:23:50.599  loading function::GetEngineTiming ...
+16:23:50.605  ok!
+16:23:50.613  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:23:50.636  loading function::SetEngineTiming ...
+16:23:50.638  ok!
+16:23:50.644  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:23:50.653  loading function::SilenceToggle ...
+16:23:50.659  ok!
+16:23:50.668  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:23:50.673  Tester: MacTest32Cal.dll loaded
+16:23:50.680   | initializing network...
+16:23:50.687  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:23:50.696  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:23:50.702  Oct 13, 2026
+16:23:50.711  RawSocket::GetApiVersion :: 1.1 <ok>
+16:23:50.719  RawSocket::ShutdownService :: ok
+16:23:50.727  RawSocket::CreateSocket :: ok
+16:23:50.734  RawSocket::DestroySocket :: ok
+16:23:50.740  RawSocket::SendPacket :: ok
+16:23:50.749  RawSocket::SendPacketLen :: ok
+16:23:50.757  RawSocket::SetEthernetHeader :: ok
+16:23:50.763  RawSocket::SetPacketFilter :: ok
+16:23:50.771  socket [event:0] checkpoint! all callbacks assigned!
+16:23:50.778  socket [event:0] checkpoint! socket transmit handler initialized!
+16:23:50.787  socket [event:0] receive handler object initialization successful!
+16:23:50.794  socket [event:0] global socket receive handler initialization successful!
+16:23:50.800  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:50.814  socket [event:0] filter compilation: successful
+16:23:50.823  socket [event:0] filter registration successful! auto filter resumed!
+16:23:50.829  socket [event:0] socket registration successful!
+16:23:50.838  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:23:50.845  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:23:50.854  socket initialized!
+16:23:50.860  socket handle address: 0000028A2BF90770
+16:23:50.866  Starting system...
+16:23:50.872  ok!
+16:23:50.881  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:23:50.887  checking controller boards...
+16:23:50.894  board: 2 ok!
+16:23:50.902  board: 1 ok!
+16:23:50.908  Setting Channel: 1 specifications...
+16:23:50.914  ok!
+16:23:50.921  Setting Channel: 1 configurations...
+16:23:50.927  ok!
+16:23:50.935  Setting raw-socket header for ctlr board...
+16:23:50.940  ok!
+16:23:50.947  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:23:50.953  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:23:50.960  socket [event:0] filter compilation: successful
+16:23:50.966  socket [event:0] filter registration successful! auto filter resumed!
+16:23:50.973  active channel = 1
+16:24:06.718  socket [event:0] unregistering socket...
+16:24:06.719  socket [event:1] ok!
+16:24:06.726  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:24:55 ====
+16:24:55.808  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:24:55.817  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:25:01.539  Calibration: starting the tester engine...
+16:25:01.708  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:25:01.720  loading dll <MacTest32Cal.dll>, Compiled:
+16:25:01.721  Nov 04, 2026
+16:25:01.728  loading function::SetEventHandler ...
+16:25:01.734  ok!
+16:25:01.741  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:25:01.750  loading function::GetSystemName ...
+16:25:01.755  ok!
+16:25:01.763  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:25:01.770  loading function::GetSystemNameEx ...
+16:25:01.775  ok!
+16:25:01.781  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:25:01.789  loading function::InitializeSystem ...
+16:25:01.797  ok!
+16:25:01.805  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:25:01.812  loading function::CloseSystem ...
+16:25:01.817  ok!
+16:25:01.824  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:25:01.832  loading function::SetActiveChan ...
+16:25:01.838  ok!
+16:25:01.846  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:25:01.854  loading function::GetActiveChan ...
+16:25:01.859  ok!
+16:25:01.867  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:25:01.873  loading function::GetChanSpec ...
+16:25:01.879  ok!
+16:25:01.887  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:25:01.894  loading function::SetOutput ...
+16:25:01.901  ok!
+16:25:01.910  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:25:01.915  loading function::PollChannels ...
+16:25:01.921  ok!
+16:25:01.929  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:25:01.936  loading function::CheckChannel ...
+16:25:01.942  ok!
+16:25:01.951  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:25:01.959  loading function::StopChannel ...
+16:25:01.965  ok!
+16:25:01.972  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:25:01.983  loading function::StopChannels ...
+16:25:01.987  ok!
+16:25:01.995  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:25:02.004  loading function::DownloadBoard ...
+16:25:02.010  ok!
+16:25:02.016  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:25:02.024  loading function::DownloadChannel ...
+16:25:02.030  ok!
+16:25:02.037  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:25:02.046  loading function::StartChannel ...
+16:25:02.052  ok!
+16:25:02.061  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:25:02.070  loading function::GetChannelCurrent ...
+16:25:02.077  ok!
+16:25:02.087  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:25:02.093  loading function::CheckDataUpdate ...
+16:25:02.101  ok!
+16:25:02.111  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:25:02.119  loading function::ResetCalibration ...
+16:25:02.126  ok!
+16:25:02.135  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:25:02.142  loading function::UpdateCalibrationData ...
+16:25:02.150  ok!
+16:25:02.158  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:25:02.167  loading function::DownloadChannelCalibration ...
+16:25:02.176  ok!
+16:25:02.186  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:25:02.194  loading function::SystemStatus ...
+16:25:02.202  ok!
+16:25:02.210  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:25:02.218  loading function::GetCtlrDownloadStatus ...
+16:25:02.225  ok!
+16:25:02.236  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:25:02.243  loading function::SetCtlrMode ...
+16:25:02.251  ok!
+16:25:02.261  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:25:02.268  loading function::SetAuxiliaryBoard ...
+16:25:02.275  ok!
+16:25:02.284  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:25:02.292  loading function::SetAuxiliaryPanel ...
+16:25:02.299  ok!
+16:25:02.308  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:25:02.317  loading function::DownloadAuxiliaryBoard ...
+16:25:02.324  ok!
+16:25:02.335  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:25:02.342  loading function::GetAuxBoardData ...
+16:25:02.351  ok!
+16:25:02.362  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:25:02.371  loading function::GetAuxPanelData ...
+16:25:02.380  ok!
+16:25:02.389  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:25:02.398  loading function::EnableAuxEmulation ...
+16:25:02.406  ok!
+16:25:02.415  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:25:02.425  loading function::EmulateSetpoint ...
+16:25:02.434  ok!
+16:25:02.443  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:25:02.452  loading function::GetNetStats ...
+16:25:02.458  ok!
+16:25:02.468  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:25:02.476  loading function::GetEngineTiming ...
+16:25:02.483  ok!
+16:25:02.492  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:25:02.503  loading function::SetEngineTiming ...
+16:25:02.509  ok!
+16:25:02.518  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:25:02.526  loading function::SilenceToggle ...
+16:25:02.534  ok!
+16:25:02.541  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:25:02.550  Tester: MacTest32Cal.dll loaded
+16:25:02.558   | initializing network...
+16:25:02.566  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:25:02.575  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231536128, Compiled:
+16:25:02.582  Oct 13, 2026
+16:25:02.592  RawSocket::GetApiVersion :: 1.1 <ok>
+16:25:02.600  RawSocket::ShutdownService :: ok
+16:25:02.610  RawSocket::CreateSocket :: ok
+16:25:02.617  RawSocket::DestroySocket :: ok
+16:25:02.626  RawSocket::SendPacket :: ok
+16:25:02.635  RawSocket::SendPacketLen :: ok
+16:25:02.646  RawSocket::SetEthernetHeader :: ok
+16:25:02.654  RawSocket::SetPacketFilter :: ok
+16:25:02.663  socket [event:0] checkpoint! all callbacks assigned!
+16:25:02.672  socket [event:0] checkpoint! socket transmit handler initialized!
+16:25:02.680  socket [event:0] receive handler object initialization successful!
+16:25:02.688  socket [event:0] global socket receive handler initialization successful!
+16:25:02.695  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:25:02.705  socket [event:0] filter compilation: successful
+16:25:02.713  socket [event:0] filter registration successful! auto filter resumed!
+16:25:02.720  socket [event:0] socket registration successful!
+16:25:02.728  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:25:02.737  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:25:02.744  socket initialized!
+16:25:02.753  socket handle address: 0000025B2C0733B0
+16:25:02.762  Starting system...
+16:25:02.769  ok!
+16:25:02.777  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:25:02.785  checking controller boards...
+16:25:02.792  board: 2 ok!
+16:25:02.804  board: 1 ok!
+16:25:02.808  Setting Channel: 1 specifications...
+16:25:02.816  ok!
+16:25:02.826  Setting Channel: 1 configurations...
+16:25:02.834  ok!
+16:25:02.843  Setting raw-socket header for ctlr board...
+16:25:02.850  ok!
+16:25:02.861  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:25:02.868  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:25:02.877  socket [event:0] filter compilation: successful
+16:25:02.886  socket [event:0] filter registration successful! auto filter resumed!
+16:25:02.894  active channel = 1
+16:25:13.383  socket [event:0] unregistering socket...
+16:25:13.384  socket [event:1] ok!
+16:25:13.393  Tester: engine closed
+
+==== AutoCalv2.exe started 2026-11-12 16:25:30 ====
+16:25:30.492  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:25:30.502  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:25:35.606  Calibration: starting the tester engine...
+16:25:35.773  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:25:35.785  loading dll <MacTest32Cal.dll>, Compiled:
+16:25:35.786  Nov 04, 2026
+16:25:35.794  loading function::SetEventHandler ...
+16:25:35.802  ok!
+16:25:35.808  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:25:35.819  loading function::GetSystemName ...
+16:25:35.823  ok!
+16:25:35.831  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:25:35.838  loading function::GetSystemNameEx ...
+16:25:35.844  ok!
+16:25:35.852  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:25:35.859  loading function::InitializeSystem ...
+16:25:35.865  ok!
+16:25:35.873  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:25:35.881  loading function::CloseSystem ...
+16:25:35.887  ok!
+16:25:35.895  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:25:35.901  loading function::SetActiveChan ...
+16:25:35.906  ok!
+16:25:35.913  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:25:35.921  loading function::GetActiveChan ...
+16:25:35.926  ok!
+16:25:35.933  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:25:35.942  loading function::GetChanSpec ...
+16:25:35.946  ok!
+16:25:35.954  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:25:35.961  loading function::SetOutput ...
+16:25:35.967  ok!
+16:25:35.974  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:25:35.980  loading function::PollChannels ...
+16:25:35.988  ok!
+16:25:35.995  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:25:36.004  loading function::CheckChannel ...
+16:25:36.008  ok!
+16:25:36.016  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:25:36.023  loading function::StopChannel ...
+16:25:36.028  ok!
+16:25:36.035  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:25:36.042  loading function::StopChannels ...
+16:25:36.050  ok!
+16:25:36.057  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:25:36.064  loading function::DownloadBoard ...
+16:25:36.071  ok!
+16:25:36.078  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:25:36.085  loading function::DownloadChannel ...
+16:25:36.091  ok!
+16:25:36.099  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:25:36.105  loading function::StartChannel ...
+16:25:36.113  ok!
+16:25:36.120  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:25:36.127  loading function::GetChannelCurrent ...
+16:25:36.132  ok!
+16:25:36.140  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:25:36.147  loading function::CheckDataUpdate ...
+16:25:36.154  ok!
+16:25:36.162  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:25:36.170  loading function::ResetCalibration ...
+16:25:36.177  ok!
+16:25:36.185  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:25:36.193  loading function::UpdateCalibrationData ...
+16:25:36.199  ok!
+16:25:36.206  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:25:36.213  loading function::DownloadChannelCalibration ...
+16:25:36.219  ok!
+16:25:36.228  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:25:36.235  loading function::SystemStatus ...
+16:25:36.248  ok!
+16:25:36.257  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:25:36.261  loading function::GetCtlrDownloadStatus ...
+16:25:36.267  ok!
+16:25:36.276  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:25:36.284  loading function::SetCtlrMode ...
+16:25:36.290  ok!
+16:25:36.298  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:25:36.305  loading function::SetAuxiliaryBoard ...
+16:25:36.311  ok!
+16:25:36.320  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:25:36.327  loading function::SetAuxiliaryPanel ...
+16:25:36.333  ok!
+16:25:36.341  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:25:36.349  loading function::DownloadAuxiliaryBoard ...
+16:25:36.356  ok!
+16:25:36.363  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:25:36.370  loading function::GetAuxBoardData ...
+16:25:36.378  ok!
+16:25:36.385  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:25:36.394  loading function::GetAuxPanelData ...
+16:25:36.402  ok!
+16:25:36.411  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:25:36.418  loading function::EnableAuxEmulation ...
+16:25:36.426  ok!
+16:25:36.435  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:25:36.444  loading function::EmulateSetpoint ...
+16:25:36.451  ok!
+16:25:36.460  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:25:36.469  loading function::GetNetStats ...
+16:25:36.476  ok!
+16:25:36.484  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:25:36.492  loading function::GetEngineTiming ...
+16:25:36.498  ok!
+16:25:36.508  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:25:36.514  loading function::SetEngineTiming ...
+16:25:36.521  ok!
+16:25:36.529  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:25:36.537  loading function::SilenceToggle ...
+16:25:36.544  ok!
+16:25:36.552  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:25:36.561  Tester: MacTest32Cal.dll loaded
+16:25:36.568   | initializing network...
+16:25:36.575  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:25:36.583  RS.Create(...)| Path: RawSocket.dll, Handle: 140705231536128, Compiled:
+16:25:36.591  Oct 13, 2026
+16:25:36.600  RawSocket::GetApiVersion :: 1.1 <ok>
+16:25:36.607  RawSocket::ShutdownService :: ok
+16:25:36.615  RawSocket::CreateSocket :: ok
+16:25:36.623  RawSocket::DestroySocket :: ok
+16:25:36.633  RawSocket::SendPacket :: ok
+16:25:36.640  RawSocket::SendPacketLen :: ok
+16:25:36.649  RawSocket::SetEthernetHeader :: ok
+16:25:36.656  RawSocket::SetPacketFilter :: ok
+16:25:36.663  socket [event:0] checkpoint! all callbacks assigned!
+16:25:36.671  socket [event:0] checkpoint! socket transmit handler initialized!
+16:25:36.677  socket [event:0] receive handler object initialization successful!
+16:25:36.686  socket [event:0] global socket receive handler initialization successful!
+16:25:36.694  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:25:36.701  socket [event:0] filter compilation: successful
+16:25:36.708  socket [event:0] filter registration successful! auto filter resumed!
+16:25:36.715  socket [event:0] socket registration successful!
+16:25:36.723  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:25:36.730  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:25:36.737  socket initialized!
+16:25:36.744  socket handle address: 00000256590F5600
+16:25:36.754  Starting system...
+16:25:36.760  ok!
+16:25:36.768  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:25:36.776  checking controller boards...
+16:25:36.781  board: 2 ok!
+16:25:36.789  board: 1 ok!
+16:25:36.796  Setting Channel: 1 specifications...
+16:25:36.803  ok!
+16:25:36.812  Setting Channel: 1 configurations...
+16:25:36.818  ok!
+16:25:36.826  Setting raw-socket header for ctlr board...
+16:25:36.833  ok!
+16:25:36.841  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:25:36.847  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:25:36.854  socket [event:0] filter compilation: successful
+16:25:36.861  socket [event:0] filter registration successful! auto filter resumed!
+16:25:36.868  active channel = 1
+16:25:47.542  Atmel-ICE connected, serial J42700070268, status OK
+16:25:47.543  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+16:25:47.764  socket [event:0] unregistering socket...
+16:25:47.766  socket [event:1] ok!
+16:25:47.775  Tester: engine closed
+16:26:09.566  Starting socket for 192.168.126.214
+16:26:09.641  192.168.126.214 reached via 192.168.126.51
+16:26:09.644  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 29031 | }
+16:26:09.656  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 29031 | }
+16:26:09.664  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+16:26:10.804  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29032 | }
+16:26:10.828  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29032 | }
+16:26:11.106  Calibration record read: Prototype / PrototypeDEC2022JB
+16:27:09.953  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 16:40:51 ====
+16:40:51.866  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:40:51.875  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:40:53.560  Calibration: starting the tester engine...
+16:40:53.745  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:40:53.757  loading dll <MacTest32Cal.dll>, Compiled:
+16:40:53.758  Nov 04, 2026
+16:40:53.766  loading function::SetEventHandler ...
+16:40:53.777  ok!
+16:40:53.781  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:40:53.793  loading function::GetSystemName ...
+16:40:53.796  ok!
+16:40:53.805  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:40:53.812  loading function::GetSystemNameEx ...
+16:40:53.820  ok!
+16:40:53.830  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:40:53.836  loading function::InitializeSystem ...
+16:40:53.844  ok!
+16:40:53.853  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:40:53.859  loading function::CloseSystem ...
+16:40:53.866  ok!
+16:40:53.875  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:40:53.883  loading function::SetActiveChan ...
+16:40:53.890  ok!
+16:40:53.899  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:40:53.907  loading function::GetActiveChan ...
+16:40:53.915  ok!
+16:40:53.925  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:40:53.933  loading function::GetChanSpec ...
+16:40:53.938  ok!
+16:40:53.946  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:40:53.957  loading function::SetOutput ...
+16:40:53.963  ok!
+16:40:53.972  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:40:53.979  loading function::PollChannels ...
+16:40:53.986  ok!
+16:40:53.996  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:40:54.003  loading function::CheckChannel ...
+16:40:54.012  ok!
+16:40:54.022  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:40:54.029  loading function::StopChannel ...
+16:40:54.037  ok!
+16:40:54.048  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:40:54.059  loading function::StopChannels ...
+16:40:54.064  ok!
+16:40:54.078  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:40:54.084  loading function::DownloadBoard ...
+16:40:54.089  ok!
+16:40:54.098  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:40:54.108  loading function::DownloadChannel ...
+16:40:54.117  ok!
+16:40:54.124  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:40:54.132  loading function::StartChannel ...
+16:40:54.151  ok!
+16:40:54.163  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:40:54.170  loading function::GetChannelCurrent ...
+16:40:54.179  ok!
+16:40:54.186  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:40:54.195  loading function::CheckDataUpdate ...
+16:40:54.203  ok!
+16:40:54.212  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:40:54.221  loading function::ResetCalibration ...
+16:40:54.229  ok!
+16:40:54.237  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:40:54.247  loading function::UpdateCalibrationData ...
+16:40:54.252  ok!
+16:40:54.261  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:40:54.271  loading function::DownloadChannelCalibration ...
+16:40:54.276  ok!
+16:40:54.289  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:40:54.299  loading function::SystemStatus ...
+16:40:54.308  ok!
+16:40:54.316  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:40:54.324  loading function::GetCtlrDownloadStatus ...
+16:40:54.334  ok!
+16:40:54.343  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:40:54.354  loading function::SetCtlrMode ...
+16:40:54.362  ok!
+16:40:54.373  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:40:54.382  loading function::SetAuxiliaryBoard ...
+16:40:54.389  ok!
+16:40:54.401  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:40:54.411  loading function::SetAuxiliaryPanel ...
+16:40:54.418  ok!
+16:40:54.426  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:40:54.435  loading function::DownloadAuxiliaryBoard ...
+16:40:54.441  ok!
+16:40:54.452  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:40:54.459  loading function::GetAuxBoardData ...
+16:40:54.467  ok!
+16:40:54.475  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:40:54.484  loading function::GetAuxPanelData ...
+16:40:54.491  ok!
+16:40:54.499  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:40:54.509  loading function::EnableAuxEmulation ...
+16:40:54.515  ok!
+16:40:54.526  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:40:54.536  loading function::EmulateSetpoint ...
+16:40:54.544  ok!
+16:40:54.553  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:40:54.562  loading function::GetNetStats ...
+16:40:54.570  ok!
+16:40:54.579  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:40:54.587  loading function::GetEngineTiming ...
+16:40:54.594  ok!
+16:40:54.603  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:40:54.611  loading function::SetEngineTiming ...
+16:40:54.618  ok!
+16:40:54.628  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:40:54.635  loading function::SilenceToggle ...
+16:40:54.644  ok!
+16:40:54.653  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:40:54.661  Tester: MacTest32Cal.dll loaded
+16:40:54.669   | initializing network...
+16:40:54.679  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:40:54.687  RS.Create(...)| Path: RawSocket.dll, Handle: 140705113178112, Compiled:
+16:40:54.695  Oct 13, 2026
+16:40:54.706  RawSocket::GetApiVersion :: 1.1 <ok>
+16:40:54.713  RawSocket::ShutdownService :: ok
+16:40:54.721  RawSocket::CreateSocket :: ok
+16:40:54.730  RawSocket::DestroySocket :: ok
+16:40:54.740  RawSocket::SendPacket :: ok
+16:40:54.746  RawSocket::SendPacketLen :: ok
+16:40:54.755  RawSocket::SetEthernetHeader :: ok
+16:40:54.763  RawSocket::SetPacketFilter :: ok
+16:40:54.771  socket [event:0] checkpoint! all callbacks assigned!
+16:40:54.779  socket [event:0] checkpoint! socket transmit handler initialized!
+16:40:54.786  socket [event:0] receive handler object initialization successful!
+16:40:54.794  socket [event:0] global socket receive handler initialization successful!
+16:40:54.802  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:40:54.810  socket [event:0] filter compilation: successful
+16:40:54.819  socket [event:0] filter registration successful! auto filter resumed!
+16:40:54.829  socket [event:0] socket registration successful!
+16:40:54.836  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:40:54.845  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:40:54.855  socket initialized!
+16:40:54.865  socket handle address: 0000025844BEB790
+16:40:54.870  Starting system...
+16:40:54.876  ok!
+16:40:54.886  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:40:54.896  checking controller boards...
+16:40:54.903  board: 2 ok!
+16:40:54.911  board: 1 ok!
+16:40:54.918  Setting Channel: 1 specifications...
+16:40:54.926  ok!
+16:40:54.936  Setting Channel: 1 configurations...
+16:40:54.943  ok!
+16:40:54.952  Setting raw-socket header for ctlr board...
+16:40:54.958  ok!
+16:40:54.967  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:40:54.974  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:40:54.982  socket [event:0] filter compilation: successful
+16:40:54.990  socket [event:0] filter registration successful! auto filter resumed!
+16:40:54.997  active channel = 1
+16:40:56.986  socket [event:0] unregistering socket...
+16:40:56.987  socket [event:1] ok!
+16:40:56.995  Tester: engine closed
+16:40:59.676  Starting socket for 192.168.126.214
+16:40:59.749  192.168.126.214 reached via 192.168.126.51
+16:40:59.750  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 15334 | }
+16:40:59.762  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 15334 | }
+16:40:59.772  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+16:41:06.296  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 15335 | }
+16:41:06.319  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 15335 | }
+16:41:06.582  Calibration record read: Prototype / PrototypeDEC2022JB
+16:41:06.595  Read: AutoCalv2.data.json had no valid record of the box :: the values read were saved to it
+16:45:58.757  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 15354 | }
+16:45:58.779  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 15354 | }
+16:45:59.055  Calibration record read: Prototype / PrototypeDEC2022JB
+16:45:59.057  Write: the board already holds what is shown :: written again
+16:45:59.064  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 15373 | }
+16:45:59.083  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 15373 | }
+16:45:59.288  Calibration record staged on the board
+16:45:59.289  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 15391 | }
+16:45:59.308  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 15391 | }
+16:45:59.313  Calibration record committed to EEPROM
+16:46:01.206  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 15392 | }
+16:46:01.226  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 15392 | }
+16:46:01.478  Calibration record read: Prototype / PrototypeDEC2022JB
+16:46:05.251  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 16:50:25 ====
+16:50:25.988  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:50:25.996  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+
+==== AutoCalv2.exe started 2026-11-12 16:52:15 ====
+16:52:15.958  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:52:15.967  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:52:17.616  Calibration: starting the tester engine...
+16:52:17.772  Calibration: tester engine running: JULIUS-TESTER (C:\BatTest.cfg), 16 channels
+16:52:17.786  loading dll <MacTest32Cal.dll>, Compiled:
+16:52:17.786  Nov 04, 2026
+16:52:17.793  loading function::SetEventHandler ...
+16:52:17.801  ok!
+16:52:17.805  Loading... FuncPtr(SetEventHandler) = 000000006E88D260
+16:52:17.812  loading function::GetSystemName ...
+16:52:17.817  ok!
+16:52:17.822  Loading... FuncPtr(GetSystemName) = 000000006E88D010
+16:52:17.828  loading function::GetSystemNameEx ...
+16:52:17.834  ok!
+16:52:17.840  Loading... FuncPtr(GetSystemNameEx) = 000000006E88D070
+16:52:17.847  loading function::InitializeSystem ...
+16:52:17.852  ok!
+16:52:17.859  Loading... FuncPtr(InitializeSystem) = 000000006E88CF60
+16:52:17.864  loading function::CloseSystem ...
+16:52:17.869  ok!
+16:52:17.875  Loading... FuncPtr(CloseSystem) = 000000006E88D130
+16:52:17.882  loading function::SetActiveChan ...
+16:52:17.887  ok!
+16:52:17.894  Loading... FuncPtr(SetActiveChan) = 000000006E88D160
+16:52:17.900  loading function::GetActiveChan ...
+16:52:17.905  ok!
+16:52:17.912  Loading... FuncPtr(GetActiveChan) = 000000006E88D1A0
+16:52:17.919  loading function::GetChanSpec ...
+16:52:17.924  ok!
+16:52:17.932  Loading... FuncPtr(GetChanSpec) = 000000006E88D1D0
+16:52:17.938  loading function::SetOutput ...
+16:52:17.944  ok!
+16:52:17.951  Loading... FuncPtr(SetOutput) = 000000006E88D250
+16:52:17.957  loading function::PollChannels ...
+16:52:17.964  ok!
+16:52:17.971  Loading... FuncPtr(PollChannels) = 000000006E88D2E0
+16:52:17.978  loading function::CheckChannel ...
+16:52:17.982  ok!
+16:52:17.990  Loading... FuncPtr(CheckChannel) = 000000006E88D310
+16:52:17.995  loading function::StopChannel ...
+16:52:18.000  ok!
+16:52:18.008  Loading... FuncPtr(StopChannel) = 000000006E88D3F0
+16:52:18.014  loading function::StopChannels ...
+16:52:18.021  ok!
+16:52:18.028  Loading... FuncPtr(StopChannels) = 000000006E88D410
+16:52:18.034  loading function::DownloadBoard ...
+16:52:18.040  ok!
+16:52:18.047  Loading... FuncPtr(DownloadBoard) = 000000006E88D440
+16:52:18.054  loading function::DownloadChannel ...
+16:52:18.060  ok!
+16:52:18.066  Loading... FuncPtr(DownloadChannel) = 000000006E88D460
+16:52:18.073  loading function::StartChannel ...
+16:52:18.079  ok!
+16:52:18.086  Loading... FuncPtr(StartChannel) = 000000006E88D3D0
+16:52:18.092  loading function::GetChannelCurrent ...
+16:52:18.098  ok!
+16:52:18.105  Loading... FuncPtr(GetChannelCurrent) = 000000006E88D480
+16:52:18.112  loading function::CheckDataUpdate ...
+16:52:18.119  ok!
+16:52:18.126  Loading... FuncPtr(CheckDataUpdate) = 000000006E88D4D0
+16:52:18.133  loading function::ResetCalibration ...
+16:52:18.139  ok!
+16:52:18.146  Loading... FuncPtr(ResetCalibration) = 000000006E88D530
+16:52:18.153  loading function::UpdateCalibrationData ...
+16:52:18.160  ok!
+16:52:18.168  Loading... FuncPtr(UpdateCalibrationData) = 000000006E88D560
+16:52:18.174  loading function::DownloadChannelCalibration ...
+16:52:18.181  ok!
+16:52:18.191  Loading... FuncPtr(DownloadChannelCalibration) = 000000006E88D5A0
+16:52:18.196  loading function::SystemStatus ...
+16:52:18.203  ok!
+16:52:18.210  Loading... FuncPtr(SystemStatus) = 000000006E88D7E0
+16:52:18.218  loading function::GetCtlrDownloadStatus ...
+16:52:18.223  ok!
+16:52:18.234  Loading... FuncPtr(GetCtlrDownloadStatus) = 000000006E88D810
+16:52:18.241  loading function::SetCtlrMode ...
+16:52:18.247  ok!
+16:52:18.254  Loading... FuncPtr(SetCtlrMode) = 000000006E88D5E0
+16:52:18.261  loading function::SetAuxiliaryBoard ...
+16:52:18.268  ok!
+16:52:18.277  Loading... FuncPtr(SetAuxiliaryBoard) = 000000006E88D600
+16:52:18.283  loading function::SetAuxiliaryPanel ...
+16:52:18.290  ok!
+16:52:18.298  Loading... FuncPtr(SetAuxiliaryPanel) = 000000006E88D620
+16:52:18.304  loading function::DownloadAuxiliaryBoard ...
+16:52:18.312  ok!
+16:52:18.318  Loading... FuncPtr(DownloadAuxiliaryBoard) = 000000006E88D640
+16:52:18.324  loading function::GetAuxBoardData ...
+16:52:18.331  ok!
+16:52:18.338  Loading... FuncPtr(GetAuxBoardData) = 000000006E88D680
+16:52:18.344  loading function::GetAuxPanelData ...
+16:52:18.351  ok!
+16:52:18.361  Loading... FuncPtr(GetAuxPanelData) = 000000006E88D6B0
+16:52:18.368  loading function::EnableAuxEmulation ...
+16:52:18.374  ok!
+16:52:18.381  Loading... FuncPtr(EnableAuxEmulation) = 000000006E88D700
+16:52:18.389  loading function::EmulateSetpoint ...
+16:52:18.396  ok!
+16:52:18.404  Loading... FuncPtr(EmulateSetpoint) = 000000006E88D720
+16:52:18.411  loading function::GetNetStats ...
+16:52:18.418  ok!
+16:52:18.426  Loading... FuncPtr(GetNetStats) = 000000006E88D750
+16:52:18.432  loading function::GetEngineTiming ...
+16:52:18.440  ok!
+16:52:18.447  Loading... FuncPtr(GetEngineTiming) = 000000006E88D780
+16:52:18.454  loading function::SetEngineTiming ...
+16:52:18.462  ok!
+16:52:18.470  Loading... FuncPtr(SetEngineTiming) = 000000006E88D7B0
+16:52:18.476  loading function::SilenceToggle ...
+16:52:18.483  ok!
+16:52:18.491  Loading... FuncPtr(SilenceToggle) = 000000006E88D840
+16:52:18.498  Tester: MacTest32Cal.dll loaded
+16:52:18.505   | initializing network...
+16:52:18.512  Adapter Selection:: <Path>::\Device\Packet_{5E1B38C2-9803-4952-92E7-7607211354EC}
+16:52:18.520  RS.Create(...)| Path: RawSocket.dll, Handle: 140705313193984, Compiled:
+16:52:18.527  Oct 13, 2026
+16:52:18.534  RawSocket::GetApiVersion :: 1.1 <ok>
+16:52:18.542  RawSocket::ShutdownService :: ok
+16:52:18.549  RawSocket::CreateSocket :: ok
+16:52:18.556  RawSocket::DestroySocket :: ok
+16:52:18.563  RawSocket::SendPacket :: ok
+16:52:18.571  RawSocket::SendPacketLen :: ok
+16:52:18.579  RawSocket::SetEthernetHeader :: ok
+16:52:18.586  RawSocket::SetPacketFilter :: ok
+16:52:18.592  socket [event:0] checkpoint! all callbacks assigned!
+16:52:18.599  socket [event:0] checkpoint! socket transmit handler initialized!
+16:52:18.607  socket [event:0] receive handler object initialization successful!
+16:52:18.614  socket [event:0] global socket receive handler initialization successful!
+16:52:18.621  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:52:18.628  socket [event:0] filter compilation: successful
+16:52:18.635  socket [event:0] filter registration successful! auto filter resumed!
+16:52:18.642  socket [event:0] socket registration successful!
+16:52:18.649  socket [event:0] WinPcap version 4.1.3 (packet.dll version 4.1.0.2980)
+16:52:18.656  socket [event:0] based on libpcap version 1.0 branch 1_0_rel0b (20091008)
+16:52:18.662  socket initialized!
+16:52:18.670  socket handle address: 00000211058B5970
+16:52:18.677  Starting system...
+16:52:18.683  ok!
+16:52:18.691  Tester: JULIUS-TESTER started on Realtek PCIe GbE Family Controller, 16 channels
+16:52:18.698  checking controller boards...
+16:52:18.705  board: 2 ok!
+16:52:18.712  board: 1 ok!
+16:52:18.719  Setting Channel: 1 specifications...
+16:52:18.726  ok!
+16:52:18.734  Setting Channel: 1 configurations...
+16:52:18.741  ok!
+16:52:18.748  Setting raw-socket header for ctlr board...
+16:52:18.754  ok!
+16:52:18.761  socket [event:0] socket rx_handle: auto-filters cleared! manual filter active
+16:52:18.768  socket [event:5] filter(s): ether src 42:30:30:30:30:30
+16:52:18.774  socket [event:0] filter compilation: successful
+16:52:18.781  socket [event:0] filter registration successful! auto filter resumed!
+16:52:18.787  active channel = 1
+16:52:22.620  socket [event:0] unregistering socket...
+16:52:22.621  socket [event:1] ok!
+16:52:22.631  Tester: engine closed
+16:52:27.153  Starting socket for 192.168.126.214
+16:52:27.223  192.168.126.214 reached via 192.168.126.51
+16:52:27.224  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 19923 | }
+16:52:27.234  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 19923 | }
+16:52:27.243  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+16:52:29.740  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19924 | }
+16:52:29.764  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19924 | }
+16:52:30.043  Calibration record read: Prototype / PrototypeDEC2022JB
+16:52:39.612  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19943 | }
+16:52:39.633  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19943 | }
+16:52:39.912  Calibration record read: Prototype / PrototypeDEC2022JB
+16:52:39.913  Write: the board's current record differs from what is shown in 1 place(s):
+16:52:39.919    Shunt 2 measured: the board has 99.9993, to write 99.99935
+16:52:47.476  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 19962 | }
+16:52:47.497  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 19962 | }
+16:52:47.725  Calibration record staged on the board
+16:52:47.726  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 19980 | }
+16:52:47.748  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 19980 | }
+16:52:47.752  Calibration record committed to EEPROM
+16:52:47.758  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 19981 | }
+16:52:47.770  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 19981 | }
+16:52:48.041  Calibration record read: Prototype / PrototypeDEC2022JB
+16:52:48.043  WARNING: written to the board's EEPROM, but the board holds 1 value(s) differently from what was written:
+16:52:48.048    Shunt 2 measured: the board has 99.9993, written 99.99935
+16:52:48.056    AutoCalv2.data.json was not touched
+16:53:04.732  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 20000 | }
+16:53:04.753  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 20000 | }
+16:53:05.032  Calibration record read: Prototype / PrototypeDEC2022JB
+16:53:05.033  Write: the board's current record differs from what is shown in 1 place(s):
+16:53:05.040    Shunt 2 measured: the board has 99.9993, to write 99.99935
+16:53:07.303  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 20019 | }
+16:53:07.325  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 20019 | }
+16:53:07.528  Calibration record staged on the board
+16:53:07.529  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 20037 | }
+16:53:07.550  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 20037 | }
+16:53:07.553  Calibration record committed to EEPROM
+16:53:07.558  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 20038 | }
+16:53:07.569  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 20038 | }
+16:53:07.822  Calibration record read: Prototype / PrototypeDEC2022JB
+16:53:07.825  WARNING: written to the board's EEPROM, but the board holds 1 value(s) differently from what was written:
+16:53:07.831    Shunt 2 measured: the board has 99.9993, written 99.99935
+16:53:07.838    AutoCalv2.data.json was not touched
+16:53:39.485  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 20057 | }
+16:53:39.505  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 20057 | }
+16:53:39.784  Calibration record read: Prototype / PrototypeDEC2022JB
+16:53:39.785  Write: the board's current record differs from what is shown in 1 place(s):
+16:53:39.792    Shunt 2 measured: the board has 99.9993, to write 99.99935
+16:53:47.322  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 20076 | }
+16:53:47.343  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 20076 | }
+16:53:47.572  Calibration record staged on the board
+16:53:47.573  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 20094 | }
+16:53:47.595  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 20094 | }
+16:53:47.599  Calibration record committed to EEPROM
+16:53:47.602  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 20095 | }
+16:53:47.616  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 20095 | }
+16:53:47.870  Calibration record read: Prototype / PrototypeDEC2022JB
+16:53:47.872  WARNING: written to the board's EEPROM, but the board holds 1 value(s) differently from what was written:
+16:53:47.878    Shunt 2 measured: the board has 99.9993, written 99.99935
+16:53:47.883    AutoCalv2.data.json was not touched
+16:59:18.623  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 16:59:49 ====
+16:59:49.604  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+16:59:49.612  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+16:59:51.849  Atmel-ICE connected, serial J42700070268, status OK
+16:59:51.850  avrdude: C:\Users\jolaoye\AppData\Roaming\AutoCalv2\avrdude\avrdude.exe
+16:59:53.763  Starting socket for 192.168.126.214
+16:59:53.836  192.168.126.214 reached via 192.168.126.51
+16:59:53.837  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 12707 | }
+16:59:53.848  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 4, |         "dtime": "Nov 10 2026 16:27:01", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 12707 | }
+16:59:53.858  AutoCalibrator firmware 0.5.4, built Nov 10 2026 16:27:01 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+16:59:57.515  192.168.126.214: application running
+16:59:57.518  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 8, |         "FNum": 3 |     }, |     "id": 12709 | }
+16:59:57.576  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 8, |         "FNum": 3, |         "status": "OK" |     }, |     "id": 12709 | }
+16:59:57.580  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 10, |         "FNum": 0 |     }, |     "id": 12710 | }
+16:59:57.587  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 10, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 12710 | }
+16:59:57.593  192.168.126.214: rebooting into the bootloader (TFTP window about 15 s)
+16:59:57.596  Waiting for the bootloader
+17:00:10.518  Sent, waiting for the application
+17:00:17.616  Board announced itself from 192.168.126.214: Gratuitous Echo!!!.
+17:00:18.093  Application is back
+17:00:18.095  Update finished
+17:00:23.898  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 12715 | }
+17:00:23.920  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 12715 | }
+17:00:24.180  Calibration record read: Prototype / PrototypeDEC2022JB
+17:00:30.732  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 12734 | }
+17:00:30.754  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 12734 | }
+17:00:31.015  Calibration record read: Prototype / PrototypeDEC2022JB
+17:00:31.017  Write: the board's current record differs from what is shown in 3 place(s):
+17:00:31.025    Shunt 2 measured: the board has 99.9993, to write 99.99935
+17:00:31.031    Shunt 2 diff: the board has 0.006670001, to write 0.006670001
+17:00:31.039    Shunt 3 previous: the board has 0.9999149, to write 0.9999149
+17:01:01.755  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 12753 | }
+17:01:01.775  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 12753 | }
+17:01:02.011  Calibration record staged on the board
+17:01:02.012  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 12771 | }
+17:01:02.062  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 12771 | }
+17:01:02.066  Calibration record committed to EEPROM
+17:01:02.071  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 12772 | }
+17:01:02.082  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 12772 | }
+17:01:02.318  Calibration record read: Prototype / PrototypeDEC2022JB
+17:01:02.330  WARNING: written to the board's EEPROM, but the board holds 3 value(s) differently from what was written:
+17:01:02.331    Shunt 2 measured: the board has 99.9993, written 99.99935
+17:01:02.339    Shunt 2 diff: the board has 0.006670001, written 0.006670001
+17:01:02.344    Shunt 3 previous: the board has 0.9999139, written 0.9999149
+17:01:02.351    AutoCalv2.data.json was not touched
+17:01:09.483  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 12791 | }
+17:01:09.504  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 12791 | }
+17:01:09.761  Calibration record read: Prototype / PrototypeDEC2022JB
+17:02:03.528  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 17:02:09 ====
+17:02:09.604  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:02:09.614  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:02:13.395  Starting socket for 192.168.126.214
+17:02:13.468  192.168.126.214 reached via 192.168.126.51
+17:02:13.469  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 29431 | }
+17:02:13.480  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 29431 | }
+17:02:13.489  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+17:02:14.829  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29432 | }
+17:02:14.853  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29432 | }
+17:02:15.114  Calibration record read: Prototype / PrototypeDEC2022JB
+17:02:20.957  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29451 | }
+17:02:20.977  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29451 | }
+17:02:21.213  Calibration record read: Prototype / PrototypeDEC2022JB
+17:02:21.214  Write: the board's current record differs from what is shown in 1 place(s):
+17:02:21.220    Shunt 2 measured: the board has 99.9993, to write 99.99935
+17:02:22.284  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 29470 | }
+17:02:22.304  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 29470 | }
+17:02:22.549  Calibration record staged on the board
+17:02:22.550  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 29488 | }
+17:02:22.593  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 29488 | }
+17:02:22.600  Calibration record committed to EEPROM
+17:02:22.604  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29489 | }
+17:02:22.615  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29489 | }
+17:02:22.849  Calibration record read: Prototype / PrototypeDEC2022JB
+17:02:22.850  Written to the board's EEPROM and read back the same
+17:02:22.862  Notice: AutoCalv2.data.json brought up to date with what was written (2 value(s)):
+17:02:22.866    Shunt 2 diff: the file had 0.00667, written 0.006670001
+17:02:22.873    Shunt 3 previous: the file had 0.999915, written 0.9999139
+17:02:37.299  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29508 | }
+17:02:37.319  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29508 | }
+17:02:37.580  Calibration record read: Prototype / PrototypeDEC2022JB
+17:02:48.012  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:02:50.534  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29527 | }
+17:02:50.555  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29527 | }
+17:02:50.817  Calibration record read: Prototype / PrototypeDEC2022JB
+17:03:03.661  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29546 | }
+17:03:03.683  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29546 | }
+17:03:03.929  Calibration record read: Prototype / PrototypeDEC2022JB
+17:03:38.943  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29565 | }
+17:03:38.965  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29565 | }
+17:03:39.214  Calibration record read: Prototype / PrototypeDEC2022JB
+17:03:43.378  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:03:47.855  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 29584 | }
+17:03:47.877  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 29584 | }
+17:03:48.138  Calibration record read: Prototype / PrototypeDEC2022JB
+17:04:32.756  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 17:38:02 ====
+17:38:02.266  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:38:02.273  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:38:07.367  Starting socket for 192.168.126.214
+17:38:07.446  192.168.126.214 reached via 192.168.126.51
+17:38:07.446  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 26707 | }
+17:38:07.457  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 26707 | }
+17:38:07.468  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+17:38:08.911  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26708 | }
+17:38:08.935  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26708 | }
+17:38:09.198  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:09.220  Notice: AutoCalv2.config.json brought up to date with the standards the board holds:
+17:38:09.221    Fluke 8508A: the serial number and due date of 2 meter(s)
+17:38:09.226    Standards list: 2 line(s) from the board, 1 unused Ohm Labs line(s) kept
+17:38:24.201  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:38:32.273  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26727 | }
+17:38:32.294  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26727 | }
+17:38:32.556  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:42.085  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26746 | }
+17:38:42.106  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26746 | }
+17:38:42.370  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:42.371  Write: the board already holds what is shown :: written again
+17:38:42.379  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17.0, |         "tech": "Baldus, J." |     }, |     "id": 26765 | }
+17:38:42.400  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 0, |         "status": "OK" |     }, |     "id": 26765 | }
+17:38:42.702  Calibration record staged on the board
+17:38:42.704  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4 |     }, |     "id": 26783 | }
+17:38:42.713  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 9, |         "FNum": 4, |         "status": "OK" |     }, |     "id": 26783 | }
+17:38:42.720  Calibration record committed to EEPROM
+17:38:42.724  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26784 | }
+17:38:42.734  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26784 | }
+17:38:42.941  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:42.943  Written to the board's EEPROM and read back the same
+17:38:45.204  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26803 | }
+17:38:45.224  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26803 | }
+17:38:45.459  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:50.320  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 26822 | }
+17:38:50.340  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 26822 | }
+17:38:50.576  Calibration record read: Prototype / PrototypeDEC2022JB
+17:38:59.050  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:39:08.277  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 17:40:17 ====
+17:40:17.564  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:40:17.570  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:40:31.922  Starting socket for 192.168.126.214
+17:40:31.994  192.168.126.214 reached via 192.168.126.51
+17:40:31.994  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 30241 | }
+17:40:32.006  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 30241 | }
+17:40:32.019  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+17:40:32.814  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 30242 | }
+17:40:32.837  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 30242 | }
+17:40:33.098  Calibration record read: Prototype / PrototypeDEC2022JB
+17:40:56.351  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 30261 | }
+17:40:56.373  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 30261 | }
+17:40:56.634  Calibration record read: Prototype / PrototypeDEC2022JB
+17:41:02.779  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:41:05.189  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 30280 | }
+17:41:05.211  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 30280 | }
+17:41:05.460  Calibration record read: Prototype / PrototypeDEC2022JB
+17:41:06.827  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 17:41:12 ====
+17:41:12.746  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+17:41:12.754  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+17:41:17.727  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:41:20.939  Starting socket for 192.168.126.214
+17:41:21.009  192.168.126.214 reached via 192.168.126.51
+17:41:21.010  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 7866 | }
+17:41:21.022  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 7866 | }
+17:41:21.032  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+17:41:21.947  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 7867 | }
+17:41:21.971  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 7867 | }
+17:41:22.230  Calibration record read: Prototype / PrototypeDEC2022JB
+17:41:31.314  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+17:41:32.504  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 7886 | }
+17:41:32.524  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 7886 | }
+17:41:32.785  Calibration record read: Prototype / PrototypeDEC2022JB
+18:17:20.046  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 18:17:29 ====
+18:17:29.188  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+18:17:29.196  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+18:17:34.672  Starting socket for 192.168.126.214
+18:17:34.757  192.168.126.214 reached via 192.168.126.51
+18:17:34.758  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 16778 | }
+18:17:34.768  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 16778 | }
+18:17:34.780  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+18:17:35.786  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 16779 | }
+18:17:35.810  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 16779 | }
+18:17:36.058  Calibration record read: Prototype / PrototypeDEC2022JB
+18:17:36.067  WARNING: the standards read from the board did not match AutoCalv2.config.json :: the file was brought up to date:
+18:17:36.068    Standards list: 2 line(s) from the board
+18:17:46.104  Imported from AutoCalv2.config.json, AutoCalv2.data.json :: 0 shunt(s) from the certificate :: not in the box until Write
+18:17:50.381  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 16798 | }
+18:17:50.403  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 16798 | }
+18:17:50.665  Calibration record read: Prototype / PrototypeDEC2022JB
+18:18:57.003  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 19:13:00 ====
+19:13:00.857  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+19:13:00.864  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+19:13:08.894  Starting socket for 192.168.126.214
+19:13:08.966  192.168.126.214 reached via 192.168.126.51
+19:13:08.966  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 1125 | }
+19:13:08.977  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 1125 | }
+19:13:08.986  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+19:13:14.268  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 1126 | }
+19:13:14.291  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 1126 | }
+19:13:14.550  Calibration record read: Prototype / PrototypeDEC2022JB
+19:13:14.562  WARNING: the record read from the board did not match the local copy in 2 place(s) :: the local copy was brought up to date:
+19:13:14.564    AutoCalv2.config.json :: Certificate sheet :: Prev. cal. date: local (none), the board has 2026-11-10
+19:13:14.569    AutoCalv2.config.json :: Certificate sheet :: Comments: local "Method: LOP-72-01 Calibration of AutoCalibrators and Shunts,", the board has "Method: LOP-72-01 Calibration of AutoCalibrators; Notes: Tem"
+19:26:39.740  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 1145 | }
+19:26:39.762  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 1145 | }
+19:26:40.022  Calibration record read: Prototype / PrototypeDEC2022JB
+19:26:41.726  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 1164 | }
+19:26:41.746  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 1164 | }
+19:26:41.979  Calibration record read: Prototype / PrototypeDEC2022JB
+19:26:42.443  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 1183 | }
+19:26:42.463  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 1183 | }
+19:26:42.696  Calibration record read: Prototype / PrototypeDEC2022JB
+19:40:00.318  Closing 192.168.126.214
+
+==== AutoCalv2.exe started 2026-11-12 19:52:57 ====
+19:52:57.741  Shunt plan: no plan file yet, the defaults are in use (Configure Shunts saves one)
+19:52:57.748  PLAN 8 of 8 shunts planned :: C:\Data\Maccor_Software\Development\Arduino\AutoCalibrator_528LB\test\AutoCalExplorerV2\Win64\Release\AutoCalv2.shunts.ini
+19:53:26.778  Starting socket for 192.168.126.214
+19:53:26.937  192.168.126.214 reached via 192.168.126.51
+19:53:26.938  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1 |     }, |     "id": 4702 | }
+19:53:26.950  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 1, |         "device": "AutoCalibrator", |         "major": 0, |         "minor": 5, |         "patch": 5, |         "dtime": "Nov 12 2026 16:57:56", |         "notes": "Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>", |         "status": "OK" |     }, |     "id": 4702 | }
+19:53:26.957  AutoCalibrator firmware 0.5.5, built Nov 12 2026 16:57:56 | Autocal. v2.0. Rev. E <HW: Rex Powell, FW: Julius Olaoye>
+19:53:28.273  >> 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2 |     }, |     "id": 4703 | }
+19:53:28.297  << 192.168.126.214 | { |     "jsonrpc": "2.0", |     "method": "MacAutoCal", |     "params": { |         "FClass": 0, |         "FNum": 2, |         "status": "OK", |         "serial": "Prototype", |         "model": "BT700507", |         "cert": "PrototypeDEC2022JB", |         "manufacturer": "Maccor", |         "owner": "Maccor, Inc.", |         "cal_date": "2022-12-07", |         "cal_date_prev": "2026-11-10", |         "cal_due": "2023-06-05", |         "temp": 23.54, |         "humd": 17, |         "tech": "Baldus, J." |     }, |     "id": 4703 | }
+19:53:28.548  Calibration record read: Prototype / PrototypeDEC2022JB
+19:53:54.476  Closing 192.168.126.214
